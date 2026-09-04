@@ -229,7 +229,7 @@ export default function AuthModal({ isOpen, onClose }) {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="oficial.cumplimiento@aubasa.com.ar"
-                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0284c7] focus:border-transparent outline-none"
+                      className="w-full pl-9 pr-3 py-2 text-sm font-semibold text-slate-900 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-200 focus:border-[#0284c7] placeholder:text-slate-400 outline-none"
                     />
                   </div>
                 </div>
@@ -244,7 +244,7 @@ export default function AuthModal({ isOpen, onClose }) {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="••••••••"
-                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0284c7] focus:border-transparent outline-none"
+                      className="w-full pl-9 pr-3 py-2 text-sm font-semibold text-slate-900 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-200 focus:border-[#0284c7] placeholder:text-slate-400 outline-none"
                     />
                   </div>
                 </div>
@@ -270,7 +270,7 @@ export default function AuthModal({ isOpen, onClose }) {
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder="Sergio Montes"
-                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0284c7] focus:border-transparent outline-none"
+                      className="w-full pl-9 pr-3 py-2 text-sm font-semibold text-slate-900 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-200 focus:border-[#0284c7] placeholder:text-slate-400 outline-none"
                     />
                   </div>
                 </div>
@@ -285,7 +285,7 @@ export default function AuthModal({ isOpen, onClose }) {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="usuario@aubasa.com.ar"
-                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0284c7] focus:border-transparent outline-none"
+                      className="w-full pl-9 pr-3 py-2 text-sm font-semibold text-slate-900 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-200 focus:border-[#0284c7] placeholder:text-slate-400 outline-none"
                     />
                   </div>
                 </div>
@@ -295,7 +295,7 @@ export default function AuthModal({ isOpen, onClose }) {
                   <select
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
-                    className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0284c7] focus:border-transparent outline-none bg-white font-medium"
+                    className="w-full px-3 py-2 text-xs font-bold text-slate-800 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-200 focus:border-[#0284c7] outline-none bg-white"
                   >
                     <option value="Oficial de Cumplimiento SGAS">Oficial de Cumplimiento Principal (ISO 37001 Cl. 5.3)</option>
                     <option value="Auditor Interno SGAS">Auditor Interno (Cl. 9.2)</option>
@@ -316,7 +316,7 @@ export default function AuthModal({ isOpen, onClose }) {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="••••••••"
-                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0284c7] focus:border-transparent outline-none"
+                      className="w-full pl-9 pr-3 py-2 text-sm font-semibold text-slate-900 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-200 focus:border-[#0284c7] placeholder:text-slate-400 outline-none"
                     />
                   </div>
                 </div>

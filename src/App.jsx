@@ -25,7 +25,6 @@ import { RED_FLAGS_CATALOG } from './data/initialRedFlagsData.js';
 
 function AppContent() {
   const { user, loading } = useAuth();
-  const [guestMode, setGuestMode] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard' | 'advisor' | 'risks' | 'dueDiligence' | 'records' | 'policies' | 'gapAnalysis' | 'redFlags'
 
   // Estados reactivos cargados desde storage
@@ -180,9 +179,9 @@ function AppContent() {
     );
   }
 
-  // 2. Pantalla de Acceso / Login Institucional Oficial
-  if (!user && !guestMode) {
-    return <LoginScreen onGuestAccess={() => setGuestMode(true)} />;
+  // 2. Pantalla de Acceso / Login Institucional Obligatorio
+  if (!user) {
+    return <LoginScreen />;
   }
 
   return (
