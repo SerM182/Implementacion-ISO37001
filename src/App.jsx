@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { AuthProvider } from './context/AuthContext.jsx';
+import { AuthProvider, useAuth } from './context/AuthContext.jsx';
 import Navbar from './components/layout/Navbar.jsx';
 import SubHeader from './components/layout/SubHeader.jsx';
 import Footer from './components/layout/Footer.jsx';
+import LoginScreen from './components/auth/LoginScreen.jsx';
 
 import ExecutiveDashboard from './components/dashboard/ExecutiveDashboard.jsx';
 import ComplianceAdvisorView from './components/advisor/ComplianceAdvisorView.jsx';
@@ -23,6 +24,8 @@ import { supabaseSync } from './utils/supabaseSync.js';
 import { RED_FLAGS_CATALOG } from './data/initialRedFlagsData.js';
 
 function AppContent() {
+  const { user, loading } = useAuth();
+  const [guestMode, setGuestMode] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard' | 'advisor' | 'risks' | 'dueDiligence' | 'records' | 'policies' | 'gapAnalysis' | 'redFlags'
 
   // Estados reactivos cargados desde storage
@@ -164,6 +167,23 @@ function AppContent() {
     setTrainingPlan(sgasStorage.getTrainingPlan());
     setCollaborators(sgasStorage.getCollaborators());
   };
+
+  // 1. Pantalla de Carga Inicial
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#e9eef3] flex flex-col items-center justify-center p-4">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-10 h-10 border-4 border-[#0284c7] border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-xs font-bold text-slate-700 tracking-wide">Iniciando Sistema AUBASA SGAS...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // 2. Pantalla de Acceso / Login Institucional Oficial
+  if (!user && !guestMode) {
+    return <LoginScreen onGuestAccess={() => setGuestMode(true)} />;
+  }
 
   return (
     <div className="min-h-screen bg-[#e9eef3] text-slate-800 flex flex-col selection:bg-sky-500 selection:text-white font-sans antialiased">
