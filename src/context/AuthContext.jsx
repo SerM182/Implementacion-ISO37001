@@ -37,23 +37,41 @@ export function AuthProvider({ children }) {
 
   const signIn = async (email, password) => {
     if (!supabase) return { error: { message: 'Supabase no está configurado con la clave anon.' } };
-    return await supabase.auth.signInWithPassword({ email, password });
+    try {
+      return await supabase.auth.signInWithPassword({
+        email: email.trim(),
+        password: password
+      });
+    } catch (err) {
+      console.error('Error en signIn:', err);
+      return { error: { message: err.message || 'Error al conectar con el servidor de autenticación.' } };
+    }
   };
 
   const signUp = async (email, password, metadata = {}) => {
     if (!supabase) return { error: { message: 'Supabase no está configurado con la clave anon.' } };
-    return await supabase.auth.signUp({
-      email,
-      password,
-      options: { data: metadata }
-    });
+    try {
+      return await supabase.auth.signUp({
+        email: email.trim(),
+        password: password,
+        options: { data: metadata }
+      });
+    } catch (err) {
+      console.error('Error en signUp:', err);
+      return { error: { message: err.message || 'Error al conectar con el servidor de registro.' } };
+    }
   };
 
   const signOut = async () => {
     if (!supabase) return;
-    await supabase.auth.signOut();
-    setUser(null);
-    setSession(null);
+    try {
+      await supabase.auth.signOut();
+    } catch (err) {
+      console.warn('Error al cerrar sesión:', err);
+    } finally {
+      setUser(null);
+      setSession(null);
+    }
   };
 
   return (
