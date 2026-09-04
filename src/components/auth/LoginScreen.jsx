@@ -21,8 +21,8 @@ export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
-  const [role, setRole] = useState('Oficial de Cumplimiento SGAS');
-  const [area, setArea] = useState('Gerencia de Compliance y Control');
+  const [role, setRole] = useState('Administrador General SGAS');
+  const [area, setArea] = useState('Gerencia General & Oficialía de Cumplimiento SGAS');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(null);
@@ -258,11 +258,12 @@ export default function LoginScreen() {
                   onChange={(e) => setRole(e.target.value)}
                   className="w-full px-3 py-2 text-xs font-bold text-slate-800 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-200 focus:border-[#0284c7] outline-none cursor-pointer"
                 >
-                  <option value="Oficial de Cumplimiento SGAS">Oficial de Cumplimiento Principal (ISO 37001 Cl. 5.3)</option>
-                  <option value="Auditor Interno SGAS">Auditor Interno de Cumplimiento (Cl. 9.2)</option>
-                  <option value="Responsable de Compras & Contrataciones">Responsable de Compras & Contrataciones</option>
-                  <option value="Control de Tesorería & Pagos">Control de Tesorería & Pagos (Cl. 8.3)</option>
-                  <option value="Supervisión de Obras BALP">Supervisión de Obras BALP (LEMIT)</option>
+                  <option value="Administrador General SGAS">👑 Administrador General SGAS (Acceso Total & Control Maestro)</option>
+                  <option value="Oficial de Cumplimiento SGAS">🛡️ Oficial de Cumplimiento Principal (ISO 37001 Cl. 5.3)</option>
+                  <option value="Auditor Interno SGAS">🔍 Auditor Interno de Cumplimiento (Cl. 9.2)</option>
+                  <option value="Responsable de Compras & Contrataciones">📑 Responsable de Compras & Contrataciones</option>
+                  <option value="Control de Tesorería & Pagos">💳 Control de Tesorería & Pagos (Cl. 8.3)</option>
+                  <option value="Supervisión de Obras BALP">🏗️ Supervisión de Obras BALP (LEMIT)</option>
                 </select>
               </div>
 

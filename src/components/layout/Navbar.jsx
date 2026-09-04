@@ -15,7 +15,8 @@ import {
   User,
   UserCheck,
   LogIn,
-  LogOut
+  LogOut,
+  Crown
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext.jsx';
 
@@ -112,31 +113,33 @@ export default function Navbar({
             })}
           </nav>
 
-          {/* 3. Acciones Globales: Usuario / Cerrar Sesión, Base de Datos, PDF */}
+          {/* 3. Acciones Globales: Usuario / Superadmin, Cerrar Sesión, Base de Datos, PDF */}
           <div className="flex items-center gap-1.5 shrink-0">
-            {/* Si el usuario está conectado: muestra su perfil y botón de Cerrar Sesión */}
+            {/* Si el usuario está conectado: muestra su badge de Administrador Maestro y botón de Cerrar Sesión */}
             {user ? (
-              <div className="flex items-center gap-1 bg-emerald-50/90 border border-emerald-300 rounded-lg p-1 text-xs">
+              <div className="flex items-center gap-1 bg-amber-50/90 border border-amber-300 rounded-lg p-1 text-xs">
                 <button
                   onClick={onOpenAuthModal}
-                  title="Ver perfil de usuario y equipo"
-                  className="flex items-center gap-1.5 px-2 py-1 hover:bg-emerald-100 rounded text-emerald-900 font-bold transition-colors cursor-pointer"
+                  title="Centro de Control de Administrador y Equipo"
+                  className="flex items-center gap-1.5 px-2 py-1 hover:bg-amber-100 rounded text-amber-950 font-black transition-colors cursor-pointer"
                 >
-                  <UserCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                  <Crown className="w-3.5 h-3.5 text-amber-600 shrink-0" />
                   <span className="truncate max-w-[100px] sm:max-w-[130px]">
                     {user.user_metadata?.full_name?.split(' ')[0] || user.email?.split('@')[0]}
                   </span>
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span className="hidden lg:inline-block px-1.5 py-0.2 text-[8px] font-black uppercase bg-amber-400 text-slate-950 rounded shadow-2xs">
+                    Admin
+                  </span>
                 </button>
 
                 {/* Botón directo de Cerrar Sesión */}
                 <button
                   onClick={handleQuickLogout}
-                  title="Cerrar Sesión de este usuario"
+                  title="Cerrar Sesión del usuario"
                   className="flex items-center gap-1 px-2 py-1 bg-white hover:bg-rose-50 text-rose-700 hover:text-rose-800 border border-rose-200 rounded text-[11px] font-black transition-all cursor-pointer shadow-2xs"
                 >
                   <LogOut className="w-3 h-3 text-rose-600" />
-                  <span className="hidden sm:inline">Cerrar Sesión</span>
+                  <span className="hidden sm:inline">Salir</span>
                 </button>
               </div>
             ) : (

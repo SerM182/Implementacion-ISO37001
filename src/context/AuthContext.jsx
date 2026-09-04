@@ -10,7 +10,6 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     if (!isSupabaseConfigured() || !supabase) {
-      // Si no está configurada la anon key aún, mantener modo offline/demo
       setLoading(false);
       return;
     }
@@ -51,15 +50,47 @@ export function AuthProvider({ children }) {
   const signUp = async (email, password, metadata = {}) => {
     if (!supabase) return { error: { message: 'Supabase no está configurado con la clave anon.' } };
     try {
+      const enhancedMetadata = {
+        role: 'Administrador General SGAS',
+        isAdmin: true,
+        permissions: 'full_admin_access',
+        concesion: 'Autopista BALP (50 km)',
+        ...metadata
+      };
       return await supabase.auth.signUp({
         email: email.trim(),
         password: password,
-        options: { data: metadata }
+        options: { data: enhancedMetadata }
       });
     } catch (err) {
       console.error('Error en signUp:', err);
       return { error: { message: err.message || 'Error al conectar con el servidor de registro.' } };
     }
+  };
+
+  const updateProfile = async (metadata = {}) => {
+    if (!supabase) return { error: { message: 'Supabase no está configurado.' } };
+    try {
+      const { data, error } = await supabase.auth.updateUser({
+        data: metadata
+      });
+      if (!error && data?.user) {
+        setUser(data.user);
+      }
+      return { data, error };
+    } catch (err) {
+      console.error('Error al actualizar usuario:', err);
+      return { error: { message: err.message || 'Error al actualizar perfil.' } };
+    }
+  };
+
+  const setMasterAdminRole = async () => {
+    return await updateProfile({
+      role: 'Administrador General SGAS',
+      isAdmin: true,
+      permissions: 'full_admin_access',
+      area: 'Gerencia de Cumplimiento & Dirección General AUBASA'
+    });
   };
 
   const signOut = async () => {
@@ -74,8 +105,26 @@ export function AuthProvider({ children }) {
     }
   };
 
+  // Permiso de administrador total concedido a cualquier usuario autenticado en la plataforma
+  const isAdmin = true;
+  const userRole = user?.user_metadata?.role || 'Administrador General SGAS';
+
   return (
-    <AuthContext.Provider value={{ user, session, loading, signIn, signUp, signOut, isSupabaseConfigured: isSupabaseConfigured() }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        session,
+        loading,
+        signIn,
+        signUp,
+        signOut,
+        updateProfile,
+        setMasterAdminRole,
+        isAdmin,
+        userRole,
+        isSupabaseConfigured: isSupabaseConfigured()
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
@@ -88,3 +137,4 @@ export function useAuth() {
   }
   return context;
 }
+
