@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AuthProvider } from './context/AuthContext.jsx';
 import Navbar from './components/layout/Navbar.jsx';
 import SubHeader from './components/layout/SubHeader.jsx';
@@ -19,6 +19,7 @@ import MasterPrintReport from './components/print/MasterPrintReport.jsx';
 import AuthModal from './components/auth/AuthModal.jsx';
 
 import { sgasStorage } from './utils/storage.js';
+import { supabaseSync } from './utils/supabaseSync.js';
 import { RED_FLAGS_CATALOG } from './data/initialRedFlagsData.js';
 
 function AppContent() {
@@ -41,15 +42,39 @@ function AppContent() {
   const [isPrintReportOpen, setIsPrintReportOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
-  // Sincronización con localStorage
+  // Sincronización automática con Supabase Cloud en el arranque de la app
+  useEffect(() => {
+    if (supabaseSync.isConnected()) {
+      supabaseSync.pullFromCloud().then((res) => {
+        if (res.success && res.data) {
+          if (res.data.risks) setRisks(res.data.risks);
+          if (res.data.partners) setPartners(res.data.partners);
+          if (res.data.records) setRecords(res.data.records);
+          if (res.data.reports) setReports(res.data.reports);
+          if (res.data.collaborators) setCollaborators(res.data.collaborators);
+          if (res.data.gapItems && res.data.gapItems.length > 0) setGapItems(res.data.gapItems);
+        }
+      }).catch(err => {
+        console.warn('Auto-pull inicial de Supabase:', err);
+      });
+    }
+  }, []);
+
+  // Sincronización local + Supabase Cloud
   const handleUpdateRisks = (newRisks) => {
     setRisks(newRisks);
     sgasStorage.saveRisks(newRisks);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.pushToCloud();
+    }
   };
 
   const handleUpdatePartners = (newPartners) => {
     setPartners(newPartners);
     sgasStorage.savePartners(newPartners);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.pushToCloud();
+    }
   };
 
   const handleUpdatePolicies = (newPolicies) => {
@@ -60,17 +85,26 @@ function AppContent() {
   const handleUpdateGapItems = (newItems) => {
     setGapItems(newItems);
     sgasStorage.saveGapAnalysis(newItems);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.saveGapItems(newItems);
+    }
   };
 
   const handleUpdateReports = (newReports) => {
     setReports(newReports);
     sgasStorage.saveReports(newReports);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.pushToCloud();
+    }
   };
 
   const handleCreateReport = (newReport) => {
     const nextList = [newReport, ...reports];
     setReports(nextList);
     sgasStorage.saveReports(nextList);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.saveReportItem(newReport);
+    }
   };
 
   const handleUpdateRoadmapPhases = (newPhases) => {
@@ -81,6 +115,9 @@ function AppContent() {
   const handleUpdateCollaborators = (newCollabs) => {
     setCollaborators(newCollabs);
     sgasStorage.saveCollaborators(newCollabs);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.pushToCloud();
+    }
   };
 
   const handleUpdateTrainingPlan = (newPlan) => {
@@ -88,23 +125,32 @@ function AppContent() {
     sgasStorage.saveTrainingPlan(newPlan);
   };
 
-  // Handlers para Registros y Evidencias (Cl. 7.5)
+  // Handlers para Registros y Evidencias (Cl. 7.5) con guardado reactivo a Supabase
   const handleAddRecord = (newRecord) => {
     const nextList = [newRecord, ...records];
     setRecords(nextList);
     sgasStorage.saveRecords(nextList);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.saveRecordItem(newRecord);
+    }
   };
 
   const handleUpdateRecord = (updatedRecord) => {
     const nextList = records.map(r => r.id === updatedRecord.id ? updatedRecord : r);
     setRecords(nextList);
     sgasStorage.saveRecords(nextList);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.saveRecordItem(updatedRecord);
+    }
   };
 
   const handleDeleteRecord = (recordId) => {
     const nextList = records.filter(r => r.id !== recordId);
     setRecords(nextList);
     sgasStorage.saveRecords(nextList);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.deleteRecordItem(recordId);
+    }
   };
 
   const handleDataRestored = () => {

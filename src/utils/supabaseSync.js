@@ -37,7 +37,17 @@ export const supabaseSync = {
       const { data: gapData, error: errGap } = await supabase.from('gap_analysis').select('*');
       if (!errGap && gapData && gapData.length > 0) sgasStorage.saveGapAnalysis(gapData);
 
-      return { success: true };
+      return {
+        success: true,
+        data: {
+          risks: risksData || [],
+          partners: partnersData || [],
+          records: recordsData || [],
+          reports: reportsData || [],
+          collaborators: collabsData || [],
+          gapItems: (gapData && gapData.length > 0) ? gapData : null
+        }
+      };
     } catch (e) {
       console.error('Error al sincronizar desde Supabase:', e);
       return { success: false, error: e.message };
@@ -83,6 +93,61 @@ export const supabaseSync = {
     } catch (e) {
       console.error('Error al subir a Supabase:', e);
       return { success: false, error: e.message };
+    }
+  },
+
+  // Guardado reactivo individual en segundo plano
+  saveRecordItem: async (record) => {
+    if (!isSupabaseConfigured() || !supabase) return;
+    try {
+      await supabase.from('records').upsert([record]);
+    } catch (e) {
+      console.warn('Auto-sync record error:', e);
+    }
+  },
+
+  deleteRecordItem: async (id) => {
+    if (!isSupabaseConfigured() || !supabase) return;
+    try {
+      await supabase.from('records').delete().eq('id', id);
+    } catch (e) {
+      console.warn('Auto-sync delete record error:', e);
+    }
+  },
+
+  saveRiskItem: async (risk) => {
+    if (!isSupabaseConfigured() || !supabase) return;
+    try {
+      await supabase.from('risks').upsert([risk]);
+    } catch (e) {
+      console.warn('Auto-sync risk error:', e);
+    }
+  },
+
+  savePartnerItem: async (partner) => {
+    if (!isSupabaseConfigured() || !supabase) return;
+    try {
+      await supabase.from('partners').upsert([partner]);
+    } catch (e) {
+      console.warn('Auto-sync partner error:', e);
+    }
+  },
+
+  saveReportItem: async (report) => {
+    if (!isSupabaseConfigured() || !supabase) return;
+    try {
+      await supabase.from('whistleblowing_reports').upsert([report]);
+    } catch (e) {
+      console.warn('Auto-sync report error:', e);
+    }
+  },
+
+  saveGapItems: async (items) => {
+    if (!isSupabaseConfigured() || !supabase) return;
+    try {
+      await supabase.from('gap_analysis').upsert(items);
+    } catch (e) {
+      console.warn('Auto-sync gap error:', e);
     }
   }
 };

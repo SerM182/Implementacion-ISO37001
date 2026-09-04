@@ -77,7 +77,7 @@ export default function Navbar({
                 </span>
               </div>
               <p className="text-[10px] font-bold text-slate-500 tracking-tight hidden sm:block">
-                Autopista BALP (50 km) • Peajes • Pagos • Obras
+                Autopista BALP (50 km) • Contrataciones • Pagos • Obras
               </p>
             </div>
           </div>
