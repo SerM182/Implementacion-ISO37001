@@ -10,10 +10,10 @@ import {
   AlertTriangle,
   FolderCheck,
   GraduationCap,
+  Users,
   Printer,
   Database,
   User,
-  UserCheck,
   LogIn,
   LogOut,
   Crown
@@ -31,52 +31,53 @@ export default function Navbar({
 
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'gapAnalysis', label: 'Diagnóstico (32)', icon: CheckSquare, badge: 'IRAM' },
-    { id: 'policies', label: 'POEs (10)', icon: FileText },
-    { id: 'records', label: 'Registros (7.5)', icon: FolderCheck, badge: '12 Plantillas', highlight: true },
+    { id: 'gapAnalysis', label: 'Diagnóstico', icon: CheckSquare, badge: 'IRAM' },
+    { id: 'policies', label: 'POEs', icon: FileText, badge: '10' },
+    { id: 'records', label: 'Registros', icon: FolderCheck, badge: '7.5', highlight: true },
     { id: 'risks', label: 'Riesgos', icon: Grid },
     { id: 'dueDiligence', label: 'Proveedores', icon: Building2 },
     { id: 'training', label: 'Capacitación', icon: GraduationCap },
     { id: 'redFlags', label: 'Canal Ético', icon: AlertTriangle, badge: '37002' },
+    { id: 'users', label: 'Usuarios', icon: Users, badge: 'Admin' },
     { id: 'advisor', label: 'Asistente IA', icon: Bot, isAi: true }
   ];
 
   const handleQuickLogout = async (e) => {
     e.stopPropagation();
-    if (window.confirm('¿Desea cerrar la sesión del usuario actual?')) {
+    if (window.confirm('¿Desea cerrar la sesión de su usuario de AUBASA SGAS?')) {
       await signOut();
     }
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-xs no-print select-none">
-      <div className="w-full px-3 sm:px-5 lg:px-6">
-        <div className="flex items-center justify-between h-15 gap-2">
+    <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-xs no-print select-none w-full">
+      <div className="w-full px-2 sm:px-3 lg:px-4">
+        <div className="flex items-center justify-between h-13 sm:h-15 gap-1.5 sm:gap-2">
 
           {/* 1. Logo Institucional AUBASA SGAS */}
           <div
-            className="flex items-center gap-2 sm:gap-2.5 cursor-pointer group shrink-0"
+            className="flex items-center gap-1.5 sm:gap-2 cursor-pointer group shrink-0"
             onClick={() => onTabChange('dashboard')}
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#0284c7] to-[#0ea5e9] flex items-center justify-center shadow-md shadow-sky-200 border border-sky-300 group-hover:scale-105 transition-transform">
-              <ShieldAlert className="w-4.5 h-4.5 text-white" />
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-tr from-[#0284c7] to-[#0ea5e9] flex items-center justify-center shadow-md shadow-sky-200 border border-sky-300 group-hover:scale-105 transition-transform shrink-0">
+              <ShieldAlert className="w-4 h-4 text-white" />
             </div>
             <div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-base font-black tracking-tight text-[#0369a1]">AUBASA</span>
-                <span className="text-[10px] font-black text-slate-800 uppercase tracking-wider">SGAS</span>
-                <span className="px-1.5 py-0.2 text-[8px] font-black uppercase bg-sky-100 text-sky-800 border border-sky-200 rounded">
+              <div className="flex items-center gap-1">
+                <span className="text-xs sm:text-sm font-black tracking-tight text-[#0369a1]">AUBASA</span>
+                <span className="text-[9px] sm:text-[10px] font-black text-slate-800 uppercase tracking-wider">SGAS</span>
+                <span className="px-1 py-0.2 text-[7px] sm:text-[8px] font-black uppercase bg-sky-100 text-sky-800 border border-sky-200 rounded">
                   37001
                 </span>
               </div>
-              <p className="text-[9px] font-bold text-slate-500 tracking-tight hidden sm:block">
-                BALP 50 km • Contratación • Pagos • Obras
+              <p className="text-[8px] sm:text-[9px] font-bold text-slate-500 tracking-tight hidden lg:block">
+                BALP 50 km • Obras • Pagos • Compras
               </p>
             </div>
           </div>
 
-          {/* 2. Menú de Navegación Compacto y Limpio (Desktop) */}
-          <nav className="hidden xl:flex items-center gap-1 bg-slate-50/90 p-1 rounded-xl border border-slate-200/80">
+          {/* 2. Menú de Navegación Compacto y Fluido (Desktop / Pantallas Grandes) */}
+          <nav className="hidden lg:flex items-center gap-0.5 bg-slate-50/90 p-0.5 sm:p-1 rounded-xl border border-slate-200/80 overflow-x-auto no-scrollbar">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeTab === item.id;
@@ -85,7 +86,7 @@ export default function Navbar({
                   key={item.id}
                   onClick={() => onTabChange(item.id)}
                   title={item.label}
-                  className={`flex items-center gap-1.5 px-2 py-1 rounded-lg text-[11px] font-black uppercase tracking-tight transition-all cursor-pointer whitespace-nowrap ${
+                  className={`flex items-center gap-1 px-1.5 xl:px-2 py-1 rounded-lg text-[10px] xl:text-[11px] font-black uppercase tracking-tight transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                     isActive
                       ? 'bg-[#0284c7] text-white shadow-xs'
                       : item.isAi
@@ -100,7 +101,7 @@ export default function Navbar({
                   }`} />
                   <span>{item.label}</span>
                   {item.badge && !isActive && (
-                    <span className={`px-1 py-0.2 text-[8px] font-black rounded ${
+                    <span className={`hidden 2xl:inline-block px-1 py-0.2 text-[8px] font-black rounded ${
                       item.highlight
                         ? 'bg-rose-100 text-rose-800 border border-rose-200'
                         : 'bg-sky-100 text-sky-800 border border-sky-200'
@@ -113,41 +114,40 @@ export default function Navbar({
             })}
           </nav>
 
-          {/* 3. Acciones Globales: Usuario / Superadmin, Cerrar Sesión, Base de Datos, PDF */}
-          <div className="flex items-center gap-1.5 shrink-0">
-            {/* Si el usuario está conectado: muestra su badge de Administrador Maestro y botón de Cerrar Sesión */}
+          {/* 3. Acciones Globales: Usuario / Superadmin, Cerrar Sesión Rojo Prominente, Base de Datos, PDF */}
+          <div className="flex items-center gap-1 shrink-0">
             {user ? (
-              <div className="flex items-center gap-1 bg-amber-50/90 border border-amber-300 rounded-lg p-1 text-xs">
+              <div className="flex items-center gap-1 bg-amber-50/90 border border-amber-300 rounded-lg p-0.5 text-xs">
+                {/* Botón de Perfil & Permisos de Administrador */}
                 <button
                   onClick={onOpenAuthModal}
                   title="Centro de Control de Administrador y Equipo"
-                  className="flex items-center gap-1.5 px-2 py-1 hover:bg-amber-100 rounded text-amber-950 font-black transition-colors cursor-pointer"
+                  className="flex items-center gap-1 px-1.5 py-0.5 sm:py-1 hover:bg-amber-100 rounded text-amber-950 font-black transition-colors cursor-pointer"
                 >
                   <Crown className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                  <span className="truncate max-w-[100px] sm:max-w-[130px]">
+                  <span className="truncate max-w-[70px] sm:max-w-[100px] text-[10px] sm:text-[11px] font-bold">
                     {user.user_metadata?.full_name?.split(' ')[0] || user.email?.split('@')[0]}
                   </span>
-                  <span className="hidden lg:inline-block px-1.5 py-0.2 text-[8px] font-black uppercase bg-amber-400 text-slate-950 rounded shadow-2xs">
+                  <span className="px-1 py-0.2 text-[7px] sm:text-[8px] font-black uppercase bg-amber-400 text-slate-950 rounded shadow-2xs">
                     Admin
                   </span>
                 </button>
 
-                {/* Botón directo de Cerrar Sesión */}
+                {/* BOTÓN ROJO DE LOG OUT / CERRAR SESIÓN (Ultra Prominente) */}
                 <button
                   onClick={handleQuickLogout}
-                  title="Cerrar Sesión del usuario"
-                  className="flex items-center gap-1 px-2 py-1 bg-white hover:bg-rose-50 text-rose-700 hover:text-rose-800 border border-rose-200 rounded text-[11px] font-black transition-all cursor-pointer shadow-2xs"
+                  title="Cerrar Sesión del usuario actual"
+                  className="flex items-center gap-1 px-2 py-0.5 sm:py-1 bg-rose-600 hover:bg-rose-700 text-white rounded text-[10px] sm:text-[11px] font-black transition-all cursor-pointer shadow-xs active:scale-95 shrink-0"
                 >
-                  <LogOut className="w-3 h-3 text-rose-600" />
-                  <span className="hidden sm:inline">Salir</span>
+                  <LogOut className="w-3 h-3 text-white shrink-0" />
+                  <span className="font-extrabold">Salir</span>
                 </button>
               </div>
             ) : (
-              /* Si no está conectado: Botón de Iniciar Sesión */
               <button
                 onClick={onOpenAuthModal}
                 title="Iniciar Sesión Oficial o Registrar Usuario"
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0284c7] hover:bg-[#0369a1] text-white rounded-lg text-xs font-black transition-all shadow-xs cursor-pointer"
+                className="flex items-center gap-1 px-2.5 py-1 bg-[#0284c7] hover:bg-[#0369a1] text-white rounded-lg text-xs font-black transition-all shadow-xs cursor-pointer"
               >
                 <LogIn className="w-3.5 h-3.5 text-white" />
                 <span>Iniciar Sesión</span>
@@ -157,27 +157,27 @@ export default function Navbar({
             <button
               onClick={onOpenExportModal}
               title="Administrar Base de Datos y Respaldos"
-              className="flex items-center gap-1 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-bold border border-slate-300 transition-colors shadow-2xs cursor-pointer"
+              className="flex items-center gap-1 px-1.5 sm:px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-bold border border-slate-300 transition-colors shadow-2xs cursor-pointer"
             >
               <Database className="w-3.5 h-3.5 text-[#0284c7]" />
-              <span className="hidden md:inline">Base de Datos</span>
+              <span className="hidden xl:inline text-[11px]">Base de Datos</span>
             </button>
 
             {onPrintMaster && (
               <button
                 onClick={onPrintMaster}
                 title="Generar Reporte Oficial en PDF"
-                className="flex items-center gap-1 px-2.5 py-1.5 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-bold shadow-xs transition-colors cursor-pointer"
+                className="flex items-center gap-1 px-1.5 sm:px-2 py-1 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-bold shadow-xs transition-colors cursor-pointer"
               >
                 <Printer className="w-3.5 h-3.5 text-white" />
-                <span className="hidden sm:inline">PDF</span>
+                <span className="hidden sm:inline text-[11px]">PDF</span>
               </button>
             )}
           </div>
         </div>
 
         {/* Menú de Navegación Móvil y Tablets con Scroll Suave */}
-        <div className="xl:hidden flex items-center gap-1 py-1.5 overflow-x-auto no-scrollbar border-t border-slate-100">
+        <div className="lg:hidden flex items-center gap-1 py-1.5 overflow-x-auto no-scrollbar border-t border-slate-100">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -196,9 +196,17 @@ export default function Navbar({
               </button>
             );
           })}
+          {user && (
+            <button
+              onClick={handleQuickLogout}
+              className="flex items-center gap-1 px-2.5 py-1 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-[11px] font-black uppercase whitespace-nowrap transition-all shrink-0 cursor-pointer shadow-xs ml-auto"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              <span>Cerrar Sesión</span>
+            </button>
+          )}
         </div>
       </div>
     </header>
   );
 }
-

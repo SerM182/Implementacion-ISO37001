@@ -49,10 +49,10 @@ export default function RecordCategoryTabs({
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-        <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+        <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700">
           Clasificación Normativa de Evidencias (Cláusula 7.5)
         </h3>
-        <span className="text-[11px] text-cyan-400 font-mono">
+        <span className="text-[11px] text-[#0284c7] font-mono font-bold">
           {RECORD_CATEGORIES.length} Tipologías Obligatorias AUBASA
         </span>
       </div>
@@ -61,15 +61,17 @@ export default function RecordCategoryTabs({
         {/* Pestaña: Todos */}
         <button
           onClick={() => onSelectCategory('all')}
-          className={`flex flex-col items-center justify-center p-3 rounded-xl border text-center transition-all ${
+          className={`flex flex-col items-center justify-center p-3 rounded-xl border text-center transition-all cursor-pointer ${
             selectedCategory === 'all'
-              ? 'bg-cyan-500/20 border-cyan-400 text-white shadow-[0_0_15px_rgba(6,182,212,0.25)] ring-1 ring-cyan-400'
-              : 'bg-slate-900/80 border-slate-800 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 hover:border-slate-700'
+              ? 'bg-[#0284c7] border-[#0284c7] text-white shadow-sm ring-2 ring-sky-300'
+              : 'bg-white border-slate-200 text-slate-700 hover:text-[#0284c7] hover:bg-slate-50'
           }`}
         >
-          <Layers className="w-5 h-5 mb-1 text-cyan-400" />
+          <Layers className={`w-5 h-5 mb-1 ${selectedCategory === 'all' ? 'text-white' : 'text-[#0284c7]'}`} />
           <span className="text-xs font-bold leading-tight">Todos</span>
-          <span className="mt-1 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-slate-800 text-cyan-300">
+          <span className={`mt-1 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold ${
+            selectedCategory === 'all' ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-800'
+          }`}>
             {totalCount}
           </span>
         </button>
@@ -84,19 +86,19 @@ export default function RecordCategoryTabs({
             <button
               key={cat.id}
               onClick={() => onSelectCategory(cat.id)}
-              className={`flex flex-col items-center justify-center p-2.5 rounded-xl border text-center transition-all relative ${
+              className={`flex flex-col items-center justify-center p-2.5 rounded-xl border text-center transition-all relative cursor-pointer ${
                 isSelected
-                  ? 'bg-slate-800/90 border-cyan-400 text-white shadow-[0_0_15px_rgba(6,182,212,0.2)] ring-1 ring-cyan-400'
-                  : 'bg-slate-900/80 border-slate-800 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 hover:border-slate-700'
+                  ? 'bg-sky-50 border-[#0284c7] text-sky-950 shadow-sm ring-2 ring-sky-300'
+                  : 'bg-white border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50 hover:border-slate-300'
               }`}
             >
-              <IconComponent className={`w-4 h-4 mb-1 ${isSelected ? 'text-cyan-400' : 'text-slate-400'}`} />
+              <IconComponent className={`w-4 h-4 mb-1 ${isSelected ? 'text-[#0284c7]' : 'text-slate-500'}`} />
               <span className="text-[11px] font-bold leading-tight line-clamp-1">
                 {cat.shortName}
               </span>
               <span className="text-[9px] text-slate-500 font-mono mt-0.5">{cat.clausulaIso}</span>
               <span className={`mt-1 px-1.5 py-0.2 rounded-full text-[10px] font-mono font-bold ${
-                isSelected ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30' : 'bg-slate-800 text-slate-400'
+                isSelected ? 'bg-sky-200 text-sky-900 border border-sky-300' : 'bg-slate-100 text-slate-600'
               }`}>
                 {count}
               </span>

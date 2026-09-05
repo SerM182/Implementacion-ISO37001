@@ -14,7 +14,7 @@ export default function RecordsFilterBar({
   totalCount
 }) {
   return (
-    <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 shadow-lg backdrop-blur-sm space-y-3">
+    <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm space-y-3">
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
 
         {/* Barra de búsqueda de texto */}
@@ -25,12 +25,12 @@ export default function RecordsFilterBar({
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Buscar por código, título, responsable, peaje, contratista o cláusula..."
-            className="w-full bg-slate-950/80 border border-slate-800 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 rounded-xl pl-10 pr-9 py-2.5 text-xs text-white placeholder-slate-500 transition-all outline-none"
+            className="w-full bg-slate-50 border border-slate-200 focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 rounded-xl pl-10 pr-9 py-2.5 text-xs text-slate-800 placeholder-slate-400 transition-all outline-none"
           />
           {searchQuery && (
             <button
               onClick={() => onSearchChange('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700"
             >
               <X className="w-4 h-4" />
             </button>
@@ -45,7 +45,7 @@ export default function RecordsFilterBar({
               value={statusFilter}
               onChange={(e) => onStatusFilterChange(e.target.value)}
               aria-label="Filtrar por estado de verificación"
-              className="bg-slate-950/80 border border-slate-800 hover:border-slate-700 text-xs text-slate-300 rounded-xl px-3 py-2.5 outline-none focus:border-cyan-400 cursor-pointer"
+              className="bg-slate-50 border border-slate-200 hover:border-slate-300 text-xs text-slate-700 rounded-xl px-3 py-2.5 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 cursor-pointer"
             >
               <option value="all">Todos los Estados</option>
               <option value="verificado">Verificado / Conforme</option>
@@ -60,7 +60,7 @@ export default function RecordsFilterBar({
               value={isoClauseFilter}
               onChange={(e) => onIsoClauseFilterChange(e.target.value)}
               aria-label="Filtrar por cláusula ISO 37001"
-              className="bg-slate-950/80 border border-slate-800 hover:border-slate-700 text-xs text-slate-300 rounded-xl px-3 py-2.5 outline-none focus:border-cyan-400 cursor-pointer"
+              className="bg-slate-50 border border-slate-200 hover:border-slate-300 text-xs text-slate-700 rounded-xl px-3 py-2.5 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 cursor-pointer"
             >
               <option value="all">Todas las Cláusulas ISO</option>
               <option value="4.5">Cl. 4.5 Evaluación de Riesgos</option>
@@ -89,10 +89,10 @@ export default function RecordsFilterBar({
           {onExportCsv && (
             <button
               onClick={onExportCsv}
-              className="px-3 py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all"
+              className="px-3 py-2.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 hover:text-slate-900 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer"
               title="Exportar registros filtrados a CSV"
             >
-              <Download className="w-3.5 h-3.5 text-cyan-400" />
+              <Download className="w-3.5 h-3.5 text-[#0284c7]" />
               <span className="hidden sm:inline">CSV</span>
             </button>
           )}
@@ -100,7 +100,7 @@ export default function RecordsFilterBar({
           {/* Botón Nuevo Registro */}
           <button
             onClick={onOpenNewRecordModal}
-            className="px-4 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white rounded-xl text-xs font-bold flex items-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98]"
+            className="px-4 py-2.5 bg-[#0284c7] hover:bg-[#0369a1] text-white rounded-xl text-xs font-bold flex items-center gap-2 shadow-sm hover:shadow-md transition-all cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>Cargar Nueva Evidencia</span>
@@ -110,9 +110,9 @@ export default function RecordsFilterBar({
       </div>
 
       {/* Resumen de Resultados */}
-      <div className="flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-800/60 pt-2 px-1">
+      <div className="flex items-center justify-between text-[11px] text-slate-500 border-t border-slate-100 pt-2 px-1">
         <div>
-          Mostrando <strong className="text-white font-mono">{filteredCount}</strong> de <strong className="text-white font-mono">{totalCount}</strong> registros de evidencias auditables
+          Mostrando <strong className="text-slate-900 font-mono font-bold">{filteredCount}</strong> de <strong className="text-slate-900 font-mono font-bold">{totalCount}</strong> registros de evidencias auditables
         </div>
         {(searchQuery || statusFilter !== 'all' || isoClauseFilter !== 'all') && (
           <button
@@ -121,7 +121,7 @@ export default function RecordsFilterBar({
               onStatusFilterChange('all');
               onIsoClauseFilterChange('all');
             }}
-            className="text-cyan-400 hover:underline flex items-center gap-1 text-[11px]"
+            className="text-[#0284c7] hover:underline flex items-center gap-1 text-[11px] font-bold cursor-pointer"
           >
             <X className="w-3 h-3" />
             Limpiar filtros activos

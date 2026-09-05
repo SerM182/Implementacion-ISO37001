@@ -37,6 +37,10 @@ export const supabaseSync = {
       const { data: gapData, error: errGap } = await supabase.from('gap_analysis').select('*');
       if (!errGap && gapData && gapData.length > 0) sgasStorage.saveGapAnalysis(gapData);
 
+      // 7. Usuarios del Sistema SGAS
+      const { data: usersData, error: errUsers } = await supabase.from('app_users').select('*');
+      if (!errUsers && usersData && usersData.length > 0) sgasStorage.saveUsers(usersData);
+
       return {
         success: true,
         data: {
@@ -45,6 +49,7 @@ export const supabaseSync = {
           records: recordsData || [],
           reports: reportsData || [],
           collaborators: collabsData || [],
+          users: usersData || [],
           gapItems: (gapData && gapData.length > 0) ? gapData : null
         }
       };
@@ -87,6 +92,11 @@ export const supabaseSync = {
       const gapItems = sgasStorage.getGapAnalysis();
       if (gapItems.length > 0) {
         await supabase.from('gap_analysis').upsert(gapItems);
+      }
+
+      const users = sgasStorage.getUsers();
+      if (users.length > 0) {
+        await supabase.from('app_users').upsert(users);
       }
 
       return { success: true };
@@ -148,6 +158,24 @@ export const supabaseSync = {
       await supabase.from('gap_analysis').upsert(items);
     } catch (e) {
       console.warn('Auto-sync gap error:', e);
+    }
+  },
+
+  saveUserItem: async (user) => {
+    if (!isSupabaseConfigured() || !supabase) return;
+    try {
+      await supabase.from('app_users').upsert([user]);
+    } catch (e) {
+      console.warn('Auto-sync user error:', e);
+    }
+  },
+
+  deleteUserItem: async (id) => {
+    if (!isSupabaseConfigured() || !supabase) return;
+    try {
+      await supabase.from('app_users').delete().eq('id', id);
+    } catch (e) {
+      console.warn('Auto-sync delete user error:', e);
     }
   }
 };

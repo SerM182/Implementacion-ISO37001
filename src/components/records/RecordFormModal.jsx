@@ -150,25 +150,25 @@ export default function RecordFormModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md overflow-y-auto animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-white/60 backdrop-blur-xs overflow-y-auto animate-fadeIn">
       <div
-        className="bg-slate-900 border border-slate-700/80 rounded-2xl w-full max-w-3xl shadow-2xl overflow-hidden my-8 transform transition-all text-slate-200"
+        className="bg-white border border-slate-200 rounded-2xl w-full max-w-3xl shadow-2xl overflow-hidden my-8 transform transition-all text-slate-800"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Cabecera */}
-        <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 p-6 border-b border-slate-800 flex items-center justify-between">
+        <div className="bg-slate-50 p-6 border-b border-slate-200 flex items-center justify-between">
           <div>
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/60">
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#0369a1] bg-sky-100 px-2 py-0.5 rounded border border-sky-200">
               ISO 37001:2016 — Cláusula 7.5
             </span>
-            <h3 className="text-lg font-bold text-white mt-1">
+            <h3 className="text-lg font-bold text-slate-900 mt-1">
               {initialRecord ? 'Editar Registro de Evidencia' : 'Cargar Nueva Evidencia de Cumplimiento'}
             </h3>
           </div>
           <button
             onClick={onClose}
             aria-label="Cerrar modal"
-            className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+            className="p-1.5 text-slate-600 hover:text-slate-700 hover:bg-slate-200 rounded-lg transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -180,13 +180,13 @@ export default function RecordFormModal({
           {/* Fila 1: Tipología & Cláusula */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-slate-300 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
+              <label className="block text-slate-700 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
                 Tipología de Evidencia *
               </label>
               <select
                 value={formData.tipoRegistro}
                 onChange={handleCategoryChange}
-                className="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400"
+                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
               >
                 {RECORD_CATEGORIES.map(cat => (
                   <option key={cat.id} value={cat.id}>
@@ -197,7 +197,7 @@ export default function RecordFormModal({
             </div>
 
             <div>
-              <label className="block text-slate-300 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
+              <label className="block text-slate-700 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
                 Cláusula ISO 37001 Requisito
               </label>
               <input
@@ -205,14 +205,14 @@ export default function RecordFormModal({
                 value={formData.clausulaIso}
                 onChange={(e) => setFormData({ ...formData, clausulaIso: e.target.value })}
                 placeholder="Ej. Cl. 8.4"
-                className="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white font-mono outline-none focus:border-cyan-400"
+                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-800 font-mono outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
               />
             </div>
           </div>
 
           {/* Fila 2: Título de la Evidencia */}
           <div>
-            <label className="block text-slate-300 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
+            <label className="block text-slate-700 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
               Título Oficial de la Evidencia / Registro *
             </label>
             <input
@@ -220,8 +220,8 @@ export default function RecordFormModal({
               value={formData.titulo}
               onChange={(e) => setFormData({ ...formData, titulo: e.target.value })}
               placeholder="Ej. Acta de Ensayo de Probetas Asfálticas Tramo Autovía 2 Km 180"
-              className={`w-full bg-slate-950 border rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 ${
-                errors.titulo ? 'border-rose-500' : 'border-slate-700'
+              className={`w-full bg-white border rounded-xl p-2.5 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 ${
+                errors.titulo ? 'border-rose-500' : 'border-slate-300'
               }`}
             />
             {errors.titulo && <span className="text-rose-400 text-[10px] mt-1 block">{errors.titulo}</span>}
@@ -230,19 +230,19 @@ export default function RecordFormModal({
           {/* Fila 3: Fecha, Ubicación, Responsable, Estado */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             <div>
-              <label className="block text-slate-300 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
+              <label className="block text-slate-700 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
                 Fecha de Emisión *
               </label>
               <input
                 type="date"
                 value={formData.fecha}
                 onChange={(e) => setFormData({ ...formData, fecha: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white font-mono outline-none focus:border-cyan-400"
+                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-800 font-mono outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
               />
             </div>
 
             <div>
-              <label className="block text-slate-300 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
+              <label className="block text-slate-700 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
                 Ubicación / Área *
               </label>
               <input
@@ -250,15 +250,15 @@ export default function RecordFormModal({
                 value={formData.areaUbicacion}
                 onChange={(e) => setFormData({ ...formData, areaUbicacion: e.target.value })}
                 placeholder="Ej. Peaje Dock Sud / Peaje Hudson / Obras BALP"
-                className={`w-full bg-slate-950 border rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 ${
-                  errors.areaUbicacion ? 'border-rose-500' : 'border-slate-700'
+                className={`w-full bg-white border rounded-xl p-2.5 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 ${
+                  errors.areaUbicacion ? 'border-rose-500' : 'border-slate-300'
                 }`}
               />
               {errors.areaUbicacion && <span className="text-rose-400 text-[10px] mt-1 block">{errors.areaUbicacion}</span>}
             </div>
 
             <div>
-              <label className="block text-slate-300 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
+              <label className="block text-slate-700 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
                 Responsable *
               </label>
               <input
@@ -266,21 +266,21 @@ export default function RecordFormModal({
                 value={formData.responsable}
                 onChange={(e) => setFormData({ ...formData, responsable: e.target.value })}
                 placeholder="Ej. Ing. Martín Ramos"
-                className={`w-full bg-slate-950 border rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 ${
-                  errors.responsable ? 'border-rose-500' : 'border-slate-700'
+                className={`w-full bg-white border rounded-xl p-2.5 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 ${
+                  errors.responsable ? 'border-rose-500' : 'border-slate-300'
                 }`}
               />
               {errors.responsable && <span className="text-rose-400 text-[10px] mt-1 block">{errors.responsable}</span>}
             </div>
 
             <div>
-              <label className="block text-slate-300 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
+              <label className="block text-slate-700 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
                 Estado Verificación
               </label>
               <select
                 value={formData.estadoVerificacion}
                 onChange={(e) => setFormData({ ...formData, estadoVerificacion: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400"
+                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
               >
                 <option value="verificado">Verificado / Conforme</option>
                 <option value="en_revision">En Revisión Técnica</option>
@@ -291,7 +291,7 @@ export default function RecordFormModal({
 
           {/* Fila 4: Resumen de Hechos / Evidencias */}
           <div>
-            <label className="block text-slate-300 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
+            <label className="block text-slate-700 font-bold mb-1.5 uppercase text-[10px] tracking-wider">
               Resumen de la Evidencia & Hechos Documentados *
             </label>
             <textarea
@@ -299,16 +299,16 @@ export default function RecordFormModal({
               value={formData.resumenEvidencia}
               onChange={(e) => setFormData({ ...formData, resumenEvidencia: e.target.value })}
               placeholder="Describa de forma clara y auditable los hechos, hallazgos, resultados técnicos y controles antisoborno verificados..."
-              className={`w-full bg-slate-950 border rounded-xl p-3 text-white outline-none focus:border-cyan-400 leading-relaxed ${
-                errors.resumenEvidencia ? 'border-rose-500' : 'border-slate-700'
+              className={`w-full bg-white border rounded-xl p-3 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 leading-relaxed ${
+                errors.resumenEvidencia ? 'border-rose-500' : 'border-slate-300'
               }`}
             />
             {errors.resumenEvidencia && <span className="text-rose-400 text-[10px] mt-1 block">{errors.resumenEvidencia}</span>}
           </div>
 
           {/* Fila 5: Parámetros Técnicos Específicos por Tipo */}
-          <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800 space-y-3">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 block">
+          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 block">
               Parámetros y Métricas de Control para esta Tipología
             </span>
 
@@ -316,33 +316,33 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'capacitacion' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Asistencia (%)</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Asistencia (%)</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.asistenciaPorcentaje || ''}
                     onChange={(e) => handleMetadataChange('asistenciaPorcentaje', e.target.value)}
                     placeholder="Ej. 98%"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Horas de Capacitación</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Horas de Capacitación</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.horasCapacitacion || ''}
                     onChange={(e) => handleMetadataChange('horasCapacitacion', e.target.value)}
                     placeholder="Ej. 16 hs"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Evaluación de Eficacia</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Evaluación de Eficacia</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.evaluacionEficaciaPromedio || ''}
                     onChange={(e) => handleMetadataChange('evaluacionEficaciaPromedio', e.target.value)}
                     placeholder="Ej. 9.4/10"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
               </div>
@@ -351,31 +351,31 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'conflicto_interes' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Declarante</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Declarante</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.declarante || ''}
                     onChange={(e) => handleMetadataChange('declarante', e.target.value)}
                     placeholder="Nombre completo"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Cargo / Función</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Cargo / Función</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.cargo || ''}
                     onChange={(e) => handleMetadataChange('cargo', e.target.value)}
                     placeholder="Ej. Miembro Comisión Evaluadora"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">¿Declara Conflicto?</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">¿Declara Conflicto?</label>
                   <select
                     value={formData.metadatosEspecificos.poseeConflicto === false ? 'No' : (formData.metadatosEspecificos.poseeConflicto === true ? 'Sí' : 'No')}
                     onChange={(e) => handleMetadataChange('poseeConflicto', e.target.value === 'Sí')}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   >
                     <option value="No">No declara conflictos</option>
                     <option value="Sí">Sí, declara potenciales vínculos</option>
@@ -387,33 +387,33 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'regalos' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Remitente / Proveedor</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Remitente / Proveedor</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.remitente || ''}
                     onChange={(e) => handleMetadataChange('remitente', e.target.value)}
                     placeholder="Ej. VialConstrucciones S.A."
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Valor Estimado (USD)</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Valor Estimado (USD)</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.valorEstimadoUsd || ''}
                     onChange={(e) => handleMetadataChange('valorEstimadoUsd', e.target.value)}
                     placeholder="Ej. USD 150"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Decisión Oficial Cumplimiento</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Decisión Oficial Cumplimiento</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.decisionOficialCumplimiento || ''}
                     onChange={(e) => handleMetadataChange('decisionOficialCumplimiento', e.target.value)}
                     placeholder="Ej. Rechazado y devuelto con acta"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
               </div>
@@ -422,31 +422,31 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'auditoria' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Equipo Auditor</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Equipo Auditor</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.equipoAuditor || ''}
                     onChange={(e) => handleMetadataChange('equipoAuditor', e.target.value)}
                     placeholder="Ej. Auditoría Interna AUBASA"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Hallazgos Mayores</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Hallazgos Mayores</label>
                   <input
                     type="number"
                     value={formData.metadatosEspecificos.hallazgosMayores ?? 0}
                     onChange={(e) => handleMetadataChange('hallazgosMayores', parseInt(e.target.value) || 0)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Hallazgos Menores</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Hallazgos Menores</label>
                   <input
                     type="number"
                     value={formData.metadatosEspecificos.hallazgosMenores ?? 0}
                     onChange={(e) => handleMetadataChange('hallazgosMenores', parseInt(e.target.value) || 0)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
               </div>
@@ -455,23 +455,23 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'no_conformidad' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Causa Raíz Identificada</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Causa Raíz Identificada</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.causaRaiz || ''}
                     onChange={(e) => handleMetadataChange('causaRaiz', e.target.value)}
                     placeholder="Ej. Falta de verificación cruzada"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Acción Inmediata Implementada</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Acción Inmediata Implementada</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.accionInmediata || ''}
                     onChange={(e) => handleMetadataChange('accionInmediata', e.target.value)}
                     placeholder="Ej. Bloqueo de proveedor y revisión técnica"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
               </div>
@@ -480,33 +480,33 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'integridad_terceros' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Contratista / Razón Social</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Contratista / Razón Social</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.contratista || ''}
                     onChange={(e) => handleMetadataChange('contratista', e.target.value)}
                     placeholder="Ej. Pavimentos del Plata S.A."
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">CUIT</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">CUIT</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.cuit || ''}
                     onChange={(e) => handleMetadataChange('cuit', e.target.value)}
                     placeholder="Ej. 30-71458923-8"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white font-mono"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 font-mono"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Licitación Vinculada</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Licitación Vinculada</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.licitacionVinculada || ''}
                     onChange={(e) => handleMetadataChange('licitacionVinculada', e.target.value)}
                     placeholder="Ej. LP N° 04/2026"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white font-mono"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 font-mono"
                   />
                 </div>
               </div>
@@ -515,33 +515,33 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'controles_financieros' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Proveedor / Beneficiario</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Proveedor / Beneficiario</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.proveedorBeneficiario || ''}
                     onChange={(e) => handleMetadataChange('proveedorBeneficiario', e.target.value)}
                     placeholder="Ej. Vial Construcciones S.A."
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Monto Transferido (ARS)</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Monto Transferido (ARS)</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.montoTransferidoArs || ''}
                     onChange={(e) => handleMetadataChange('montoTransferidoArs', e.target.value)}
                     placeholder="Ej. $48.500.000"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Doble Firma Electrónica</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Doble Firma Electrónica</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.verificacionDobleFirma || ''}
                     onChange={(e) => handleMetadataChange('verificacionDobleFirma', e.target.value)}
                     placeholder="Ej. Token Finanzas + Token Directorio"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
               </div>
@@ -550,33 +550,33 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'ensayo_asfalto' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Laboratorio de Ensayo</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Laboratorio de Ensayo</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.laboratorio || ''}
                     onChange={(e) => handleMetadataChange('laboratorio', e.target.value)}
                     placeholder="Ej. LEMIT / CIC"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Densidad Marshall Obtenida</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Densidad Marshall Obtenida</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.densidadObtenida || ''}
                     onChange={(e) => handleMetadataChange('densidadObtenida', e.target.value)}
                     placeholder="Ej. 98.6% (Exigido >= 97%)"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Espesor Capa Rodamiento</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Espesor Capa Rodamiento</label>
                   <input
                     type="text"
                     value={formData.metadatosEspecificos.espesorCapa || ''}
                     onChange={(e) => handleMetadataChange('espesorCapa', e.target.value)}
                     placeholder="Ej. 52 mm (Pliego: 50 mm)"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white"
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
               </div>
@@ -585,36 +585,36 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'evaluacion_riesgo' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Metodología</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Metodología</label>
                   <input type="text" value={formData.metadatosEspecificos.metodologia || ''}
                     onChange={(e) => handleMetadataChange('metodologia', e.target.value)}
                     placeholder="Ej. ISO 31000 / Matriz 5x5"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Escenarios Identificados</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Escenarios Identificados</label>
                   <input type="number" value={formData.metadatosEspecificos.escenariosIdentificados ?? ''}
                     onChange={(e) => handleMetadataChange('escenariosIdentificados', parseInt(e.target.value) || 0)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Riesgos Críticos</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Riesgos Críticos</label>
                   <input type="number" value={formData.metadatosEspecificos.riesgosCriticos ?? ''}
                     onChange={(e) => handleMetadataChange('riesgosCriticos', parseInt(e.target.value) || 0)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Riesgo Residual</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Riesgo Residual</label>
                   <input type="text" value={formData.metadatosEspecificos.riesgoResidual || ''}
                     onChange={(e) => handleMetadataChange('riesgoResidual', e.target.value)}
                     placeholder="Ej. Medio (controlado)"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Próxima Revisión</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Próxima Revisión</label>
                   <input type="date" value={formData.metadatosEspecificos.proximaRevision || ''}
                     onChange={(e) => handleMetadataChange('proximaRevision', e.target.value)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
               </div>
             )}
@@ -622,41 +622,41 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'debida_diligencia' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Razón Social</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Razón Social</label>
                   <input type="text" value={formData.metadatosEspecificos.razonSocial || ''}
                     onChange={(e) => handleMetadataChange('razonSocial', e.target.value)}
                     placeholder="Ej. UTE Pavimentos Bonaerenses"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">CUIT</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">CUIT</label>
                   <input type="text" value={formData.metadatosEspecificos.cuit || ''}
                     onChange={(e) => handleMetadataChange('cuit', e.target.value)}
                     placeholder="Ej. 30-71889922-4"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white font-mono" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 font-mono" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Puntaje DD (0-100)</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Puntaje DD (0-100)</label>
                   <input type="number" value={formData.metadatosEspecificos.puntajeDD ?? ''}
                     onChange={(e) => handleMetadataChange('puntajeDD', parseInt(e.target.value) || 0)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Nivel de Riesgo</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Nivel de Riesgo</label>
                   <select value={formData.metadatosEspecificos.nivelRiesgo || 'Bajo'}
                     onChange={(e) => handleMetadataChange('nivelRiesgo', e.target.value)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white">
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200">
                     <option value="Bajo">Bajo</option>
                     <option value="Medio">Medio</option>
                     <option value="Alto">Alto</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Screening PEP</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Screening PEP</label>
                   <input type="text" value={formData.metadatosEspecificos.screeningPEP || ''}
                     onChange={(e) => handleMetadataChange('screeningPEP', e.target.value)}
                     placeholder="Ej. Sin coincidencias"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
               </div>
             )}
@@ -664,34 +664,34 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'canal_etico' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Nº de Caso</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Nº de Caso</label>
                   <input type="text" value={formData.metadatosEspecificos.numeroCaso || ''}
                     onChange={(e) => handleMetadataChange('numeroCaso', e.target.value)}
                     placeholder="Ej. CASO-2026-014"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white font-mono" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 font-mono" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Canal de Recepción</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Canal de Recepción</label>
                   <input type="text" value={formData.metadatosEspecificos.canalRecepcion || ''}
                     onChange={(e) => handleMetadataChange('canalRecepcion', e.target.value)}
                     placeholder="Ej. Portal Web cifrado"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">¿Anónima?</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">¿Anónima?</label>
                   <select value={formData.metadatosEspecificos.anonima === false ? 'No' : (formData.metadatosEspecificos.anonima === true ? 'Sí' : 'Sí')}
                     onChange={(e) => handleMetadataChange('anonima', e.target.value === 'Sí')}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white">
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200">
                     <option value="Sí">Sí</option>
                     <option value="No">No</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Estado de Triaje</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Estado de Triaje</label>
                   <input type="text" value={formData.metadatosEspecificos.estadoTriage || ''}
                     onChange={(e) => handleMetadataChange('estadoTriage', e.target.value)}
                     placeholder="Ej. Admisible"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
               </div>
             )}
@@ -699,31 +699,31 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'investigacion' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Nº de Caso</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Nº de Caso</label>
                   <input type="text" value={formData.metadatosEspecificos.numeroCaso || ''}
                     onChange={(e) => handleMetadataChange('numeroCaso', e.target.value)}
                     placeholder="Ej. CASO-2026-009"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white font-mono" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 font-mono" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Conclusión</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Conclusión</label>
                   <input type="text" value={formData.metadatosEspecificos.conclusion || ''}
                     onChange={(e) => handleMetadataChange('conclusion', e.target.value)}
                     placeholder="Ej. Soborno comprobado"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Medida Disciplinaria</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Medida Disciplinaria</label>
                   <input type="text" value={formData.metadatosEspecificos.medidaDisciplinaria || ''}
                     onChange={(e) => handleMetadataChange('medidaDisciplinaria', e.target.value)}
                     placeholder="Ej. Despido con causa"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">¿Denuncia Penal?</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">¿Denuncia Penal?</label>
                   <select value={formData.metadatosEspecificos.denunciaPenal === false ? 'No' : (formData.metadatosEspecificos.denunciaPenal === true ? 'Sí' : 'No')}
                     onChange={(e) => handleMetadataChange('denunciaPenal', e.target.value === 'Sí')}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white">
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200">
                     <option value="No">No</option>
                     <option value="Sí">Sí</option>
                   </select>
@@ -734,32 +734,32 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'objetivos' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Objetivo</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Objetivo</label>
                   <input type="text" value={formData.metadatosEspecificos.objetivo || ''}
                     onChange={(e) => handleMetadataChange('objetivo', e.target.value)}
                     placeholder="Ej. 100% contratos con cláusula"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Indicador (KPI)</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Indicador (KPI)</label>
                   <input type="text" value={formData.metadatosEspecificos.indicadorKpi || ''}
                     onChange={(e) => handleMetadataChange('indicadorKpi', e.target.value)}
                     placeholder="Ej. % pliegos con CLA-SGAS-01"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Meta Anual</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Meta Anual</label>
                   <input type="text" value={formData.metadatosEspecificos.metaAnual || ''}
                     onChange={(e) => handleMetadataChange('metaAnual', e.target.value)}
                     placeholder="Ej. 100%"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Valor Actual</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Valor Actual</label>
                   <input type="text" value={formData.metadatosEspecificos.valorActual || ''}
                     onChange={(e) => handleMetadataChange('valorActual', e.target.value)}
                     placeholder="Ej. 96%"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
               </div>
             )}
@@ -767,32 +767,32 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'comunicacion' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Canal</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Canal</label>
                   <input type="text" value={formData.metadatosEspecificos.canal || ''}
                     onChange={(e) => handleMetadataChange('canal', e.target.value)}
                     placeholder="Ej. Cartelería e intranet"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Audiencia</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Audiencia</label>
                   <input type="text" value={formData.metadatosEspecificos.audiencia || ''}
                     onChange={(e) => handleMetadataChange('audiencia', e.target.value)}
                     placeholder="Ej. Personal de peaje"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Alcance</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Alcance</label>
                   <input type="text" value={formData.metadatosEspecificos.alcance || ''}
                     onChange={(e) => handleMetadataChange('alcance', e.target.value)}
                     placeholder="Ej. 4 estaciones troncales"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Medio de Verificación</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Medio de Verificación</label>
                   <input type="text" value={formData.metadatosEspecificos.medioVerificacion || ''}
                     onChange={(e) => handleMetadataChange('medioVerificacion', e.target.value)}
                     placeholder="Ej. Acta de distribución firmada"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
               </div>
             )}
@@ -800,30 +800,30 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'revision_cumplimiento' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Periodo</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Periodo</label>
                   <input type="text" value={formData.metadatosEspecificos.periodo || ''}
                     onChange={(e) => handleMetadataChange('periodo', e.target.value)}
                     placeholder="Ej. 1er Semestre 2026"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Conclusión General</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Conclusión General</label>
                   <input type="text" value={formData.metadatosEspecificos.conclusionGeneral || ''}
                     onChange={(e) => handleMetadataChange('conclusionGeneral', e.target.value)}
                     placeholder="Ej. SGAS eficaz"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Recomendaciones</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Recomendaciones</label>
                   <input type="number" value={formData.metadatosEspecificos.recomendaciones ?? ''}
                     onChange={(e) => handleMetadataChange('recomendaciones', parseInt(e.target.value) || 0)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">¿Presentado a Directorio?</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">¿Presentado a Directorio?</label>
                   <select value={formData.metadatosEspecificos.presentadoADirectorio === false ? 'No' : (formData.metadatosEspecificos.presentadoADirectorio === true ? 'Sí' : 'Sí')}
                     onChange={(e) => handleMetadataChange('presentadoADirectorio', e.target.value === 'Sí')}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white">
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200">
                     <option value="Sí">Sí</option>
                     <option value="No">No</option>
                   </select>
@@ -834,31 +834,31 @@ export default function RecordFormModal({
             {formData.tipoRegistro === 'seguimiento_medicion' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Periodo</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Periodo</label>
                   <input type="text" value={formData.metadatosEspecificos.periodo || ''}
                     onChange={(e) => handleMetadataChange('periodo', e.target.value)}
                     placeholder="Ej. Q2 2026"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">KPIs Monitoreados</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">KPIs Monitoreados</label>
                   <input type="number" value={formData.metadatosEspecificos.kpisMonitoreados ?? ''}
                     onChange={(e) => handleMetadataChange('kpisMonitoreados', parseInt(e.target.value) || 0)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Tendencia de Denuncias</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Tendencia de Denuncias</label>
                   <input type="text" value={formData.metadatosEspecificos.tendenciaDenuncias || ''}
                     onChange={(e) => handleMetadataChange('tendenciaDenuncias', e.target.value)}
                     placeholder="Ej. Estable"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
-                  <label className="block text-slate-400 text-[10px] mb-1">Efectividad de Controles</label>
+                  <label className="block text-slate-600 text-[10px] mb-1">Efectividad de Controles</label>
                   <input type="text" value={formData.metadatosEspecificos.efectividadControles || ''}
                     onChange={(e) => handleMetadataChange('efectividadControles', e.target.value)}
                     placeholder="Ej. En alza (89%)"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white" />
+                    className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
               </div>
             )}
@@ -866,7 +866,7 @@ export default function RecordFormModal({
 
           {/* Fila 6: Documentos y Archivos de Respaldo */}
           <div className="space-y-2">
-            <label className="block text-slate-300 font-bold uppercase text-[10px] tracking-wider">
+            <label className="block text-slate-700 font-bold uppercase text-[10px] tracking-wider">
               Legajos & Archivos de Respaldo (Trazabilidad Inmutable)
             </label>
             <div className="flex gap-2">
@@ -875,7 +875,7 @@ export default function RecordFormModal({
                 value={newDocName}
                 onChange={(e) => setNewDocName(e.target.value)}
                 placeholder="Nombre del documento oficial (ej. Informe_Ensayo_LEMIT_092.pdf)"
-                className="flex-1 bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400"
+                className="flex-1 bg-white border border-slate-300 rounded-xl p-2.5 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200"
               />
               <button
                 type="button"
@@ -893,12 +893,12 @@ export default function RecordFormModal({
                 {formData.documentosAdjuntos.map((doc, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center justify-between p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-xs"
+                    className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200 text-xs"
                   >
                     <div className="flex items-center gap-2">
-                      <FileSpreadsheet className="w-3.5 h-3.5 text-cyan-400" />
-                      <span className="text-slate-200">{doc.nombre}</span>
-                      <span className="text-[9px] text-slate-500 font-mono bg-slate-900 px-1.5 py-0.5 rounded">
+                      <FileSpreadsheet className="w-3.5 h-3.5 text-[#0284c7]" />
+                      <span className="text-slate-800">{doc.nombre}</span>
+                      <span className="text-[9px] text-slate-500 font-mono bg-white border border-slate-200 px-1.5 py-0.5 rounded">
                         {doc.hash}
                       </span>
                     </div>
@@ -918,18 +918,18 @@ export default function RecordFormModal({
         </form>
 
         {/* Footer */}
-        <div className="bg-slate-950/80 p-4 px-6 border-t border-slate-800 flex items-center justify-end gap-3">
+        <div className="bg-slate-50 p-4 px-6 border-t border-slate-200 flex items-center justify-end gap-3">
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl text-xs font-bold transition-colors"
+            className="px-4 py-2 bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 hover:text-slate-900 rounded-xl text-xs font-bold transition-colors"
           >
             Cancelar
           </button>
           <button
             type="button"
             onClick={handleSubmit}
-            className="px-5 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white rounded-xl text-xs font-bold flex items-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all"
+            className="px-5 py-2 bg-[#0284c7] hover:bg-[#0369a1] text-white rounded-xl text-xs font-bold flex items-center gap-2 shadow-sm transition-all"
           >
             <Save className="w-4 h-4" />
             <span>Guardar Registro Auditable</span>

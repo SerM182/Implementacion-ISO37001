@@ -14,6 +14,7 @@ import TrainingSuiteView from './components/training/TrainingSuiteView.jsx';
 import PolicySuiteView from './components/policyBuilder/PolicySuiteView.jsx';
 import GapAnalysisView from './components/gapAnalysis/GapAnalysisView.jsx';
 import RedFlagsRadarView from './components/redFlags/RedFlagsRadarView.jsx';
+import UsersManagementView from './components/users/UsersManagementView.jsx';
 
 import ExportImportModal from './components/common/ExportImportModal.jsx';
 import MasterPrintReport from './components/print/MasterPrintReport.jsx';
@@ -25,7 +26,7 @@ import { RED_FLAGS_CATALOG } from './data/initialRedFlagsData.js';
 
 function AppContent() {
   const { user, loading } = useAuth();
-  const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard' | 'advisor' | 'risks' | 'dueDiligence' | 'records' | 'policies' | 'gapAnalysis' | 'redFlags'
+  const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard' | 'advisor' | 'risks' | 'dueDiligence' | 'records' | 'policies' | 'gapAnalysis' | 'redFlags' | 'users'
 
   // Estados reactivos cargados desde storage
   const [risks, setRisks] = useState(() => sgasStorage.getRisks());
@@ -37,6 +38,7 @@ function AppContent() {
   const [records, setRecords] = useState(() => sgasStorage.getRecords());
   const [trainingPlan, setTrainingPlan] = useState(() => sgasStorage.getTrainingPlan());
   const [collaborators, setCollaborators] = useState(() => sgasStorage.getCollaborators());
+  const [users, setUsers] = useState(() => sgasStorage.getUsers());
   const [redFlags] = useState(RED_FLAGS_CATALOG);
 
   // Modales globales
@@ -54,6 +56,7 @@ function AppContent() {
           if (res.data.records) setRecords(res.data.records);
           if (res.data.reports) setReports(res.data.reports);
           if (res.data.collaborators) setCollaborators(res.data.collaborators);
+          if (res.data.users && res.data.users.length > 0) setUsers(res.data.users);
           if (res.data.gapItems && res.data.gapItems.length > 0) setGapItems(res.data.gapItems);
         }
       }).catch(err => {
@@ -127,6 +130,34 @@ function AppContent() {
     sgasStorage.saveTrainingPlan(newPlan);
   };
 
+  // Handlers para Usuarios del Sistema
+  const handleAddUser = (newUser) => {
+    const nextList = [newUser, ...users];
+    setUsers(nextList);
+    sgasStorage.saveUsers(nextList);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.saveUserItem(newUser);
+    }
+  };
+
+  const handleUpdateUser = (updatedUser) => {
+    const nextList = users.map(u => u.id === updatedUser.id ? updatedUser : u);
+    setUsers(nextList);
+    sgasStorage.saveUsers(nextList);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.saveUserItem(updatedUser);
+    }
+  };
+
+  const handleDeleteUser = (userId) => {
+    const nextList = users.filter(u => u.id !== userId);
+    setUsers(nextList);
+    sgasStorage.saveUsers(nextList);
+    if (supabaseSync.isConnected()) {
+      supabaseSync.deleteUserItem(userId);
+    }
+  };
+
   // Handlers para Registros y Evidencias (Cl. 7.5) con guardado reactivo a Supabase
   const handleAddRecord = (newRecord) => {
     const nextList = [newRecord, ...records];
@@ -165,6 +196,7 @@ function AppContent() {
     setRecords(sgasStorage.getRecords());
     setTrainingPlan(sgasStorage.getTrainingPlan());
     setCollaborators(sgasStorage.getCollaborators());
+    setUsers(sgasStorage.getUsers());
   };
 
   // 1. Pantalla de Carga Inicial
@@ -186,8 +218,8 @@ function AppContent() {
 
   return (
     <div className="min-h-screen bg-[#e9eef3] text-slate-800 flex flex-col selection:bg-sky-500 selection:text-white font-sans antialiased">
-      {/* Contenedor Superior con Sombra de Hoja/Página Moderna */}
-      <div className="w-full max-w-[1400px] mx-auto my-0 sm:my-3 bg-white shadow-2xl rounded-none sm:rounded-2xl overflow-hidden border border-slate-200/80 flex flex-col min-h-[96vh]">
+      {/* Contenedor Superior con Sombra de Hoja/Página Moderna y Ancho Completo Flexible */}
+      <div className="w-full max-w-full 2xl:max-w-[1680px] mx-auto my-0 sm:my-2 bg-white shadow-xl rounded-none sm:rounded-xl border border-slate-200/80 flex flex-col min-h-[98vh] overflow-x-hidden">
         {/* Navbar Superior Blanco Mejorado */}
         <Navbar
           activeTab={activeTab}
@@ -210,7 +242,7 @@ function AppContent() {
         />
 
         {/* Contenedor Principal de la Vista Activa */}
-        <main className="flex-1 w-full p-4 sm:p-6 lg:p-8 bg-[#f8fafc]">
+        <main className="flex-1 w-full p-3 sm:p-5 lg:p-6 bg-[#f8fafc]">
           {activeTab === 'dashboard' && (
             <ExecutiveDashboard
               roadmapPhases={roadmapPhases}
@@ -289,6 +321,15 @@ function AppContent() {
               whistleblowingReports={reports}
               onUpdateReports={handleUpdateReports}
               onCreateReport={handleCreateReport}
+            />
+          )}
+
+          {activeTab === 'users' && (
+            <UsersManagementView
+              users={users}
+              onAddUser={handleAddUser}
+              onUpdateUser={handleUpdateUser}
+              onDeleteUser={handleDeleteUser}
             />
           )}
         </main>

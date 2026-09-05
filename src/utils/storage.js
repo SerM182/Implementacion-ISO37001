@@ -10,6 +10,7 @@ import { INITIAL_WHISTLEBLOWING_REPORTS } from '../data/initialWhistleblowingDat
 import { INITIAL_ROADMAP_PHASES } from '../data/initialRoadmapData.js';
 import { INITIAL_RECORDS_DATA } from '../data/initialRecordsData.js';
 import { TRAINING_PLAN_OVERVIEW, INITIAL_COLLABORATORS_PROGRESS } from '../data/initialTrainingData.js';
+import { INITIAL_USERS_DATA } from '../data/initialUsersData.js';
 
 // Claves de localStorage
 const STORAGE_KEYS = {
@@ -23,6 +24,7 @@ const STORAGE_KEYS = {
   RECORDS: 'aubasa_sgas_records_v1',
   TRAINING_PLAN: 'aubasa_sgas_training_plan_v1',
   TRAINING_COLLABORATORS: 'aubasa_sgas_training_collabs_v1',
+  USERS: 'aubasa_sgas_users_v1',
   CERTIFICATES: 'aubasa_sgas_certificates_v1',
   CUSTOM_SETTINGS: 'aubasa_sgas_settings_v1'
 };
@@ -105,6 +107,10 @@ export const sgasStorage = {
   getCollaborators: () => safeGet(STORAGE_KEYS.TRAINING_COLLABORATORS, []),
   saveCollaborators: (data) => safeSet(STORAGE_KEYS.TRAINING_COLLABORATORS, data),
 
+  // Usuarios y Equipo del SGAS (Incluye el padrón inicial de 5 miembros del equipo AUBASA)
+  getUsers: () => safeGet(STORAGE_KEYS.USERS, INITIAL_USERS_DATA),
+  saveUsers: (data) => safeSet(STORAGE_KEYS.USERS, data),
+
   getCertificates: () => safeGet(STORAGE_KEYS.CERTIFICATES, []),
   saveCertificates: (data) => safeSet(STORAGE_KEYS.CERTIFICATES, data),
 
@@ -122,6 +128,7 @@ export const sgasStorage = {
       safeSet(STORAGE_KEYS.WHISTLEBLOWING, []);
       safeSet(STORAGE_KEYS.RECORDS, []);
       safeSet(STORAGE_KEYS.TRAINING_COLLABORATORS, []);
+      safeSet(STORAGE_KEYS.USERS, INITIAL_USERS_DATA);
       safeSet(STORAGE_KEYS.CERTIFICATES, []);
       safeSet(STORAGE_KEYS.GAP_ANALYSIS, CLEAN_GAP_ANALYSIS);
       safeSet(STORAGE_KEYS.POLICIES, INITIAL_POLICY_TEMPLATES);
@@ -147,6 +154,7 @@ export const sgasStorage = {
       safeSet(STORAGE_KEYS.RECORDS, INITIAL_RECORDS_DATA);
       safeSet(STORAGE_KEYS.TRAINING_PLAN, TRAINING_PLAN_OVERVIEW);
       safeSet(STORAGE_KEYS.TRAINING_COLLABORATORS, INITIAL_COLLABORATORS_PROGRESS);
+      safeSet(STORAGE_KEYS.USERS, INITIAL_USERS_DATA);
       safeSet(STORAGE_KEYS.CERTIFICATES, []);
       return true;
     } catch (e) {
@@ -177,6 +185,7 @@ export const sgasStorage = {
     records: sgasStorage.getRecords(),
     trainingPlan: sgasStorage.getTrainingPlan(),
     collaborators: sgasStorage.getCollaborators(),
+    users: sgasStorage.getUsers(),
     certificates: sgasStorage.getCertificates()
   }),
 
@@ -192,6 +201,7 @@ export const sgasStorage = {
     if (bundle.records) sgasStorage.saveRecords(bundle.records);
     if (bundle.trainingPlan) sgasStorage.saveTrainingPlan(bundle.trainingPlan);
     if (bundle.collaborators) sgasStorage.saveCollaborators(bundle.collaborators);
+    if (bundle.users) sgasStorage.saveUsers(bundle.users);
     if (bundle.certificates) sgasStorage.saveCertificates(bundle.certificates);
     return true;
   }

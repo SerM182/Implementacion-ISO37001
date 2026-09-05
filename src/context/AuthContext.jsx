@@ -17,7 +17,21 @@ export function AuthProvider({ children }) {
     // 1. Obtener sesión actual de Supabase
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
-      setUser(session?.user ?? null);
+      const currentUser = session?.user ?? null;
+      setUser(currentUser);
+      // Auto-asegurar permisos Master Admin para sgiaubasa@gmail.com
+      if (currentUser && currentUser.email?.toLowerCase().includes('sgiaubasa')) {
+        if (!currentUser.user_metadata?.isAdmin || currentUser.user_metadata?.role !== 'Administrador General SGAS') {
+          supabase.auth.updateUser({
+            data: {
+              role: 'Administrador General SGAS',
+              isAdmin: true,
+              permissions: 'full_admin_access',
+              area: 'Dirección General & Gerencia de Cumplimiento AUBASA'
+            }
+          }).catch(() => {});
+        }
+      }
       setLoading(false);
     }).catch(err => {
       console.error('Error al recuperar sesión de Supabase:', err);
@@ -27,7 +41,20 @@ export function AuthProvider({ children }) {
     // 2. Escuchar cambios de autenticación
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
-      setUser(session?.user ?? null);
+      const currentUser = session?.user ?? null;
+      setUser(currentUser);
+      if (currentUser && currentUser.email?.toLowerCase().includes('sgiaubasa')) {
+        if (!currentUser.user_metadata?.isAdmin || currentUser.user_metadata?.role !== 'Administrador General SGAS') {
+          supabase.auth.updateUser({
+            data: {
+              role: 'Administrador General SGAS',
+              isAdmin: true,
+              permissions: 'full_admin_access',
+              area: 'Dirección General & Gerencia de Cumplimiento AUBASA'
+            }
+          }).catch(() => {});
+        }
+      }
       setLoading(false);
     });
 
