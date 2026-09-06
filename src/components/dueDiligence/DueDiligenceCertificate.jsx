@@ -129,11 +129,11 @@ export default function DueDiligenceCertificate({
           {/* Firmas y Sellos Institucionales */}
           <div className="pt-8 border-t border-slate-200 grid grid-cols-2 gap-8 text-center text-xs">
             <div className="space-y-1">
-              <div className="h-10 flex items-center justify-center font-serif italic text-slate-700 text-base">
-                Martín Valenzuela
+              <div className="h-10 flex items-center justify-center text-slate-400 text-xs">
+                Firma: _______________________
               </div>
               <div className="border-t border-slate-400 pt-1 font-bold text-slate-900">
-                Dr. Martín Valenzuela
+                {partner.oficialEvaluador || '_______________________'}
               </div>
               <div className="text-[10px] text-slate-600">Oficial de Cumplimiento Antisoborno (ISO 37001)</div>
               <div className="text-[10px] text-slate-500">AUBASA S.A.</div>

@@ -36,7 +36,7 @@ export default function Iso37008InvestigationModal({
   const [torMandate, setTorMandate] = useState({
     mandato: `Investigación formal ordenada por la Función de Cumplimiento Antisoborno de AUBASA respecto de los hechos denunciados en el expediente ${report.id} (${report.tokenSeguimiento}).`,
     alcance: `Verificación pericial y documental en la Concesión BALP (50 km) focalizado en el proceso de ${report.procesoAfectado || 'Contratación / Pagos / Obras'}.`,
-    investigadorLider: report.oficialACargo || 'Dr. Martín Valenzuela (Oficial de Cumplimiento)',
+    investigadorLider: report.oficialACargo || 'Oficial de Cumplimiento (a asignar)',
     fechaInicio: report.fechaRecepcion || '2026-07-15',
     fechaLimite: report.fechaLimiteInforme || '2026-08-30',
     declaracionNoConflicto: true,

@@ -132,8 +132,8 @@ export function buildCertificateData({ course, collaboratorName, collaboratorDni
     estado: 'valido',
     entidadEmisora: 'Autopistas de Buenos Aires S.A. (AUBASA) - Oficina de Cumplimiento e Integridad',
     firmantes: [
-      { cargo: 'Oficial de Cumplimiento Antisoborno (Cl. 5.3)', nombre: 'Dr. Martín Valenzuela' },
-      { cargo: 'Gerencia de Recursos Humanos y Capacitación', nombre: 'Lic. Claudia Morales' }
+      { cargo: 'Oficial de Cumplimiento Antisoborno (Cl. 5.3)', nombre: '' },
+      { cargo: 'Gerencia de Recursos Humanos y Capacitación', nombre: '' }
     ]
   };
 }

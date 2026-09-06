@@ -153,7 +153,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Liderazgo',
     requisito: 'Función de cumplimiento antisoborno (Oficial de Cumplimiento)',
     queExigeNorma: 'Asignar a una persona o grupo la responsabilidad y autoridad independiente para supervisar el diseño e implementación del SGAS y reportar al órgano de gobierno.',
-    comoLoCumpleAubasa: 'Designación formal del Oficial de Cumplimiento (Dr. Martín Valenzuela) con dedicación, autonomía operativa, libre acceso a todos los expedientes de contratación, registros de peaje y obras, y canal de reporte directo sin intermediación al Directorio.',
+    comoLoCumpleAubasa: 'Designación formal del Oficial de Cumplimiento con dedicación, autonomía operativa, libre acceso a todos los expedientes de contratación, registros de peaje y obras, y canal de reporte directo sin intermediación al Directorio.',
     poeAsociado: 'MAN-SGAS-01 / POE-SGAS-08',
     registroObligatorio: 'REG-OFIC-01: Resolución de Designación, Estatuto de Autonomía e Informes',
     frecuenciaRegistro: 'Permanente / Informe semestral',

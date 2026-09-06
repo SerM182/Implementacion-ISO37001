@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from '../common/Modal.jsx';
 import { Copy, Check, Printer, FileText, Edit3, Eye, ShieldCheck, Download } from 'lucide-react';
+import DocumentHeader from '../common/DocumentHeader.jsx';
 
 export default function PolicyEditorPreview({
   isOpen,
@@ -154,26 +155,13 @@ export default function PolicyEditorPreview({
           </div>
         ) : (
           /* Documento Oficial Formateado para Lectura e Impresión */
-          <div className="bg-white text-slate-900 p-8 rounded-xl border border-slate-300 shadow-2xl space-y-6 font-sans print-card">
-            {/* Encabezado Controlado AUBASA */}
-            <div className="border-b-2 border-slate-900 pb-4 flex items-center justify-between">
-              <div>
-                <h2 className="text-lg font-black text-slate-900 tracking-wider">
-                  AUTOPISTAS DE BUENOS AIRES S.A.
-                </h2>
-                <p className="text-xs font-bold text-slate-600 uppercase tracking-wide">
-                  Sistema de Gestión Antisoborno (SGAS) • ISO 37001:2016
-                </p>
-                <p className="text-[10px] text-slate-500">
-                  Gerencia de Cumplimiento e Integridad Institucional • Ley 27.401
-                </p>
-              </div>
-              <div className="text-right font-mono text-xs text-slate-700">
-                <div className="font-bold text-slate-900">{policy.codigo}</div>
-                <div>{policy.clausulaIso}</div>
-                <div className="text-[10px] text-slate-500">Doc. Controlado</div>
-              </div>
-            </div>
+          <div className="bg-white text-slate-900 p-6 sm:p-8 rounded-xl border border-slate-300 shadow-2xl space-y-6 font-sans print-card">
+            {/* Encabezado Controlado AUBASA (Membrete Oficial) */}
+            <DocumentHeader
+              titulo={policy.titulo}
+              codigo={policy.codigo}
+              pagina="1 de 1"
+            />
 
             {/* Contenido Renderizado */}
             <div className="prose prose-sm max-w-none text-slate-800 leading-relaxed space-y-3">
@@ -230,28 +218,37 @@ export default function PolicyEditorPreview({
               })}
             </div>
 
-            {/* Bloque de Aprobación Institucional */}
-            <div className="pt-6 border-t border-slate-300 grid grid-cols-2 gap-8 text-center text-xs">
-              <div className="space-y-1">
-                <div className="h-8 flex items-center justify-center font-serif italic text-slate-600 text-sm">
-                  Dr. Martín Valenzuela
-                </div>
-                <div className="border-t border-slate-400 pt-1 font-bold text-slate-900">
-                  Oficial de Cumplimiento Antisoborno
-                </div>
-                <div className="text-[10px] text-slate-500">Revisión Técnica y Conformidad SGAS</div>
-              </div>
-
-              <div className="space-y-1">
-                <div className="h-8 flex items-center justify-center font-serif italic text-slate-600 text-sm">
-                  Directorio AUBASA S.A.
-                </div>
-                <div className="border-t border-slate-400 pt-1 font-bold text-slate-900">
-                  Órgano de Gobierno y Alta Dirección
-                </div>
-                <div className="text-[10px] text-slate-500">Aprobación Institucional • Acta Nº 412</div>
-              </div>
-            </div>
+            {/* Bloque de Aprobación Institucional (Firmas en Blanco para Completar) */}
+            <table className="w-full border-collapse border border-slate-900 text-[11px] text-center text-slate-900 mt-2">
+              <thead>
+                <tr className="bg-slate-50">
+                  <th className="border border-slate-900 py-1.5 font-bold">REDACCIÓN - REVISIÓN</th>
+                  <th className="border border-slate-900 py-1.5 font-bold">APROBACIÓN</th>
+                  <th className="border border-slate-900 py-1.5 font-bold">LIBERACIÓN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-900 h-10"></td>
+                  <td className="border border-slate-900 h-10"></td>
+                  <td className="border border-slate-900 h-10"></td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-900 py-1.5">
+                    <div className="font-semibold">Firma:</div>
+                    <div className="text-slate-500 mt-0.5">Oficial de Cumplimiento</div>
+                  </td>
+                  <td className="border border-slate-900 py-1.5">
+                    <div className="font-semibold">Firma:</div>
+                    <div className="text-slate-500 mt-0.5">Comité de Integridad / Directorio</div>
+                  </td>
+                  <td className="border border-slate-900 py-1.5">
+                    <div className="font-semibold">Firma:</div>
+                    <div className="text-slate-500 mt-0.5">Gerente General</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         )}
       </div>

@@ -27,10 +27,10 @@ export default function TrainingQuizSimulator({
   const [evaluationResult, setEvaluationResult] = useState(null);
 
   // Formulario del colaborador para el certificado
-  const [collabName, setCollabName] = useState('Valenzuela, Martín');
-  const [collabDni, setCollabDni] = useState('32.450.819');
-  const [collabLegajo, setCollabLegajo] = useState('LEG-1042');
-  const [collabArea, setCollabArea] = useState('Operaciones Viales & Peajes');
+  const [collabName, setCollabName] = useState('');
+  const [collabDni, setCollabDni] = useState('');
+  const [collabLegajo, setCollabLegajo] = useState('');
+  const [collabArea, setCollabArea] = useState('');
 
   const handleSelectOption = (questionId, optionIndex) => {
     if (evaluationResult) return; // Bloqueado tras evaluar
@@ -180,6 +180,7 @@ export default function TrainingQuizSimulator({
                     type="text"
                     value={collabName}
                     onChange={(e) => setCollabName(e.target.value)}
+                    placeholder="Apellido, Nombre"
                     className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-emerald-500"
                   />
                 </div>

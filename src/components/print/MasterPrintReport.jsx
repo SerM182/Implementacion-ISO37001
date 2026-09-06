@@ -1,5 +1,6 @@
 import React from 'react';
 import { calculateGapMaturity } from '../../utils/gapAnalysisScoring.js';
+import DocumentHeader from '../common/DocumentHeader.jsx';
 import {
   Printer,
   X,
@@ -80,27 +81,16 @@ export default function MasterPrintReport({
         {/* DOCUMENTO CONTROLADO OFICIAL (FORMATO PARA IMPRESIÓN Y AUDITORÍA) */}
         <div className="space-y-6 print:space-y-5 text-slate-800 print:text-slate-900 text-xs leading-relaxed">
 
-          {/* Encabezado Oficial Institucional */}
-          <div className="border-2 border-slate-300 print:border-black p-4 rounded-xl print:rounded-none flex items-center justify-between bg-slate-50">
-            <div className="space-y-1">
-              <span className="text-[10px] font-black uppercase tracking-widest text-[#0284c7] print:text-slate-800">
-                AUTOPISTAS DE BUENOS AIRES S.A. (AUBASA)
-              </span>
-              <h1 className="text-base font-black text-slate-900 print:text-black uppercase">
-                Informe Ejecutivo de Integridad, Prevención del Soborno e Investigaciones
-              </h1>
-              <p className="text-[11px] text-slate-600 print:text-slate-700">
-                Alcance: Contratación, Pagos y Planificación y Ejecución de Obras Viales — Autopista BALP (50 km)
-              </p>
-            </div>
-
-            <div className="text-right font-mono text-[10px] space-y-0.5 border-l border-slate-300 print:border-black pl-4">
-              <div><strong>Código:</strong> INF-SGAS-2026-001</div>
-              <div><strong>Versión:</strong> 2.0 (Trilogía Oficial)</div>
-              <div><strong>Fecha:</strong> {new Date().toLocaleDateString('es-AR')}</div>
-              <div><strong>Normas:</strong> ISO 37001 / 37002 / 37008</div>
-            </div>
-          </div>
+          {/* Encabezado Oficial Institucional (Membrete Oficial AUBASA) */}
+          <DocumentHeader
+            titulo="Informe Ejecutivo de Integridad, Prevención del Soborno e Investigaciones"
+            codigo="INF-SGAS-2026-001"
+            revision="02"
+            pagina="1 de 1"
+          />
+          <p className="text-[11px] text-slate-600 print:text-slate-700 -mt-3">
+            Alcance: Contratación, Pagos y Planificación y Ejecución de Obras Viales — Autopista BALP (50 km) • Normas ISO 37001 / UNE-ISO 37002 / ISO/TS 37008
+          </p>
 
           {/* 1. Resumen Ejecutivo y Dictamen de Preparación */}
           <div className="space-y-2">
@@ -272,7 +262,7 @@ export default function MasterPrintReport({
                       <td className="p-2 text-[10px]">{p.responsable}</td>
                       <td className="p-2 text-center font-mono">v{p.version}</td>
                       <td className="p-2 text-center whitespace-nowrap font-mono text-[10px] font-bold text-emerald-400 print:text-black">
-                        {p.estado === 'vigente' ? 'VIGENTE' : p.estado.toUpperCase()}
+                        {!p.estado || p.estado === 'vigente' ? 'VIGENTE' : p.estado.toUpperCase()}
                       </td>
                     </tr>
                   ))}
@@ -337,7 +327,7 @@ export default function MasterPrintReport({
             <div className="grid grid-cols-2 gap-12 pt-6 text-center">
               <div className="border-t border-slate-300 print:border-black pt-2">
                 <span className="font-bold text-slate-900 print:text-black block text-xs">
-                  Dr. Martín Valenzuela
+                  &nbsp;
                 </span>
                 <span className="text-[10px] text-slate-600 print:text-slate-700 block">
                   Oficial de Cumplimiento Antisoborno (Cl. 5.3)

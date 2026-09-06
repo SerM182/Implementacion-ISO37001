@@ -74,7 +74,7 @@ export default function Footer({ onOpenExportModal }) {
             © {new Date().getFullYear()} AUBASA — Autopistas de Buenos Aires S.A. | Sistema de Gestión Antisoborno (SGAS).
           </div>
           <div className="flex items-center gap-4 font-medium">
-            <span>Oficial de Cumplimiento: Dr. Martín Valenzuela</span>
+            <span>Función de Cumplimiento Antisoborno (Cl. 5.3)</span>
             <span>•</span>
             <span className="text-[#0284c7] font-bold">Acreditación ISO 37001</span>
           </div>

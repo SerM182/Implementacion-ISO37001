@@ -149,7 +149,7 @@ export default function TrainingCertificateModal({
           <div className="pt-8 grid grid-cols-2 gap-8 relative z-10 max-w-lg mx-auto">
             <div className="border-t border-slate-700 print:border-black pt-2 text-center">
               <span className="text-xs font-bold text-white print:text-black block">
-                Dr. Martín Valenzuela
+                &nbsp;
               </span>
               <span className="text-[10px] text-slate-400 print:text-slate-600 block">
                 Oficial de Cumplimiento Antisoborno
@@ -161,7 +161,7 @@ export default function TrainingCertificateModal({
 
             <div className="border-t border-slate-700 print:border-black pt-2 text-center">
               <span className="text-xs font-bold text-white print:text-black block">
-                Lic. Claudia Morales
+                &nbsp;
               </span>
               <span className="text-[10px] text-slate-400 print:text-slate-600 block">
                 Gerencia de Recursos Humanos

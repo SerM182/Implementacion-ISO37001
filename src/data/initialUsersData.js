@@ -21,7 +21,7 @@ export const INITIAL_USERS_DATA = [
   {
     id: 'USR-002',
     email: 'cumplimiento.sgas@aubasa.com.ar',
-    nombre: 'Valenzuela, Martín',
+    nombre: '(a designar)',
     area: 'Oficina de Cumplimiento',
     cargo: 'Oficial de Cumplimiento Antisoborno ISO 37001',
     rol: 'Oficial de Cumplimiento ISO 37001',

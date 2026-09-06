@@ -67,7 +67,7 @@ export default function WhistleblowingPortal({
       evidenciasAportadas: formData.evidenciasAportadas || 'Sin archivos adjuntos especificados',
       estado: 'recibida',
       prioridad: 'alta',
-      oficialACargo: 'Dr. Martín Valenzuela (Oficial de Cumplimiento)',
+      oficialACargo: 'Oficial de Cumplimiento (a asignar)',
       fechaLimiteInforme: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10),
       accionesTomadas: [
         {

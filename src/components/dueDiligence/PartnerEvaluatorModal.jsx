@@ -21,7 +21,7 @@ export default function PartnerEvaluatorModal({
     contratoActual: '',
     montoContratoARS: 0,
     hallazgos: '',
-    oficialEvaluador: 'Dr. Martín Valenzuela (Oficial de Cumplimiento)'
+    oficialEvaluador: ''
   });
 
   const [answers, setAnswers] = useState({});
@@ -38,7 +38,7 @@ export default function PartnerEvaluatorModal({
         contratoActual: partnerToEdit.contratoActual || '',
         montoContratoARS: partnerToEdit.montoContratoARS || 0,
         hallazgos: partnerToEdit.hallazgos || '',
-        oficialEvaluador: partnerToEdit.oficialEvaluador || 'Dr. Martín Valenzuela (Oficial de Cumplimiento)'
+        oficialEvaluador: partnerToEdit.oficialEvaluador || ''
       });
 
       // Si ya tenía respuestas guardadas o calculamos defaults conformes
@@ -60,7 +60,7 @@ export default function PartnerEvaluatorModal({
         contratoActual: '',
         montoContratoARS: 0,
         hallazgos: '',
-        oficialEvaluador: 'Dr. Martín Valenzuela (Oficial de Cumplimiento)'
+        oficialEvaluador: ''
       });
 
       const defaultAnswers = {};

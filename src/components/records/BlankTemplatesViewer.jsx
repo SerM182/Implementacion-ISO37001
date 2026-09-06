@@ -15,6 +15,8 @@ import {
   ChevronRight,
   Eye
 } from 'lucide-react';
+import DocumentHeader from '../common/DocumentHeader.jsx';
+import { buildPrintableDocumentHtml } from '../../utils/documentPrintTemplate.js';
 
 export const BLANK_TEMPLATES_DATA = [
   {
@@ -25,9 +27,7 @@ export const BLANK_TEMPLATES_DATA = [
     categoria: 'Personal & Gobernanza',
     frecuencia: 'Anual y por cada Licitación/Concurso de Obra',
     responsable: 'Directorio, Comisiones de Compra, Inspectores y Jefes de Peaje',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-ANEXO III - FORMULARIO OFICIAL DE DECLARACIÓN JURADA DE CONFLICTO DE INTERESES (Cl. 7.2)
-Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
+    formato: `Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
 
 1. DATOS DEL DECLARANTE:
 • Apellido y Nombre: ____________________________________________________________________
@@ -62,9 +62,7 @@ Revisado por Cumplimiento (Firma/Sello): _______________________________________
     categoria: 'Debida Diligencia & Compras',
     frecuencia: 'Previo a toda adjudicación y renovación bienal',
     responsable: 'Oficial de Cumplimiento & Comisión Evaluadora',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-FORMULARIO OFICIAL DE EVALUACIÓN Y DICTAMEN DE DEBIDA DILIGENCIA (Cl. 8.2)
-Alcance: Contratación de Bienes, Servicios y Obras Viales en BALP (50 km)
+    formato: `Alcance: Contratación de Bienes, Servicios y Obras Viales en BALP (50 km)
 
 1. IDENTIFICACIÓN DE LA CONTRAPARTE / OFERENTE:
 • Razón Social: _________________________________________________________________________
@@ -103,9 +101,7 @@ Firma Oficial de Cumplimiento: _______________________    Firma Gerente de Compr
     categoria: 'Controles Financieros',
     frecuencia: 'Mensual y sorpresiva en Dock Sud y Hudson',
     responsable: 'Auditoría Interna, Tesorería y Supervisión de Peaje',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-ACTA DE ARQUEO SORPRESIVO Y CONCILIACIÓN DE FONDOS DE PEAJE (Cl. 8.3)
-Estaciones de Peaje Autopista Buenos Aires - La Plata
+    formato: `Estaciones de Peaje Autopista Buenos Aires - La Plata
 
 1. DATOS DEL PROCEDIMIENTO DE ARQUEO:
 • Estación de Peaje: [  ] Dock Sud Troncal    [  ] Hudson Troncal    [  ] Acceso / Ramal: _________
@@ -141,9 +137,7 @@ Firma Auditor Interno SGAS: ___________________`
     categoria: 'Controles No Financieros',
     frecuencia: 'Por cada tramo o certificado de obra en BALP',
     responsable: 'Inspección de Obras AUBASA & Laboratorio LEMIT / UNLP',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-PROTOCOLO DE ENSAYOS CIEGOS Y CERTIFICACIÓN TÉCNICA DE OBRAS VIALES (Cl. 8.4)
-Traza Autopista Buenos Aires - La Plata (Km 0+000 al Km 50+000)
+    formato: `Traza Autopista Buenos Aires - La Plata (Km 0+000 al Km 50+000)
 
 1. IDENTIFICACIÓN DE LA OBRA Y CONTRATISTA:
 • Denominación de la Obra: ______________________________________________________________
@@ -175,9 +169,7 @@ Firma Gerente Técnico Operativo: ___________________`
     categoria: 'Mejora Continua',
     frecuencia: 'Ante todo desvío, hallazgo de auditoría o incidente',
     responsable: 'Dueño del Proceso afectado & Oficial de Cumplimiento',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-FICHA OFICIAL DE NO CONFORMIDAD Y ACCIÓN CORRECTIVA (CAPA) (Cl. 10.1)
-
+    formato: `
 1. DATOS GENERALES:
 • Registro CAPA Nº: CAPA-2026-______   Fecha de Apertura: _____/_____/202___
 • Proceso Afectado: [  ] Contrataciones   [  ] Pagos / Tesorería   [  ] Obras Viales   [  ] Peajes   [  ] Otro
@@ -217,9 +209,7 @@ Firma Dueño del Proceso: _________________________    Firma Oficial de Cumplimi
     categoria: 'Relaciones Institucionales',
     frecuencia: 'Dentro de las 48 hs de recibido o rechazado un presente',
     responsable: 'Todo el personal / Custodia: Oficial de Cumplimiento',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-FORMULARIO DE DECLARACIÓN Y REGISTRO DE REGALOS Y HOSPITALIDAD (Cl. 8.7)
-
+    formato: `
 1. DATOS DEL RECEPTOR:
 • Nombre y Apellido: ___________________________________________ Legajo: _________________
 • Cargo / Puesto: ________________________________ Area / Gerencia: ______________________
@@ -251,9 +241,7 @@ Firma del Declarante: _________________________    Firma y Sello Oficial Cumplim
     categoria: 'Contrataciones',
     frecuencia: 'Obligatorio en todo pliego licitatorio y contrato',
     responsable: 'Gerencia de Compras & Contratistas oferentes',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-ANEXO DE INTEGRIDAD Y CLÁUSULAS ANTISOBORNO OBLIGATORIAS EN PLIEGOS (Cl. 8.6)
-Licitaciones Públicas, Privadas y Concursos de Obras en Autopista BALP (50 km)
+    formato: `Licitaciones Públicas, Privadas y Concursos de Obras en Autopista BALP (50 km)
 
 La empresa ____________________________________________________, C.U.I.T. Nº _____________________,
 representada por ____________________________________________, DNI Nº ___________________________,
@@ -281,9 +269,7 @@ Firma del Apoderado de la Empresa: ______________________    Aclaración / Sello
     categoria: 'Competencia & Concientización',
     frecuencia: 'Anual y en cada inducción de personal nuevo',
     responsable: 'Gerencia de RRHH & Oficial de Cumplimiento',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-REGISTRO OFICIAL DE ASISTENCIA Y EVALUACIÓN DE EFICACIA FORMATIVA (Cl. 7.2 / 7.3)
-
+    formato: `
 1. DATOS DEL PROGRAMA DE CAPACITACIÓN:
 • Título del Curso: ____________________________________________________________________
 • Módulo: [  ] M-01 Política & Cl. 5.2   [  ] M-02 Peajes & Finanzas   [  ] M-03 Obras & LEMIT   [  ] M-04 Canal 37002
@@ -313,9 +299,7 @@ Firma del Instructor: ___________________________    Firma Oficial de Cumplimien
     categoria: 'Evaluación del Desempeño',
     frecuencia: 'Mínimo 1 vez al año (Previo a auditoría de certificación)',
     responsable: 'Equipo Auditor Interno Independiente / Oficial de Cumplimiento',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-INFORME DE AUDITORÍA INTERNA ANTISOBORNO (Cl. 9.2)
-Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
+    formato: `Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
 
 1. DATOS DE LA AUDITORÍA:
 • Nº de Auditoría: _______  Fecha(s): ______________  Tipo: [  ] Programada  [  ] Extraordinaria
@@ -352,9 +336,7 @@ Firma Auditor Líder: _______________________    Firma Oficial de Cumplimiento: 
     categoria: 'Evaluación del Desempeño',
     frecuencia: 'Semestral / Anual',
     responsable: 'Directorio y Presidencia de AUBASA',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-ACTA DE REUNIÓN DEL DIRECTORIO — REVISIÓN POR LA DIRECCIÓN DEL SGAS (Cl. 9.3)
-Libro de Actas Oficial — Sede Central AUBASA S.A.
+    formato: `Libro de Actas Oficial — Sede Central AUBASA S.A.
 
 En la Ciudad de Buenos Aires, a los _____ días del mes de _________________ de 202___, se reúne el
 Directorio de Autopistas de Buenos Aires S.A. con la presencia del Oficial de Cumplimiento para
@@ -384,9 +366,7 @@ Firma Oficial de Cumplimiento: __________________`
     categoria: 'Canal Ético & Denuncias',
     frecuencia: 'Por cada reporte ingresado',
     responsable: 'Oficial de Cumplimiento & Comité de Integridad',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN DE DENUNCIAS (UNE-ISO 37002 / ISO 37001 Cl. 8.9)
-FORMULARIO DE RECEPCIÓN, REGISTRO Y TRIAJE DE DENUNCIAS DEL CANAL ÉTICO
-
+    formato: `
 1. DATOS DE IDENTIFICACIÓN DEL CASO:
 • Número de Caso: CASO-2026-______   Token de Seguimiento: _____________________________
 • Fecha y Hora de Ingreso: _____/_____/202___ a las _______ hs.
@@ -417,9 +397,7 @@ Firma Oficial de Cumplimiento: _______________________    Fecha de Dictamen: ___
     categoria: 'Investigaciones Forenses',
     frecuencia: 'Por cada investigación iniciada',
     responsable: 'Investigador Forense Designado / Oficial de Cumplimiento',
-    formato: `AUBASA S.A. — DIRECTRICES PARA INVESTIGACIONES INTERNAS (ISO/TS 37008:2023)
-ACTA DE TÉRMINOS DE REFERENCIA Y CADENA DE CUSTODIA FORENSE
-
+    formato: `
 1. DATOS DE LA INVESTIGACIÓN:
 • Expediente Pericial Nº: EXP-FOR-2026-______   Caso Vinculado: CASO-2026-______
 • Investigador / Perito a Cargo: _________________________________________________________
@@ -453,9 +431,7 @@ Firma Investigador Forense: ______________________    Firma Oficial Cumplimiento
     categoria: 'Planificación & Objetivos',
     frecuencia: 'Trimestral',
     responsable: 'Oficial de Cumplimiento & Gerencia General',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-TABLERO DE CONTROL Y SEGUIMIENTO DE OBJETIVOS ANTISOBORNO (Cl. 6.2)
-Período: Año 2026 — Alcance Concesión BALP (50 km)
+    formato: `Período: Año 2026 — Alcance Concesión BALP (50 km)
 
 OBJETIVO 1: Capacitar al 100% del personal expuesto a riesgos de soborno en BALP.
 • KPI: (% Personal Capacitado) = (Capacitados / Total Expuestos) * 100 | Meta: 100%
@@ -483,9 +459,7 @@ Firma Oficial de Cumplimiento: _______________________    Firma Gerente General:
     categoria: 'Contexto & Gobernanza',
     frecuencia: 'Anual / Ante cambios regulatorios o de la concesión BALP',
     responsable: 'Oficial de Cumplimiento & Directorio',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-MATRIZ DE CONTEXTO DE LA ORGANIZACIÓN Y ANÁLISIS FODA (Cl. 4.1)
-Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
+    formato: `Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
 
 1. FACTORES INTERNOS PERTINENTES:
 • Estructura de gobernanza y autonomía del Oficial de Cumplimiento: ___________________________
@@ -520,9 +494,7 @@ Firma Oficial de Cumplimiento: _______________________    Firma Presidente Direc
     categoria: 'Contexto & Gobernanza',
     frecuencia: 'Anual / Ante incorporación de nuevas partes relevantes',
     responsable: 'Comité de Integridad & RRHH',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
-MATRIZ DE PARTES INTERESADAS Y SUS REQUISITOS (Cl. 4.2)
-Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
+    formato: `Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
 
 Nº | PARTE INTERESADA                          | REQUISITO / EXPECTATIVA LEGÍTIMA                        | CANAL DE RELACIONAMIENTO
 1  | Usuarios de la Autopista BALP              | Transparencia en tarifas y ausencia de sobrecostos      | Portal Web / Atención al Usuario
@@ -574,8 +546,9 @@ export default function BlankTemplatesViewer({
   };
 
   const handleDownloadTxt = (template) => {
+    const masthead = `AUBASA S.A. — AUTOPISTAS DE BUENOS AIRES S.A.\n${template.nombre}\nCódigo: ${template.codigo}   Revisión: 00   Fecha: ${new Date().toLocaleDateString('es-AR')}\n${'-'.repeat(70)}\n\n`;
     const element = document.createElement("a");
-    const file = new Blob([template.formato], { type: 'text/plain;charset=utf-8' });
+    const file = new Blob([masthead + template.formato], { type: 'text/plain;charset=utf-8' });
     element.href = URL.createObjectURL(file);
     element.download = `AUBASA_Plantilla_En_Blanco_${template.codigo}.txt`;
     document.body.appendChild(element);
@@ -585,26 +558,13 @@ export default function BlankTemplatesViewer({
 
   const handlePrintTemplate = (template) => {
     const printWindow = window.open('', '_blank');
-    printWindow.document.write(`
-      <html>
-        <head>
-          <title>${template.nombre} - AUBASA SGAS</title>
-          <style>
-            body { font-family: monospace; font-size: 12px; padding: 25px; line-height: 1.4; color: #000; }
-            pre { white-space: pre-wrap; font-family: inherit; }
-            @media print {
-              body { padding: 0; }
-            }
-          </style>
-        </head>
-        <body>
-          <pre>${template.formato}</pre>
-          <script>
-            window.onload = function() { window.print(); }
-          </script>
-        </body>
-      </html>
-    `);
+    printWindow.document.write(buildPrintableDocumentHtml({
+      titulo: template.nombre,
+      codigo: template.codigo,
+      revision: '00',
+      pagina: '1 de 1',
+      bodyText: template.formato
+    }));
     printWindow.document.close();
   };
 
@@ -782,10 +742,19 @@ export default function BlankTemplatesViewer({
             </div>
           </div>
 
-          {/* Cuerpo de la Plantilla en Blanco (Estilo Hoja Membretada) */}
-          <div className="p-5 sm:p-6 flex-1 overflow-x-auto bg-slate-50/30">
-            <div className="bg-white border border-slate-300 rounded-xl p-6 font-mono text-xs text-slate-800 shadow-inner whitespace-pre-wrap leading-relaxed select-text">
-              {activeTemplate.formato}
+          {/* Cuerpo de la Plantilla en Blanco (Estilo Hoja Membretada Oficial AUBASA) */}
+          <div className="p-5 sm:p-6 flex-1 overflow-x-auto bg-slate-100">
+            <div className="bg-white border border-slate-300 rounded-lg shadow-md mx-auto max-w-3xl overflow-hidden">
+              <div className="p-3 sm:p-4">
+                <DocumentHeader
+                  titulo={activeTemplate.nombre}
+                  codigo={activeTemplate.codigo}
+                  pagina="1 de 1"
+                />
+              </div>
+              <div className="px-5 sm:px-8 pb-8 font-mono text-xs text-slate-800 whitespace-pre-wrap leading-relaxed select-text">
+                {activeTemplate.formato}
+              </div>
             </div>
           </div>
 
