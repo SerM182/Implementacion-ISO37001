@@ -342,7 +342,7 @@ export default function ClauseAccordion({
                     </div>
 
                     <div>
-                      <label className="block text-slate-700 font-semibold mb-1">Acción Remedial para Cerrar la Brecha (CAPA Cl. 10.1)</label>
+                      <label className="block text-slate-700 font-semibold mb-1">Acción Remedial para Cerrar la Brecha (CAPA Cl. 10.2)</label>
                       <textarea
                         rows={2}
                         value={editForm.accionRemedial}

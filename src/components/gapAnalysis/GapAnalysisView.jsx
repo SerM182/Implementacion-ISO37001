@@ -118,16 +118,16 @@ ${gapItems.map((item, idx) => `
 
   // Listado de POEs para la solapa de Procedimientos
   const poesList = [
-    { codigo: 'POE-SGAS-01', titulo: 'Procedimiento de Evaluación de Riesgos y Controles Antisoborno', clausula: 'Cl. 4.5 & 8.5', area: 'Oficial de Cumplimiento & Gerencias' },
-    { codigo: 'POE-SGAS-02', titulo: 'Debida Diligencia de Contratistas, Socios de Negocios y Proveedores', clausula: 'Cl. 8.2 & 8.6', area: 'Compras, Licitaciones y Cumplimiento' },
-    { codigo: 'POE-SGAS-03', titulo: 'Controles Financieros, Doble Firma y Pagos Bancarios', clausula: 'Cl. 8.3', area: 'Administración y Finanzas / Tesorería' },
-    { codigo: 'POE-SGAS-04', titulo: 'Controles en Recaudación y Arqueos en Estaciones de Peaje (Hudson y Dock Sud)', clausula: 'Cl. 8.4', area: 'Operaciones & Supervisión de Peajes' },
-    { codigo: 'POE-SGAS-05', titulo: 'Gestión y Certificación de Obras Viales y Ensayos Técnicos de Laboratorio', clausula: 'Cl. 8.4 & 8.5', area: 'Gerencia de Obras Viales & LEMIT / UNLP' },
-    { codigo: 'POE-SGAS-06', titulo: 'Política de Regalos, Hospitalidad, Donaciones y Patrocinios', clausula: 'Cl. 8.7', area: 'Todo el Personal AUBASA BALP' },
-    { codigo: 'POE-SGAS-07', titulo: 'Gestión de Denuncias, Protección al Informante e Investigaciones (37002 / 37008)', clausula: 'Cl. 8.9 & 8.10', area: 'Canal Ético & Comité de Integridad' },
-    { codigo: 'POE-SGAS-08', titulo: 'Gestión de No Conformidades y Acciones Correctivas (CAPA)', clausula: 'Cl. 10.1', area: 'Calidad & Oficial de Cumplimiento' },
-    { codigo: 'POE-SGAS-09', titulo: 'Programa de Auditorías Internas y Revisión por la Dirección', clausula: 'Cl. 9.2 & 9.3', area: 'Directorio & Equipo Auditor SGAS' },
-    { codigo: 'POE-SGAS-10', titulo: 'Capacitación, Concientización y Declaraciones de Conflicto de Intereses', clausula: 'Cl. 7.2 & 7.3', area: 'Recursos Humanos & Cumplimiento' }
+    { codigo: 'POE-SGAS-01', titulo: 'Identificación y Evaluación de Riesgos de Soborno', clausula: 'Cl. 4.5 & 6.1', area: 'Oficial de Cumplimiento & Gerencias' },
+    { codigo: 'POE-SGAS-02', titulo: 'Debida Diligencia de Socios Comerciales y Contratistas', clausula: 'Cl. 8.2', area: 'Compras, Licitaciones y Cumplimiento' },
+    { codigo: 'POE-SGAS-03', titulo: 'Declaración y Gestión de Conflictos de Intereses', clausula: 'Cl. 7.2', area: 'Directorio, Compras e Inspección de Obras' },
+    { codigo: 'POE-SGAS-04', titulo: 'Gestión de Regalos, Hospitalidad, Donaciones y Cortesías', clausula: 'Cl. 8.7', area: 'Todo el Personal AUBASA BALP' },
+    { codigo: 'POE-SGAS-05', titulo: 'Controles Financieros en Pagos, Desembolsos y Tesorería Central', clausula: 'Cl. 8.3', area: 'Administración y Finanzas / Tesorería' },
+    { codigo: 'POE-SGAS-06', titulo: 'Controles No Financieros en Licitaciones y Certificación de Obras Viales', clausula: 'Cl. 8.4', area: 'Gerencia de Obras Viales & LEMIT / UNLP' },
+    { codigo: 'POE-SGAS-07', titulo: 'Gestión del Canal Ético, Denuncias e Investigaciones Internas', clausula: 'Cl. 8.9 & 8.10', area: 'Canal Ético & Comité de Integridad' },
+    { codigo: 'POE-SGAS-08', titulo: 'Auditorías Internas Antisoborno y Revisiones por la Dirección', clausula: 'Cl. 9.2 & 9.3', area: 'Directorio & Equipo Auditor SGAS' },
+    { codigo: 'POE-SGAS-09', titulo: 'Control de Información Documentada y Custodia de Evidencias', clausula: 'Cl. 7.5', area: 'Oficial de Cumplimiento & Sistemas' },
+    { codigo: 'POE-SGAS-10', titulo: 'No Conformidades, Causa Raíz y Acciones Correctivas (CAPA)', clausula: 'Cl. 10.2', area: 'Calidad & Oficial de Cumplimiento' }
   ];
 
   return (

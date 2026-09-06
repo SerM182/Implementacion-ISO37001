@@ -546,21 +546,6 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     id: 'GAP-10.1',
     clausula: '10.1',
     capitulo: 'Mejora',
-    requisito: 'No conformidad y acción correctiva (CAPA / 5 Porqués)',
-    queExigeNorma: 'Reaccionar ante no conformidades, evaluar la causa raíz mediante acciones correctivas e implementar medidas para evitar su recurrencia.',
-    comoLoCumpleAubasa: 'Circuito CAPA con metodología de los 5 Porqués para investigar desvíos en compras, peajes u obras, fijación de planes de acción correctiva con fecha perentoria, y verificación formal de eficacia a los 60 días del cierre.',
-    poeAsociado: 'POE-SGAS-10 (No Conformidades, Causa Raíz y Acciones Correctivas CAPA)',
-    registroObligatorio: 'REG-CAPA-01: Fichas CAPA de No Conformidad y Verificación de Eficacia',
-    frecuenciaRegistro: 'Por evento ante hallazgo de auditoría o desvío operacional',
-    responsable: 'Calidad & Procesos / Oficial de Cumplimiento',
-    estadoConformidad: 'conforme',
-    observaciones: 'Fichas CAPA con análisis de causa raíz y seguimiento de eficacia operativas.',
-    accionRemedial: 'Verificar el cierre formal de las 2 acciones correctivas abiertas en compras.'
-  },
-  {
-    id: 'GAP-10.2',
-    clausula: '10.2',
-    capitulo: 'Mejora',
     requisito: 'Mejora continua',
     queExigeNorma: 'Mejorar continuamente la conveniencia, adecuación y eficacia del SGAS.',
     comoLoCumpleAubasa: 'Plan anual de mejora continua basado en lecciones aprendidas de investigaciones, sugerencias del personal en capacitaciones, automatización de controles en el ERP de peaje y modernización de ensayos viales con laboratorios universitarios.',
@@ -571,6 +556,21 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     estadoConformidad: 'conforme',
     observaciones: 'Iniciativas de mejora incorporadas en el plan de trabajo 2026.',
     accionRemedial: 'Evaluar el impacto de las mejoras en el próximo informe semestral.'
+  },
+  {
+    id: 'GAP-10.2',
+    clausula: '10.2',
+    capitulo: 'Mejora',
+    requisito: 'No conformidad y acción correctiva (CAPA / 5 Porqués)',
+    queExigeNorma: 'Reaccionar ante no conformidades, evaluar la causa raíz mediante acciones correctivas e implementar medidas para evitar su recurrencia.',
+    comoLoCumpleAubasa: 'Circuito CAPA con metodología de los 5 Porqués para investigar desvíos en compras, peajes u obras, fijación de planes de acción correctiva con fecha perentoria, y verificación formal de eficacia a los 60 días del cierre.',
+    poeAsociado: 'POE-SGAS-10 (No Conformidades, Causa Raíz y Acciones Correctivas CAPA)',
+    registroObligatorio: 'REG-CAPA-01: Fichas CAPA de No Conformidad y Verificación de Eficacia',
+    frecuenciaRegistro: 'Por evento ante hallazgo de auditoría o desvío operacional',
+    responsable: 'Calidad & Procesos / Oficial de Cumplimiento',
+    estadoConformidad: 'conforme',
+    observaciones: 'Fichas CAPA con análisis de causa raíz y seguimiento de eficacia operativas.',
+    accionRemedial: 'Verificar el cierre formal de las 2 acciones correctivas abiertas en compras.'
   }
 ];
 

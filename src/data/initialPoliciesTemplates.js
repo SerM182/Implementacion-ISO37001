@@ -35,7 +35,7 @@ El SGAS aplica con carácter vinculante a todos los procesos directos e indirect
 ### 4. MAPA DE INTERACCIÓN DE PROCESOS DEL SGAS
 - **Estratégicos:** Gestión del Liderazgo (Cl. 5), Evaluación de Riesgos (Cl. 4.5 & 6.1), Revisión por la Dirección (Cl. 9.3).
 - **Operativos:** Debida Diligencia (Cl. 8.2), Controles Financieros (Cl. 8.3), Controles de Obras (Cl. 8.4), Regalos y Cortesías (Cl. 8.7).
-- **Soporte y Mejora:** Competencia y Capacitación (Cl. 7.2 & 7.3), Información Documentada (Cl. 7.5), Canal Ético (Cl. 8.9), Auditorías Internas (Cl. 9.2) y CAPA (Cl. 10.1).`
+- **Soporte y Mejora:** Competencia y Capacitación (Cl. 7.2 & 7.3), Información Documentada (Cl. 7.5), Canal Ético (Cl. 8.9), Auditorías Internas (Cl. 9.2) y CAPA (Cl. 10.2).`
   },
 
   // 2. POLÍTICA INSTITUCIONAL ANTISOBORNO

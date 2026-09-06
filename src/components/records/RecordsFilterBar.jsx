@@ -80,8 +80,8 @@ export default function RecordsFilterBar({
               <option value="9.2">Cl. 9.2 Auditoría Interna</option>
               <option value="9.3">Cl. 9.3 Revisión por la Dirección</option>
               <option value="9.4">Cl. 9.4 Revisión Función de Cumplimiento</option>
-              <option value="10.1">Cl. 10.1 No Conformidad & CAPA</option>
-              <option value="10.2">Cl. 10.2 Acciones Correctivas</option>
+              <option value="10.1">Cl. 10.1 Mejora Continua</option>
+              <option value="10.2">Cl. 10.2 No Conformidad & CAPA</option>
             </select>
           </div>
 

@@ -112,7 +112,7 @@ export const ISO37002_LIFECYCLE_PHASES = [
       'Informe Final de Hechos Probados (Fact-Based Report)',
       'Resolución de Directorio con medidas disciplinarias o contractuales',
       'Comunicación formal de conclusión al alertador',
-      'Plan de Acción Correctiva (CAPA Cl. 10.1) para subsanar vulnerabilidades'
+      'Plan de Acción Correctiva (CAPA Cl. 10.2) para subsanar vulnerabilidades'
     ]
   }
 ];
