@@ -91,15 +91,15 @@ export default function RiskMatrixView({
       {/* Header del Módulo */}
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <div className="flex items-center gap-2">
-            <h2 className="text-xl font-black text-white tracking-wide">
+          <div className="flex flex-wrap items-center gap-2">
+            <h2 className="text-xl font-black text-slate-900 tracking-wide">
               Matriz de Riesgos Antisoborno (ISO 37001 Cl. 4.5 & 6.1)
             </h2>
-            <span className="px-2 py-0.5 rounded text-xs font-bold bg-cyan-950 text-cyan-300 border border-cyan-800">
+            <span className="px-2 py-0.5 rounded text-xs font-bold bg-cyan-950 text-cyan-300 border border-cyan-800 shrink-0">
               AUBASA
             </span>
           </div>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-600 mt-1">
             Evaluación sistemática de riesgos inherentes y residuales en Contratación, Pagos y Planificación/Ejecución de Obras Viales.
           </p>
         </div>

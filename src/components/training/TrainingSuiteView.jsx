@@ -98,7 +98,7 @@ export default function TrainingSuiteView({
 
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
           <div className="space-y-2">
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <span className="px-3 py-1 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-800/80 text-xs font-mono font-bold">
                 Cláusulas 7.2 & 7.3 ISO 37001:2016
               </span>

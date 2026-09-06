@@ -79,15 +79,15 @@ export default function PolicySuiteView({
       {/* Header del Módulo */}
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <div className="flex items-center gap-2">
-            <h2 className="text-xl font-black text-white tracking-wide">
+          <div className="flex flex-wrap items-center gap-2">
+            <h2 className="text-xl font-black text-slate-900 tracking-wide">
               Suite de Políticas y Procedimientos Oficiales del SGAS
             </h2>
-            <span className="px-2 py-0.5 rounded text-xs font-bold bg-cyan-950 text-cyan-300 border border-cyan-800">
+            <span className="px-2 py-0.5 rounded text-xs font-bold bg-cyan-950 text-cyan-300 border border-cyan-800 shrink-0">
               ISO 37001:2016
             </span>
           </div>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-600 mt-1">
             Documentos controlados, protocolos operacionales y cláusulas anticorrupción para pliegos de AUBASA.
           </p>
         </div>
