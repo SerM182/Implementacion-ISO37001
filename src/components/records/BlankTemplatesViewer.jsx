@@ -16,6 +16,7 @@ import {
   Eye
 } from 'lucide-react';
 import DocumentHeader from '../common/DocumentHeader.jsx';
+import FormattedRecordSheet from './FormattedRecordSheet.jsx';
 import { buildPrintableDocumentHtml } from '../../utils/documentPrintTemplate.js';
 
 export const BLANK_TEMPLATES_DATA = [
@@ -750,8 +751,8 @@ export default function BlankTemplatesViewer({
                   pagina="1 de 1"
                 />
               </div>
-              <div className="px-5 sm:px-8 pb-8 font-mono text-xs text-slate-800 whitespace-pre-wrap leading-relaxed select-text">
-                {activeTemplate.formato}
+              <div className="px-5 sm:px-8 pb-8 select-text">
+                <FormattedRecordSheet text={activeTemplate.formato} />
               </div>
             </div>
           </div>
