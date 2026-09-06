@@ -164,7 +164,7 @@ export default function WhistleblowingPortal({
                   Su reporte ha sido recibido por la Función de Cumplimiento Antisoborno
                 </h3>
                 <p className="text-xs text-slate-400 max-w-lg mx-auto mt-1 leading-relaxed">
-                  Garantizamos confidencialidad absoluta y protección contra represalias según la Cláusula 8.9 de la Norma ISO 37001:2016 y la Ley Nacional 27.401.
+                  Garantizamos confidencialidad absoluta y protección contra represalias según la Cláusula 8.9 de la Norma ISO 37001:2025 y la Ley Nacional 27.401.
                 </p>
               </div>
 
@@ -311,7 +311,7 @@ export default function WhistleblowingPortal({
                     className="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-xs text-white"
                   >
                     <option value="Contratación">Contratación (Licitaciones y Compras)</option>
-                    <option value="Pagos">Pagos (Tesorería, Fondos Fijos)</option>
+                    <option value="Pagos">Pagos (Tesorería)</option>
                     <option value="Obras Viales">Planificación y Ejecución de Obras Viales</option>
                   </select>
                 </div>
@@ -328,7 +328,7 @@ export default function WhistleblowingPortal({
                     <option value="Conflicto de Intereses en Licitación">Conflicto de Intereses en Licitación</option>
                     <option value="Solicitud o Aceptación de Soborno">Solicitud o Aceptación de Soborno</option>
                     <option value="Irregularidad en Ensayos de Calidad de Asfalto">Irregularidad en Ensayos de Asfalto / Obras</option>
-                    <option value="Uso Indebido de Fondos Fijos">Uso Indebido de Fondos Fijos</option>
+                    <option value="Pago Liberado sin Respaldo Documental">Pago Liberado sin Respaldo Documental</option>
                     <option value="Presión para Certificación de Obra Incompleta">Presión para Certificación de Obra Incompleta</option>
                     <option value="Colusión o Direccionamiento de Pliegos">Colusión o Direccionamiento de Pliegos</option>
                     <option value="Otro Incumplimiento Normativo">Otro Incumplimiento Normativo</option>

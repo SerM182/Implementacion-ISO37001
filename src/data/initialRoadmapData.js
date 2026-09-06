@@ -1,5 +1,5 @@
 /**
- * Hoja de Ruta (Roadmap) de Implementación ISO 37001:2016 en AUBASA
+ * Hoja de Ruta (Roadmap) de Implementación ISO 37001:2025 en AUBASA
  * Cronograma estratégico de 6 fases hacia la certificación con el organismo acreditado.
  */
 

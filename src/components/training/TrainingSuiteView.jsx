@@ -100,7 +100,7 @@ export default function TrainingSuiteView({
           <div className="space-y-2">
             <div className="flex flex-wrap items-center gap-2">
               <span className="px-3 py-1 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-800/80 text-xs font-mono font-bold">
-                Cláusulas 7.2 & 7.3 ISO 37001:2016
+                Cláusulas 7.2 & 7.3 ISO 37001:2025
               </span>
               <span className="px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/80 text-xs font-bold flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5" />

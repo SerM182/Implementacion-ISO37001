@@ -94,7 +94,7 @@ export default function TrainingQuizSimulator({
             {selectedCourse ? `Evaluación: ${selectedCourse.titulo}` : 'Examen Situacional de Dilemas Éticos y Controles Antisoborno'}
           </h2>
           <p className="text-xs text-slate-400">
-            Responda los dilemas reales de la operación de autopistas para evaluar el entendimiento práctico de la Norma ISO 37001:2016.
+            Responda los dilemas reales de la operación de autopistas para evaluar el entendimiento práctico de la Norma ISO 37001:2025.
           </p>
         </div>
 

@@ -86,7 +86,7 @@ export function evaluateQuizAnswers(questions, userAnswers) {
     isPassed,
     breakdown,
     feedbackGeneral: isPassed
-      ? '¡Felicitaciones! Has demostrado una sólida comprensión de las políticas y controles antisoborno de AUBASA conforme a la Norma ISO 37001:2016.'
+      ? '¡Felicitaciones! Has demostrado una sólida comprensión de las políticas y controles antisoborno de AUBASA conforme a la Norma ISO 37001:2025.'
       : 'No se ha alcanzado el umbral mínimo de aprobación (80%). Se sugiere repasar los módulos del curso y volver a intentar la evaluación.'
   };
 }

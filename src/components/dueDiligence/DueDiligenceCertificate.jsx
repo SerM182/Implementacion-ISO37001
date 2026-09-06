@@ -21,7 +21,7 @@ export default function DueDiligenceCertificate({
       isOpen={isOpen}
       onClose={onClose}
       title="Certificado Oficial de Debida Diligencia Antisoborno"
-      subtitle="Documento controlado del SGAS - Norma ISO 37001:2016 Cláusula 8.2"
+      subtitle="Documento controlado del SGAS - Norma ISO 37001:2025 Cláusula 8.2"
       maxWidth="max-w-3xl"
     >
       <div className="space-y-6">
@@ -48,7 +48,7 @@ export default function DueDiligenceCertificate({
                 Gerencia de Integridad, Transparencia y Cumplimiento Normativo
               </p>
               <p className="text-[11px] text-slate-500">
-                Sistema de Gestión Antisoborno • ISO 37001:2016 (Cl. 8.2) & Ley 27.401
+                Sistema de Gestión Antisoborno • ISO 37001:2025 (Cl. 8.2) & Ley 27.401
               </p>
             </div>
             <div className="text-right font-mono text-xs text-slate-600">

@@ -1,5 +1,5 @@
 /**
- * Matriz Maestra de Requisitos ISO 37001:2016 & Diagnóstico de Brechas (Gap Analysis)
+ * Matriz Maestra de Requisitos ISO 37001:2025 & Diagnóstico de Brechas (Gap Analysis)
  * Alcance Exclusivo: Concesión Autopista Buenos Aires - La Plata (BALP - 50 km)
  * Procesos: Contratación • Pagos • Planificación y Ejecución de Obras Viales (Sede Central y traza BALP)
  */
@@ -50,7 +50,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     frecuenciaRegistro: 'Permanente / Revisión anual',
     responsable: 'Directorio de AUBASA',
     estadoConformidad: 'conforme',
-    observaciones: 'Aprobado formalmente por Acta de Directorio Nº 142/2026.',
+    observaciones: 'Aprobado formalmente por el Directorio de AUBASA (Nº de Acta a completar).',
     accionRemedial: 'Ninguna.'
   },
   {
@@ -74,7 +74,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Contexto de la Organización',
     requisito: 'Evaluación del riesgo de soborno',
     queExigeNorma: 'Evaluar periódicamente los riesgos de soborno inherentes, analizar y ponderar controles para determinar el riesgo residual.',
-    comoLoCumpleAubasa: 'Matriz de Riesgos de Soborno de AUBASA que evalúa 12 escenarios específicos en BALP (dirección de pliegos de obra, cartelización en pavimentación km 0-50, retornos en tesorería, soborno a inspectores de calidad de asfalto y desvío de fondos fijos de Sede Central). Metodología 3x3 y 5x5 con planes de tratamiento obligatorios.',
+    comoLoCumpleAubasa: 'Matriz de Riesgos de Soborno de AUBASA que evalúa 12 escenarios específicos en BALP (dirección de pliegos de obra, cartelización en pavimentación km 0-50, retornos en tesorería, soborno a inspectores de calidad de asfalto y pagos liberados sin respaldo documental completo). Metodología 3x3 y 5x5 con planes de tratamiento obligatorios.',
     poeAsociado: 'POE-SGAS-01 (Identificación y Evaluación de Riesgos de Soborno)',
     registroObligatorio: 'REG-RIE-01: Matriz de Riesgos de Soborno y Fichas de Tratamiento',
     frecuenciaRegistro: 'Anual / Ante nuevas obras o denuncias',

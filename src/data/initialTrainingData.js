@@ -1,6 +1,6 @@
 /**
  * Plan Anual de Capacitación, Catálogo de Cursos y Simulador de Evaluación Antisoborno
- * SGAS ISO 37001:2016 - AUTOPISTAS DE BUENOS AIRES S.A. (AUBASA)
+ * SGAS ISO 37001:2025 - AUTOPISTAS DE BUENOS AIRES S.A. (AUBASA)
  */
 
 export const TRAINING_PLAN_OVERVIEW = {
@@ -31,7 +31,7 @@ export const COURSES_CATALOG = [
     clausulaIso: 'Cl. 7.2 & 7.3',
     categoria: 'Gobernanza y Cultura Ética',
     nivel: 'Fundamental',
-    descripcion: 'Fundamentos de la Norma ISO 37001:2016, Ley 27.401, política de tolerancia cero al soborno y uso del Canal Ético en AUBASA.',
+    descripcion: 'Fundamentos de la Norma ISO 37001:2025, Ley 27.401, política de tolerancia cero al soborno y uso del Canal Ético en AUBASA.',
     modulos: [
       {
         numero: 1,

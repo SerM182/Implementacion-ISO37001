@@ -105,7 +105,7 @@ export default function TrainingCertificateModal({
               Certificado de Acreditación y Competencia
             </h1>
             <p className="text-xs font-mono text-slate-400 print:text-slate-600">
-              Sistema de Gestión Antisoborno &bull; Norma ISO 37001:2016 (Cl. 7.2 & 7.3)
+              Sistema de Gestión Antisoborno &bull; Norma ISO 37001:2025 (Cl. 7.2 & 7.3)
             </p>
           </div>
 

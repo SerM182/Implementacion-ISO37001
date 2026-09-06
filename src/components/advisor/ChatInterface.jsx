@@ -26,11 +26,11 @@ export default function ChatInterface() {
     {
       id: 'welcome',
       sender: 'bot',
-      text: `**Hola, soy su Asistente Especialista en Compliance e Implementación de la Norma ISO 37001:2016 para AUBASA.**\n\nPuedo orientarlo técnicamente sobre la interpretación de las cláusulas de la norma (Cl. 4 a 10), el marco legal argentino (Ley 27.401, Ley Provincial 6021, Decreto 367/17) y los protocolos operativos aplicables a **Contratación, Pagos y Obras Viales** en la **Concesión Autopista Buenos Aires - La Plata (BALP - 50 km)**.\n\n¿En qué consulta o dilema ético puedo ayudarlo hoy?`,
+      text: `**Hola, soy su Asistente Especialista en Compliance e Implementación de la Norma ISO 37001:2025 para AUBASA.**\n\nPuedo orientarlo técnicamente sobre la interpretación de las cláusulas de la norma (Cl. 4 a 10), el marco legal argentino (Ley 27.401, Ley Provincial 6021, Decreto 367/17) y los protocolos operativos aplicables a **Contratación, Pagos y Obras Viales** en la **Concesión Autopista Buenos Aires - La Plata (BALP - 50 km)**.\n\n¿En qué consulta o dilema ético puedo ayudarlo hoy?`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       metadata: {
         tipo: 'bienvenida',
-        clausulasRelacionadas: ['ISO 37001:2016', 'Ley 27.401', 'Ley 6021 PBA']
+        clausulasRelacionadas: ['ISO 37001:2025', 'Ley 27.401', 'Ley 6021 PBA']
       }
     }
   ]);
@@ -110,7 +110,7 @@ export default function ChatInterface() {
               <h3 className="text-xs font-bold text-white">Consultor de Cumplimiento Antisoborno AUBASA</h3>
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             </div>
-            <p className="text-[10px] text-slate-400">Motor Experto ISO 37001:2016 • Ley 27.401 • Ley 6021</p>
+            <p className="text-[10px] text-slate-400">Motor Experto ISO 37001:2025 • Ley 27.401 • Ley 6021</p>
           </div>
         </div>
 

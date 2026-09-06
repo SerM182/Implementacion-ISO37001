@@ -1,6 +1,6 @@
 /**
  * Registros Obligatorios de Evidencias de Cumplimiento SGAS
- * Norma ISO 37001:2016 — Cláusula 7.5 (Información Documentada)
+ * Norma ISO 37001:2025 — Cláusula 7.5 (Información Documentada)
  * Contexto Operativo: AUBASA (Contratación, Pagos y Obras Viales)
  */
 
@@ -355,7 +355,7 @@ export const INITIAL_RECORDS_DATA = [
     metadatosEspecificos: {
       tipoAuditoria: 'Auditoría Interna Ordinaria Programada',
       equipoAuditor: 'Cr. Diego Soria (Líder), Lic. Paula Méndez',
-      alcanceProcesos: 'Contrataciones directas, Certificados de Obra, Fondos Fijos',
+      alcanceProcesos: 'Contrataciones directas, Certificados de Obra, Respaldo Documental de Pagos',
       hallazgosTotales: 3,
       observacionesMayores: 0,
       observacionesMenores: 2,

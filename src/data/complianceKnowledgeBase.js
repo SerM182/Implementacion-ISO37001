@@ -1,19 +1,19 @@
 /**
- * Base de Conocimiento Experta en ISO 37001:2016 y Marco Normativo Argentino
+ * Base de Conocimiento Experta en ISO 37001:2025 y Marco Normativo Argentino
  * Especializada en Concesiones Viales y AUBASA (Contratación, Pagos, Obras)
  */
 
 export const COMPLIANCE_KNOWLEDGE_BASE = {
   normas: {
     iso37001: {
-      nombre: 'ISO 37001:2016 — Sistemas de Gestión Antisoborno',
+      nombre: 'ISO 37001:2025 — Sistemas de Gestión Antisoborno',
       descripcion: 'Estándar internacional que especifica los requisitos y proporciona una guía para establecer, implementar, mantener, revisar y mejorar un sistema de gestión antisoborno.',
       clausulasClave: [
         {
           numero: '4.5',
           titulo: 'Evaluación del Riesgo de Soborno',
           requisito: 'La organización debe evaluar regularmente el riesgo de soborno inherente y residual en sus procesos clave, considerando la naturaleza del sector, el tamaño, la ubicación y las transacciones de alto valor.',
-          aplicacionAubasa: 'Obligatorio evaluar por separado: Licitaciones de obras viales, redeterminaciones de precios, pagos a subcontratistas, fondos fijos de Tesorería y certificaciones de inspectores en traza.',
+          aplicacionAubasa: 'Obligatorio evaluar por separado: Licitaciones de obras viales, redeterminaciones de precios, pagos a subcontratistas, respaldo documental de pagos en Tesorería y certificaciones de inspectores en traza.',
           evidenciasTipicas: ['Matriz de Riesgos SGAS aprobada', 'Informes semestrales de revisión de riesgos', 'Criterios de valoración 3x3 documentados']
         },
         {
@@ -83,7 +83,7 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
           numero: '4.1',
           titulo: 'Comprensión de la Organización y de su Contexto',
           requisito: 'Determinar las cuestiones externas e internas pertinentes al propósito del SGAS y que afectan su capacidad para lograr los resultados previstos.',
-          aplicacionAubasa: 'Análisis del marco legal de concesiones viales provinciales, el Ministerio de Infraestructura PBA como órgano de supervisión y los riesgos propios del manejo de fondos fijos en Tesorería y de la certificación de obras.',
+          aplicacionAubasa: 'Análisis del marco legal de concesiones viales provinciales, el Ministerio de Infraestructura PBA como órgano de supervisión y los riesgos propios del respaldo documental de pagos en Tesorería y de la certificación de obras.',
           evidenciasTipicas: ['Análisis FODA antisoborno', 'Mapeo del marco regulatorio provincial y nacional', 'Contexto institucional del Manual del SGAS (MAN-SGAS-01)']
         },
         {
@@ -111,7 +111,7 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
           numero: '6.1',
           titulo: 'Acciones para Abordar Riesgos y Oportunidades',
           requisito: 'Planificar acciones para abordar los riesgos de soborno evaluados, integrarlas a los procesos y evaluar su eficacia.',
-          aplicacionAubasa: 'Planes de tratamiento de la Matriz de Riesgos con responsable y plazo, priorizando licitaciones, fondos fijos de Tesorería y certificación de obras.',
+          aplicacionAubasa: 'Planes de tratamiento de la Matriz de Riesgos con responsable y plazo, priorizando licitaciones, respaldo documental de pagos en Tesorería y certificación de obras.',
           evidenciasTipicas: ['Planes de tratamiento de riesgos', 'Matriz de Riesgos de Soborno (Cl. 4.5)', 'Seguimiento de eficacia de controles']
         },
         {

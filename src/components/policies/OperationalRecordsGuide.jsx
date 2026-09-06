@@ -325,7 +325,7 @@ export default function OperationalRecordsGuide({
   const handleExportGuideMarkdown = () => {
     const md = `# GUÍA MAESTRA DE POLÍTICAS, POEs Y REGISTROS OBLIGATORIOS (CL. 7.5) - AUBASA
 **Concesión:** Autopista Buenos Aires - La Plata (BALP - 50 km)
-**Norma:** ISO 37001:2016 y Ley 27.401
+**Norma:** ISO 37001:2025 y Ley 27.401
 **Fecha:** ${new Date().toLocaleDateString('es-AR')}
 
 ---

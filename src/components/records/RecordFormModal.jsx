@@ -159,7 +159,7 @@ export default function RecordFormModal({
         <div className="bg-slate-50 p-6 border-b border-slate-200 flex items-center justify-between">
           <div>
             <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#0369a1] bg-sky-100 px-2 py-0.5 rounded border border-sky-200">
-              ISO 37001:2016 — Cláusula 7.5
+              ISO 37001:2025 — Cláusula 7.5
             </span>
             <h3 className="text-lg font-bold text-slate-900 mt-1">
               {initialRecord ? 'Editar Registro de Evidencia' : 'Cargar Nueva Evidencia de Cumplimiento'}

@@ -1,6 +1,6 @@
 /**
  * Compendio Oficial de Políticas, Manual y Procedimientos Operativos Estándar (POEs) del SGAS AUBASA
- * Norma ISO 37001:2016 y Ley Nacional 27.401
+ * Norma ISO 37001:2025 y Ley Nacional 27.401
  */
 
 export const INITIAL_POLICY_TEMPLATES = [
@@ -13,18 +13,17 @@ export const INITIAL_POLICY_TEMPLATES = [
     categoria: 'Manual del Sistema',
     descripcion: 'Documento maestro que describe el alcance, contexto vial, liderazgo, política, mapa de procesos y gobernanza antisoborno de AUBASA.',
     contenidoMarkdown: `# MANUAL DEL SISTEMA DE GESTIÓN ANTISOBORNO (SGAS)
-**Código:** MAN-SGAS-01 | **Versión:** 2.0 (Oficial) | **Aprobación:** Acta de Directorio Nº 418
-**Norma:** ISO 37001:2016 | **Alcance:** Concesión Autopista Buenos Aires - La Plata (BALP - 50 km)
+**Norma:** ISO 37001:2025 | **Alcance:** Concesión Autopista Buenos Aires - La Plata (BALP - 50 km)
 
 ---
 
 ### 1. OBJETO Y CAMPO DE APLICACIÓN
-El presente Manual describe la estructura, políticas y procesos del Sistema de Gestión Antisoborno de **Autopistas de Buenos Aires S.A. (AUBASA)**, conforme los requisitos de la Norma ISO 37001:2016 y el Régimen de Integridad de la Ley 27.401.
+El presente Manual describe la estructura, políticas y procesos del Sistema de Gestión Antisoborno de **Autopistas de Buenos Aires S.A. (AUBASA)**, conforme los requisitos de la Norma ISO 37001:2025 y el Régimen de Integridad de la Ley 27.401.
 
 ### 2. ALCANCE DEL SISTEMA
 El SGAS aplica con carácter vinculante a todos los procesos directos e indirectos de:
 1. **Contratación y Abastecimiento:** Licitaciones públicas, concursos y compras de insumos viales.
-2. **Pagos y Tesorería:** Fondos fijos, liquidación a proveedores y redeterminaciones de precios, gestionados desde la Sede Central.
+2. **Pagos y Tesorería:** Liquidación a proveedores, redeterminaciones de precios y verificación de respaldos documentales, gestionados desde la Sede Central.
 3. **Planificación y Ejecución de Obras Viales:** Proyectos de repavimentación, bacheo, señalización, obras civiles, ensayos técnicos de probetas y certificación de avance físico.
 
 ### 3. ESTRUCTURA DE GOBERNANZA ANTISOBORNO
@@ -47,8 +46,7 @@ El SGAS aplica con carácter vinculante a todos los procesos directos e indirect
     categoria: 'Gobernanza y Liderazgo',
     descripcion: 'Declaración pública de tolerancia cero al soborno, prohibición absoluta de pagos de facilitación y marco de gobernanza antisoborno.',
     contenidoMarkdown: `# POLÍTICA INSTITUCIONAL ANTISOBORNO DE AUBASA
-**Código:** POL-SGAS-01 | **Versión:** 2.0 | **Aprobación:** Acta de Directorio Nº 412
-**Norma:** ISO 37001:2016 (Cláusula 5.2) | **Marco Legal:** Ley 27.401, Ley 25.188
+**Norma:** ISO 37001:2025 (Cláusula 5.2) | **Marco Legal:** Ley 27.401, Ley 25.188
 
 ---
 
@@ -72,7 +70,7 @@ Cualquier empleado, funcionario o contratista que infrinja esta Política estar�
 - Denuncia penal inmediata ante el Ministerio Público Fiscal de la Provincia de Buenos Aires.
 
 ---
-**Firma:** Directorio de AUBASA S.A. | **Fecha de Emisión:** 15 de Marzo de 2026`
+**Firma:** Directorio de AUBASA S.A.`
   },
 
   // 3. POE-01: EVALUACIÓN DE RIESGOS
@@ -84,7 +82,7 @@ Cualquier empleado, funcionario o contratista que infrinja esta Política estar�
     categoria: 'Gestión de Riesgos',
     descripcion: 'Metodología oficial para la identificación, ponderación de probabilidad e impacto, cálculo de riesgo residual y planes de tratamiento.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: GESTIÓN DE RIESGOS DE SOBORNO
-**Código:** POE-SGAS-01 | **Versión:** 1.4 | **Norma:** ISO 37001:2016 (Cl. 4.5 & 6.1)
+**Norma:** ISO 37001:2025 (Cl. 4.5 & 6.1)
 
 ---
 
@@ -100,7 +98,7 @@ Aplica a todos los procesos gerenciales, operativos (Obras, Contrataciones, Teso
 - **Directorio:** Aprobar la Matriz de Riesgos y el apetito de riesgo institucional.
 
 ### 4. ETAPAS DEL PROCEDIMIENTO
-1. **Identificación de Escenarios:** Análisis de interacciones con funcionarios públicos, contratistas viales, inspectores y manejo de fondos fijos en Tesorería.
+1. **Identificación de Escenarios:** Análisis de interacciones con funcionarios públicos, contratistas viales, inspectores y verificación de respaldos documentales en Tesorería.
 2. **Evaluación Inherente:** Calificación de Probabilidad (1 a 5) e Impacto (1 a 5) sin considerar controles existentes.
 3. **Ponderación de Controles:** Evaluación del diseño y eficacia operativa de los controles preventivos y detectivos.
 4. **Cálculo del Riesgo Residual:** Determinación del nivel final (Bajo, Medio, Alto, Crítico).
@@ -121,7 +119,7 @@ Aplica a todos los procesos gerenciales, operativos (Obras, Contrataciones, Teso
     categoria: 'Operación y Terceros',
     descripcion: 'Reglamento para la investigación de integridad, screening PEP/UBO, cuestionario de 15 puntos y clasificación de riesgo de oferentes y contratistas.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: DEBIDA DILIGENCIA DE TERCEROS
-**Código:** POE-SGAS-02 | **Versión:** 2.0 | **Norma:** ISO 37001:2016 (Cl. 8.2)
+**Norma:** ISO 37001:2025 (Cl. 8.2)
 
 ---
 
@@ -154,7 +152,7 @@ Aplica al 100% de las empresas que participen en Licitaciones Públicas, Concurs
     categoria: 'Conducta e Integridad',
     descripcion: 'Circuito de presentación de declaraciones juradas, detección de vínculos societarios o familiares y protocolo de abstención obligatoria.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: CONFLICTOS DE INTERESES
-**Código:** POE-SGAS-03 | **Versión:** 1.3 | **Norma:** ISO 37001:2016 (Cl. 7.2)
+**Norma:** ISO 37001:2025 (Cl. 7.2)
 
 ---
 
@@ -186,7 +184,7 @@ Directorio, Gerencias, personal de Compras, Comisiones Evaluadoras de Licitacion
     categoria: 'Conducta e Integridad',
     descripcion: 'Reglas para el reporte, registro, evaluación y destino final de atenciones, presentes corporativos o invitaciones de terceros.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: REGALOS Y HOSPITALIDAD
-**Código:** POE-SGAS-04 | **Versión:** 1.5 | **Norma:** ISO 37001:2016 (Cl. 8.7)
+**Norma:** ISO 37001:2025 (Cl. 8.7)
 
 ---
 
@@ -219,7 +217,7 @@ Ningún colaborador de AUBASA podrá solicitar ni recibir dinero, bienes, viajes
     categoria: 'Controles Financieros',
     descripcion: 'Reglas de segregación de funciones (4 Ojos), doble firma digital bancaria en pagos a contratistas, orden cronológico FIFO y validación previa de cuentas beneficiarias.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: CONTROLES FINANCIEROS
-**Código:** POE-SGAS-05 | **Versión:** 2.1 | **Norma:** ISO 37001:2016 (Cl. 8.3)
+**Norma:** ISO 37001:2025 (Cl. 8.3)
 
 ---
 
@@ -251,7 +249,7 @@ Garantizar la transparencia, trazabilidad, segregación de funciones y control e
     categoria: 'Operación y Obras',
     descripcion: 'Protocolo de extracción y ensayo ciego de probetas de asfalto, cubicación métrica in situ y cláusulas de integridad en pliegos.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: CONTROLES NO FINANCIEROS EN OBRAS
-**Código:** POE-SGAS-06 | **Versión:** 1.5 | **Norma:** ISO 37001:2016 (Cl. 8.4)
+**Norma:** ISO 37001:2025 (Cl. 8.4)
 
 ---
 
@@ -281,7 +279,7 @@ Evitar fraudes técnicos, adulteración de mezclas asfálticas o sobrecertificac
     categoria: 'Canal Ético y Sanciones',
     descripcion: 'Circuito de recepción anónima cifrada, triaje de admisibilidad en 5 días, investigación preliminar en 30 días y derivación penal.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: CANAL ÉTICO E INVESTIGACIONES
-**Código:** POE-SGAS-07 | **Versión:** 2.0 | **Norma:** ISO 37001:2016 (Cl. 8.9 & 8.10)
+**Norma:** ISO 37001:2025 (Cl. 8.9 & 8.10)
 
 ---
 
@@ -316,12 +314,12 @@ AUBASA protege irrestrictamente al denunciante de buena fe contra traslados, san
     categoria: 'Auditoría y Revisión',
     descripcion: 'Pautas para el programa anual de auditorías internas, independencia de auditores, muestreo documental y revisión formal del Directorio.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: AUDITORÍAS INTERNAS Y REVISIÓN
-**Código:** POE-SGAS-08 | **Versión:** 1.3 | **Norma:** ISO 37001:2016 (Cl. 9.2 & 9.3)
+**Norma:** ISO 37001:2025 (Cl. 9.2 & 9.3)
 
 ---
 
 ### 1. OBJETIVO
-Verificar que el SGAS es conforme con los requisitos de la norma ISO 37001:2016, las políticas de AUBASA y se implementa y mantiene eficazmente.
+Verificar que el SGAS es conforme con los requisitos de la norma ISO 37001:2025, las políticas de AUBASA y se implementa y mantiene eficazmente.
 
 ### 2. PROGRAMA ANUAL DE AUDITORÍA
 - Se auditarán todos los procesos de AUBASA al menos una vez cada 12 meses.
@@ -348,7 +346,7 @@ El Directorio de AUBASA sesionará al menos semestralmente para revisar:
     categoria: 'Soporte y Control',
     descripcion: 'Reglas de codificación documental, control de cambios, retención mínima de 10 años y trazabilidad criptográfica SHA-256.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: INFORMACIÓN DOCUMENTADA
-**Código:** POE-SGAS-09 | **Versión:** 1.2 | **Norma:** ISO 37001:2016 (Cl. 7.5)
+**Norma:** ISO 37001:2025 (Cl. 7.5)
 
 ---
 
@@ -379,7 +377,7 @@ Definir las pautas de creación, actualización, aprobación, distribución, arc
     categoria: 'Mejora Continua',
     descripcion: 'Metodología de los 5 Porqués para investigar desvíos, implementar acciones correctivas inmediatas y evaluar eficacia a 60 días.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: NO CONFORMIDADES Y CAPA
-**Código:** POE-SGAS-10 | **Versión:** 1.4 | **Norma:** ISO 37001:2016 (Cl. 10.1 & 10.2)
+**Norma:** ISO 37001:2025 (Cl. 10.1 & 10.2)
 
 ---
 
@@ -406,7 +404,7 @@ Ante cualquier No Conformidad o falla de control:
     categoria: 'Contrataciones y Pliegos',
     descripcion: 'Texto legal modelo de inserción obligatoria en pliegos de bases y condiciones de AUBASA.',
     contenidoMarkdown: `# CLÁUSULA ANTISOBORNO TIPO PARA PLIEGOS Y CONTRATOS DE OBRA
-**Código:** CLA-SGAS-01 | **Norma:** ISO 37001:2016 (Cl. 8.6) | **Ley:** 27.401
+**Norma:** ISO 37001:2025 (Cl. 8.6) | **Ley:** 27.401
 
 ---
 
@@ -426,7 +424,7 @@ Ante cualquier No Conformidad o falla de control:
     categoria: 'Contrataciones y Pliegos',
     descripcion: 'Cláusula anticorrupción específica para proveedores de tecnología, software de compras (ERP) y sistemas de pago a proveedores.',
     contenidoMarkdown: `# CLÁUSULA DE INTEGRIDAD PARA TECNOLOGÍA DE COMPRAS Y PAGOS
-**Código:** CLA-SGAS-02 | **Norma:** ISO 37001:2016 (Cl. 8.6) | **Ley:** 27.401
+**Norma:** ISO 37001:2025 (Cl. 8.6) | **Ley:** 27.401
 
 ---
 
@@ -445,8 +443,7 @@ Ante cualquier No Conformidad o falla de control:
     categoria: 'Conducta e Integridad',
     descripcion: 'Declaración institucional de umbrales, prohibiciones y circuito de declaración de obsequios, viajes, donaciones y cortesías de terceros.',
     contenidoMarkdown: `# POLÍTICA DE REGALOS, HOSPITALIDAD, DONACIONES Y ATENCIONES COMERCIALES
-**Código:** POL-SGAS-02 | **Versión:** 1.0 | **Aprobación:** Acta de Directorio Nº 413
-**Norma:** ISO 37001:2016 (Cláusula 8.7) | **Marco Legal:** Ley 27.401, Art. 256 y 258 C.P.
+**Norma:** ISO 37001:2025 (Cláusula 8.7) | **Marco Legal:** Ley 27.401, Art. 256 y 258 C.P.
 
 ---
 
@@ -481,8 +478,7 @@ Toda donación o patrocinio de AUBASA requiere aprobación expresa del Oficial d
     categoria: 'Canal Ético y Sanciones',
     descripcion: 'Garantías de confidencialidad, anonimato y prohibición de represalias para quienes denuncien de buena fe hechos de soborno o fraude.',
     contenidoMarkdown: `# POLÍTICA DE PROTECCIÓN AL DENUNCIANTE Y NO REPRESALIAS
-**Código:** POL-SGAS-03 | **Versión:** 1.0 | **Aprobación:** Acta de Directorio Nº 414
-**Norma:** ISO 37001:2016 (Cláusula 8.9) | **Marco Legal:** Ley 27.401, Ley 25.188
+**Norma:** ISO 37001:2025 (Cláusula 8.9) | **Marco Legal:** Ley 27.401, Ley 25.188
 
 ---
 
@@ -514,7 +510,7 @@ Las denuncias maliciosas o manifiestamente falsas serán desestimadas fundadamen
     categoria: 'Planificación y Objetivos',
     descripcion: 'Método para definir objetivos medibles, indicadores (KPIs), metas anuales y planes de logro alineados con la política antisoborno.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: OBJETIVOS ANTISOBORNO Y PLANIFICACIÓN
-**Código:** POE-SGAS-11 | **Versión:** 1.0 | **Norma:** ISO 37001:2016 (Cl. 6.2)
+**Norma:** ISO 37001:2025 (Cl. 6.2)
 
 ---
 
@@ -546,7 +542,7 @@ Establecer objetivos antisoborno medibles y coherentes con la Política Instituc
     categoria: 'Soporte y Control',
     descripcion: 'Pautas de difusión de la política antisoborno, del Canal Ético y de los resultados del SGAS a personal, contratistas y partes interesadas.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: COMUNICACIÓN DEL SGAS
-**Código:** POE-SGAS-12 | **Versión:** 1.0 | **Norma:** ISO 37001:2016 (Cl. 7.4)
+**Norma:** ISO 37001:2025 (Cl. 7.4)
 
 ---
 
@@ -579,7 +575,7 @@ Toda comunicación del SGAS es revisada por el Oficial de Cumplimiento y, cuando
     categoria: 'Conducta e Integridad',
     descripcion: 'Criterios de selección, declaraciones juradas y evaluación de antecedentes del personal en puestos de riesgo de soborno.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: EMPLEO Y DEBIDA DILIGENCIA DE PERSONAL
-**Código:** POE-SGAS-13 | **Versión:** 1.0 | **Norma:** ISO 37001:2016 (Cl. 7.2)
+**Norma:** ISO 37001:2025 (Cl. 7.2)
 
 ---
 
@@ -614,7 +610,7 @@ El incumplimiento de las normas de integridad habilita sumario, despido con caus
     categoria: 'Auditoría y Revisión',
     descripcion: 'Metodología de monitoreo de KPIs, encuestas de clima ético y revisión periódica del Oficial de Cumplimiento sobre la eficacia del SGAS.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: SEGUIMIENTO, MEDICIÓN Y REVISIÓN DE CUMPLIMIENTO
-**Código:** POE-SGAS-14 | **Versión:** 1.0 | **Norma:** ISO 37001:2016 (Cl. 9.1 & 9.4)
+**Norma:** ISO 37001:2025 (Cl. 9.1 & 9.4)
 
 ---
 
@@ -649,7 +645,7 @@ El Oficial de Cumplimiento elaborará al menos semestralmente un informe que eva
     categoria: 'Mejora Continua',
     descripcion: 'Protocolo para detectar, reportar y compensar los controles antisoborno insuficientes o ausentes, con medidas temporales y plan de remediación.',
     contenidoMarkdown: `# PROCEDIMIENTO OPERATIVO ESTÁNDAR: GESTIÓN DE LA INSUFICIENCIA DE CONTROLES
-**Código:** POE-SGAS-15 | **Versión:** 1.0 | **Norma:** ISO 37001:2016 (Cl. 8.8)
+**Norma:** ISO 37001:2025 (Cl. 8.8)
 
 ---
 

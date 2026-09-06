@@ -1,6 +1,6 @@
 /**
  * Contexto Institucional de AUBASA (Autopistas de Buenos Aires S.A.)
- * Sistema de Gestión Antisoborno - Norma ISO 37001:2016
+ * Sistema de Gestión Antisoborno - Norma ISO 37001:2025
  */
 
 export const AUBASA_CONTEXT = {
@@ -10,7 +10,7 @@ export const AUBASA_CONTEXT = {
     tipoEntidad: 'Sociedad Anónima con Participación Estatal Mayoritaria (SAPEM - Prov. de Buenos Aires)',
     sedeCentral: 'Calle 528 e/ 118 y 119, Tolosa, La Plata, Provincia de Buenos Aires',
     cuit: '30-71409204-9',
-    normaCertificar: 'ISO 37001:2016 (Sistema de Gestión Antisoborno - SGAS)',
+    normaCertificar: 'ISO 37001:2025 (Sistema de Gestión Antisoborno - SGAS)',
     organismoDeSupervision: 'Ministerio de Infraestructura y Servicios Públicos de la Prov. de Buenos Aires',
   },
   alcanceSGAS: {

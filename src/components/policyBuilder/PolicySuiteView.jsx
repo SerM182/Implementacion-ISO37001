@@ -84,7 +84,7 @@ export default function PolicySuiteView({
               Suite de Políticas y Procedimientos Oficiales del SGAS
             </h2>
             <span className="px-2 py-0.5 rounded text-xs font-bold bg-cyan-950 text-cyan-300 border border-cyan-800 shrink-0">
-              ISO 37001:2016
+              ISO 37001:2025
             </span>
           </div>
           <p className="text-xs text-slate-600 mt-1">

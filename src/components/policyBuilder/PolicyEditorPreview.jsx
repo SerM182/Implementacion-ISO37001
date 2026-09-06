@@ -60,7 +60,7 @@ export default function PolicyEditorPreview({
       isOpen={isOpen}
       onClose={onClose}
       title={`${policy.codigo}: ${policy.titulo}`}
-      subtitle={`Documento Oficial del SGAS - Norma ISO 37001:2016 (${policy.clausulaIso})`}
+      subtitle={`Documento Oficial del SGAS - Norma ISO 37001:2025 (${policy.clausulaIso})`}
       maxWidth="max-w-4xl"
     >
       <div className="space-y-4">

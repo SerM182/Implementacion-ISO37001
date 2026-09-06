@@ -22,7 +22,7 @@ export default function ComplianceAdvisorView() {
         <div>
           <div className="flex flex-wrap items-center gap-2">
             <h2 className="text-xl font-black text-slate-900 tracking-wide">
-              Asistente Especialista en Compliance ISO 37001:2016
+              Asistente Especialista en Compliance ISO 37001:2025
             </h2>
             <span className="px-2 py-0.5 rounded text-xs font-bold bg-cyan-950 text-cyan-300 border border-cyan-800 flex items-center gap-1 shrink-0">
               <Sparkles className="w-3 h-3 text-cyan-400" />

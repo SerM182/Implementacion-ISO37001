@@ -1,6 +1,6 @@
 /**
  * Matriz Inicial de Riesgos de Soborno para AUBASA
- * Norma ISO 37001:2016 — Cláusulas 4.5 y 6.1
+ * Norma ISO 37001:2025 — Cláusulas 4.5 y 6.1
  * Alcance: Contratación, Pagos, Planificación y Ejecución de Obras Viales
  */
 
