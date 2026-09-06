@@ -96,7 +96,7 @@ export default function ExportImportModal({
   };
 
   const handleClearToBlank = () => {
-    if (window.confirm('¿Desea iniciar en BLANCO para carga real? Esta acción vaciará los riesgos, proveedores, denuncias y evidencias cargadas de ejemplo, manteniendo intactos los 32 requisitos normativos, las 12 plantillas oficiales y los 10 procedimientos estándar.')) {
+    if (window.confirm('¿Desea iniciar en BLANCO para carga real? Esta acción vaciará los riesgos, proveedores, denuncias y evidencias cargadas de ejemplo, manteniendo intactos los 36 requisitos normativos, las 14 plantillas oficiales y los 10 procedimientos estándar.')) {
       sgasStorage.clearToBlankSlate();
       setFeedback({ type: 'success', text: 'Workspace listo en BLANCO para la carga real de AUBASA.' });
       if (onDataReloaded) onDataReloaded();

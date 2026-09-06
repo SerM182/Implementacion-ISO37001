@@ -306,6 +306,45 @@ Criterio de Aprobación y Eficacia: Calificación igual o superior al 80% en tes
 Firma del Instructor: ___________________________    Firma Oficial de Cumplimiento: ______________`
   },
   {
+    id: 'REC-15',
+    codigo: 'REC-AUD-15',
+    nombre: 'Informe y Programa de Auditoría Interna Antisoborno',
+    clausula: 'Cl. 9.2',
+    categoria: 'Evaluación del Desempeño',
+    frecuencia: 'Mínimo 1 vez al año (Previo a auditoría de certificación)',
+    responsable: 'Equipo Auditor Interno Independiente / Oficial de Cumplimiento',
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
+INFORME DE AUDITORÍA INTERNA ANTISOBORNO (Cl. 9.2)
+Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
+
+1. DATOS DE LA AUDITORÍA:
+• Nº de Auditoría: _______  Fecha(s): ______________  Tipo: [  ] Programada  [  ] Extraordinaria
+• Equipo Auditor (independiente del área auditada): ____________________________________________
+• Procesos / Cláusulas auditadas: [  ] Contratación (8.4/8.6)  [  ] Pagos (8.3)  [  ] Obras (8.4/8.5)
+  [  ] Debida Diligencia (8.2)  [  ] Canal Ético (8.9/8.10)  [  ] Otro: _________________________
+
+2. CRITERIOS Y MUESTREO:
+• Lista de verificación aplicada (checklist por cláusula ISO 37001): ___________________________
+• Tamaño y criterio de muestra de expedientes revisados: ______________________________________
+
+3. HALLAZGOS TIPIFICADOS:
+Nº | Cláusula | Tipo (Conformidad / Observación / NC Menor / NC Mayor) | Descripción del hallazgo
+1  | ________ | _______________________________________________________ | _________________________
+2  | ________ | _______________________________________________________ | _________________________
+3  | ________ | _______________________________________________________ | _________________________
+
+4. DICTAMEN TÉCNICO DEL EQUIPO AUDITOR:
+Conclusión general sobre la conformidad, adecuación y eficacia del SGAS en los procesos auditados:
+_________________________________________________________________________________________________
+
+5. SEGUIMIENTO:
+Las No Conformidades detectadas se derivan a Ficha CAPA (Cl. 10.1 y 10.2) para tratamiento y cierre.
+Los resultados de esta auditoría se incorporan como insumo obligatorio a la próxima Revisión por la
+Dirección (Cl. 9.3).
+
+Firma Auditor Líder: _______________________    Firma Oficial de Cumplimiento: __________________`
+  },
+  {
     id: 'REC-09',
     codigo: 'REC-DIR-09',
     nombre: 'Acta Oficial de Revisión del SGAS por la Dirección',
@@ -435,6 +474,70 @@ OBJETIVO 4: Evaluar el 100% de las denuncias ingresadas al Canal Ético en un pl
 • Q1: ______%   Q2: ______%   Q3: ______%   Q4: ______%   | Estado: [  ] En meta   [  ] Desvío
 
 Firma Oficial de Cumplimiento: _______________________    Firma Gerente General: _____________________`
+  },
+  {
+    id: 'REC-13',
+    codigo: 'REC-CTX-13',
+    nombre: 'Matriz de Contexto y Análisis FODA Antisoborno',
+    clausula: 'Cl. 4.1',
+    categoria: 'Contexto & Gobernanza',
+    frecuencia: 'Anual / Ante cambios regulatorios o de la concesión BALP',
+    responsable: 'Oficial de Cumplimiento & Directorio',
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
+MATRIZ DE CONTEXTO DE LA ORGANIZACIÓN Y ANÁLISIS FODA (Cl. 4.1)
+Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
+
+1. FACTORES INTERNOS PERTINENTES:
+• Estructura de gobernanza y autonomía del Oficial de Cumplimiento: ___________________________
+• Recursos asignados al SGAS (personal, presupuesto, tecnología): _____________________________
+• Cultura organizacional e historial de incidentes de integridad: _____________________________
+• Procesos críticos identificados: [  ] Contratación   [  ] Pagos y Tesorería   [  ] Obras Viales
+
+2. FACTORES EXTERNOS PERTINENTES:
+• Marco legal aplicable: Ley 27.401, Ley Prov. 13.981, Decreto 367/17, ISO 37001 _______________
+• Condiciones del mercado vial y de la concesión (tránsito, obras, licitaciones en curso): _____
+• Relación con organismos de supervisión (Ministerio de Infraestructura PBA, Tribunal de Cuentas,
+  ARBA): ________________________________________________________________________________
+
+3. ANÁLISIS FODA ANTISOBORNO:
+• Fortalezas: __________________________________________________________________________
+• Oportunidades: _______________________________________________________________________
+• Debilidades: _________________________________________________________________________
+• Amenazas: ____________________________________________________________________________
+
+4. CONCLUSIÓN Y APROBACIÓN:
+El presente análisis de contexto fue revisado y sirve de base para la determinación del alcance
+del SGAS (Cl. 4.3) y la evaluación de riesgos de soborno (Cl. 4.5).
+
+Lugar y Fecha: ______________________, _____ de ____________________ de 202___
+Firma Oficial de Cumplimiento: _______________________    Firma Presidente Directorio: ____________`
+  },
+  {
+    id: 'REC-14',
+    codigo: 'REC-PI-14',
+    nombre: 'Matriz de Partes Interesadas y sus Requisitos',
+    clausula: 'Cl. 4.2',
+    categoria: 'Contexto & Gobernanza',
+    frecuencia: 'Anual / Ante incorporación de nuevas partes relevantes',
+    responsable: 'Comité de Integridad & RRHH',
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
+MATRIZ DE PARTES INTERESADAS Y SUS REQUISITOS (Cl. 4.2)
+Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
+
+Nº | PARTE INTERESADA                          | REQUISITO / EXPECTATIVA LEGÍTIMA                        | CANAL DE RELACIONAMIENTO
+1  | Usuarios de la Autopista BALP              | Transparencia en tarifas y ausencia de sobrecostos      | Portal Web / Atención al Usuario
+2  | Contratistas y Oferentes de Licitaciones   | Procesos de compra íntegros y no direccionados          | Pliegos / Comisión Evaluadora
+3  | SUTPA (Sindicato de Trabajadores)           | Cumplimiento laboral y canal de denuncia protegido      | Canal Ético / Paritarias
+4  | Poder Ejecutivo Prov. de Buenos Aires       | Rendición de cuentas y cumplimiento normativo            | Informes a Min. de Infraestructura
+5  | Tribunal de Cuentas / ARBA                  | Trazabilidad documental y controles financieros          | Auditorías externas / Fiscalización
+6  | Entidades Bancarias                         | Cumplimiento de normas de prevención de lavado de activos| Debida diligencia bancaria
+7  | ____________________________________       | _______________________________________________________ | ____________________________
+8  | ____________________________________       | _______________________________________________________ | ____________________________
+
+Observaciones / Actualizaciones del período: ___________________________________________________
+
+Lugar y Fecha: ______________________, _____ de ____________________ de 202___
+Firma Oficial de Cumplimiento: _______________________    Firma Responsable RRHH: _________________`
   }
 ];
 
@@ -516,7 +619,7 @@ export default function BlankTemplatesViewer({
                 Cl. 7.5 Información Documentada
               </span>
               <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-white text-slate-700 border border-slate-200">
-                12 Plantillas Oficiales en Blanco
+                {BLANK_TEMPLATES_DATA.length} Plantillas Oficiales en Blanco
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-black text-slate-900 mt-2">

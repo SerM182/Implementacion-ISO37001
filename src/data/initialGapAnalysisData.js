@@ -317,7 +317,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     frecuenciaRegistro: 'En cada generación de evidencia / Backup semanal',
     responsable: 'Oficial de Cumplimiento / Sistemas',
     estadoConformidad: 'conforme',
-    observaciones: '12 categorías de registros operativos integradas con cálculo de hash SHA-256.',
+    observaciones: '18 categorías de registros operativos integradas con cálculo de hash SHA-256.',
     accionRemedial: 'Ejecutar pruebas periódicas de restauración de copias de seguridad.'
   },
 

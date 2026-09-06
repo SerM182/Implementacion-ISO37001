@@ -23,6 +23,30 @@ import {
 
 export const MANDATORY_RECORDS_GUIDE = [
   {
+    codigo: 'REC-CTX',
+    nombre: 'Matriz de Contexto y Análisis FODA Antisoborno',
+    clausulaIso: 'Cl. 4.1',
+    tipoId: 'contexto',
+    poeAsociado: 'MAN-SGAS-01 (Manual del SGAS - Cap. 2)',
+    frecuencia: 'Anual / Ante cambios regulatorios o de la concesión BALP',
+    responsable: 'Oficial de Cumplimiento & Directorio',
+    conservacion: '10 años',
+    queDebeContener: 'Factores internos (estructura, gobernanza, recursos) y externos (marco legal provincial y nacional, condiciones del mercado vial) que afectan al SGAS, análisis FODA formal y fecha de aprobación por el Directorio.',
+    color: 'slate'
+  },
+  {
+    codigo: 'REC-PI',
+    nombre: 'Matriz de Partes Interesadas y sus Requisitos',
+    clausulaIso: 'Cl. 4.2',
+    tipoId: 'partes_interesadas',
+    poeAsociado: 'MAN-SGAS-01 (Cap. 3 - Partes Interesadas)',
+    frecuencia: 'Anual / Ante incorporación de nuevas partes relevantes',
+    responsable: 'Comité de Integridad & RRHH',
+    conservacion: '10 años',
+    queDebeContener: 'Listado de partes interesadas pertinentes (usuarios de peaje, contratistas, oferentes, SUTPA, Poder Ejecutivo PBA, entidades bancarias), sus requisitos y expectativas legítimas y el canal de relacionamiento vigente.',
+    color: 'stone'
+  },
+  {
     codigo: 'REC-CAP',
     nombre: 'Registro de Capacitación & Evaluación de Eficacia',
     clausulaIso: 'Cl. 7.2 & 7.3',
@@ -306,7 +330,7 @@ export default function OperationalRecordsGuide({
 
 ---
 
-## 1. LOS 12 REGISTROS AUDITABLES OBLIGATORIOS A LLEVAR ADELANTE (CLÁUSULA 7.5)
+## 1. LOS ${MANDATORY_RECORDS_GUIDE.length} REGISTROS AUDITABLES OBLIGATORIOS A LLEVAR ADELANTE (CLÁUSULA 7.5)
 
 ${MANDATORY_RECORDS_GUIDE.map((r, i) => `
 ### ${i + 1}. [${r.codigo}] ${r.nombre}
@@ -359,7 +383,7 @@ ${MANDATORY_POES_GUIDE.map((p, i) => `
               Guía Maestra: Políticas, POEs y Registros a Llevar Adelante
             </h2>
             <p className="text-xs text-slate-300 leading-relaxed">
-              Directorio oficial estructurado de los <strong>10 Procedimientos Operativos Estándar (POEs)</strong> y los <strong>12 Registros de Evidencia Obligatorios</strong> que AUBASA debe generar, firmar y custodiar operativamente para acreditar cumplimiento ante auditores del organismo certificador.
+              Directorio oficial estructurado de los <strong>10 Procedimientos Operativos Estándar (POEs)</strong> y los <strong>{MANDATORY_RECORDS_GUIDE.length} Registros de Evidencia Obligatorios</strong> que AUBASA debe generar, firmar y custodiar operativamente para acreditar cumplimiento ante auditores del organismo certificador.
             </p>
           </div>
 
@@ -385,9 +409,9 @@ ${MANDATORY_POES_GUIDE.map((p, i) => `
             }`}
           >
             <FolderCheck className="w-4 h-4" />
-            <span>12 Registros Obligatorios (A Llevar Adelante)</span>
+            <span>Registros Obligatorios (A Llevar Adelante)</span>
             <span className="px-1.5 py-0.2 text-[10px] rounded bg-white/20 text-white font-mono">
-              12
+              {MANDATORY_RECORDS_GUIDE.length}
             </span>
           </button>
 
@@ -420,14 +444,14 @@ ${MANDATORY_POES_GUIDE.map((p, i) => `
         </div>
       </div>
 
-      {/* SECCIÓN 1: LOS 12 REGISTROS OBLIGATORIOS (A LLEVAR ADELANTE) */}
+      {/* SECCIÓN 1: LOS REGISTROS OBLIGATORIOS (A LLEVAR ADELANTE) */}
       {activeTab === 'records' && (
         <div className="space-y-4">
           <div className="bg-emerald-950/30 border border-emerald-800/40 rounded-xl p-4 flex items-center justify-between text-xs text-emerald-200">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>
-                <strong>Requisito ISO 37001 Cl. 7.5:</strong> Cada uno de estos 12 registros constituye evidencia auditable ante el organismo certificador. Haga clic en <em>"Gestionar en Registros Cl. 7.5"</em> para cargar o consultar expedientes.
+                <strong>Requisito ISO 37001 Cl. 7.5:</strong> Cada uno de estos {MANDATORY_RECORDS_GUIDE.length} registros constituye evidencia auditable ante el organismo certificador. Haga clic en <em>"Gestionar en Registros Cl. 7.5"</em> para cargar o consultar expedientes.
               </span>
             </div>
             {onNavigateToRecords && (

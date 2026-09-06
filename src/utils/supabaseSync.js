@@ -33,7 +33,7 @@ export const supabaseSync = {
       const { data: collabsData, error: errCollabs } = await supabase.from('training_collaborators').select('*');
       if (!errCollabs && collabsData) sgasStorage.saveCollaborators(collabsData);
 
-      // 6. Checklist 32 Requisitos
+      // 6. Checklist 36 Requisitos
       const { data: gapData, error: errGap } = await supabase.from('gap_analysis').select('*');
       if (!errGap && gapData && gapData.length > 0) sgasStorage.saveGapAnalysis(gapData);
 

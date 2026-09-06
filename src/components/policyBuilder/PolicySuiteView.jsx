@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import PolicyEditorPreview from './PolicyEditorPreview.jsx';
 import ClausePackBuilder from './ClausePackBuilder.jsx';
-import OperationalRecordsGuide from '../policies/OperationalRecordsGuide.jsx';
+import OperationalRecordsGuide, { MANDATORY_RECORDS_GUIDE } from '../policies/OperationalRecordsGuide.jsx';
 import SearchFilterBar from '../common/SearchFilterBar.jsx';
 import {
   FileText,
@@ -124,7 +124,7 @@ export default function PolicySuiteView({
           <FolderCheck className="w-4 h-4" />
           <span>Guía Maestra de Registros & POEs</span>
           <span className="px-1.5 py-0.2 text-[10px] rounded bg-white/20 text-white font-mono">
-            12 Registros / 10 POEs
+            {MANDATORY_RECORDS_GUIDE.length} Registros / 10 POEs
           </span>
         </button>
 

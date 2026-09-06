@@ -25,6 +25,8 @@ import {
   AlertOctagon
 } from 'lucide-react';
 import { STANDARDS_TRILOGY } from '../../data/iso37002And37008Data.js';
+import { RECORD_CATEGORIES } from '../../data/initialRecordsData.js';
+import { MANDATORY_RECORDS_GUIDE } from '../policies/OperationalRecordsGuide.jsx';
 
 export default function ExecutiveHeroBanner({
   onNavigate,
@@ -108,7 +110,7 @@ export default function ExecutiveHeroBanner({
               className="px-4 py-3 bg-white/15 hover:bg-white/25 text-white border border-white/30 rounded-lg text-xs font-bold flex items-center gap-2 transition-all shadow-xs"
             >
               <FolderCheck className="w-4 h-4 text-sky-200" />
-              <span>12 REGISTROS (7.5)</span>
+              <span>{RECORD_CATEGORIES.length} REGISTROS (7.5)</span>
             </button>
 
             <button
@@ -229,7 +231,7 @@ export default function ExecutiveHeroBanner({
                 Diagnóstico & Checklist
               </h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                Evaluación integral de 32 requisitos normativos: brechas normativas y asignación de responsables.
+                Evaluación integral de 36 requisitos normativos: brechas normativas y asignación de responsables.
               </p>
             </div>
 
@@ -285,10 +287,10 @@ export default function ExecutiveHeroBanner({
               </div>
 
               <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#0284c7] transition-colors">
-                Políticas & 12 Registros (7.5)
+                Políticas & {RECORD_CATEGORIES.length} Registros (7.5)
               </h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                Repositorio documental auditable de 12 registros obligatorios y 10 POEs operativos.
+                Repositorio documental auditable de {MANDATORY_RECORDS_GUIDE.length} registros obligatorios y 10 POEs operativos.
               </p>
             </div>
 

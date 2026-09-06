@@ -84,7 +84,7 @@ export const sgasStorage = {
   getPolicies: () => safeGet(STORAGE_KEYS.POLICIES, INITIAL_POLICY_TEMPLATES),
   savePolicies: (data) => safeSet(STORAGE_KEYS.POLICIES, data),
 
-  // Gap Analysis (Mantiene los 32 requisitos normativos con campos en blanco listos para auditar)
+  // Gap Analysis (Mantiene los 36 requisitos normativos con campos en blanco listos para auditar)
   getGapAnalysis: () => safeGet(STORAGE_KEYS.GAP_ANALYSIS, CLEAN_GAP_ANALYSIS),
   saveGapAnalysis: (data) => safeSet(STORAGE_KEYS.GAP_ANALYSIS, data),
 

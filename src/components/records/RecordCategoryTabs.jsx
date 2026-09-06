@@ -16,7 +16,9 @@ import {
   Target,
   Send,
   ClipboardCheck,
-  TrendingUp
+  TrendingUp,
+  Globe,
+  Users
 } from 'lucide-react';
 import { RECORD_CATEGORIES } from '../../data/initialRecordsData.js';
 
@@ -36,7 +38,9 @@ const ICON_MAP = {
   Target,
   Send,
   ClipboardCheck,
-  TrendingUp
+  TrendingUp,
+  Globe,
+  Users
 };
 
 export default function RecordCategoryTabs({

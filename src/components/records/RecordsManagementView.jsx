@@ -5,7 +5,7 @@ import RecordsFilterBar from './RecordsFilterBar.jsx';
 import RecordsTable from './RecordsTable.jsx';
 import RecordDetailModal from './RecordDetailModal.jsx';
 import RecordFormModal from './RecordFormModal.jsx';
-import BlankTemplatesViewer from './BlankTemplatesViewer.jsx';
+import BlankTemplatesViewer, { BLANK_TEMPLATES_DATA } from './BlankTemplatesViewer.jsx';
 import {
   calculateRecordsKpis,
   filterRecords
@@ -152,7 +152,7 @@ export default function RecordsManagementView({
             }`}
           >
             <FileText className="w-4 h-4" />
-            <span>Plantillas en Blanco (12 Oficiales)</span>
+            <span>Plantillas en Blanco ({BLANK_TEMPLATES_DATA.length} Oficiales)</span>
           </button>
         </div>
       </div>

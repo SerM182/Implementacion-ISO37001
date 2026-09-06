@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import ClauseAccordion from './ClauseAccordion.jsx';
 import RoadmapTimeline from '../dashboard/RoadmapTimeline.jsx';
-import BlankTemplatesViewer from '../records/BlankTemplatesViewer.jsx';
+import BlankTemplatesViewer, { BLANK_TEMPLATES_DATA } from '../records/BlankTemplatesViewer.jsx';
 import SearchFilterBar from '../common/SearchFilterBar.jsx';
 import { calculateGapMaturity } from '../../utils/gapAnalysisScoring.js';
 import {
@@ -149,7 +149,7 @@ ${gapItems.map((item, idx) => `
             </div>
           </div>
           <p className="text-xs text-slate-600 mt-1">
-            Asistente paso a paso para implementar la Norma ISO 37001 en AUBASA. Consulte cómo cumplir cada requisito, gestione el cronograma de 6 fases y acceda a las 12 plantillas oficiales en blanco.
+            Asistente paso a paso para implementar la Norma ISO 37001 en AUBASA. Consulte cómo cumplir cada requisito, gestione el cronograma de 6 fases y acceda a las {BLANK_TEMPLATES_DATA.length} plantillas oficiales en blanco.
           </p>
         </div>
 
@@ -209,7 +209,7 @@ ${gapItems.map((item, idx) => `
           <span className={`px-1.5 py-0.2 text-[10px] rounded font-mono font-bold ${
             activeTab === 'templates' ? 'bg-white/20 text-white' : 'bg-emerald-100 text-emerald-800'
           }`}>
-            12 REC
+            {BLANK_TEMPLATES_DATA.length} REC
           </span>
         </button>
 
@@ -358,7 +358,7 @@ ${gapItems.map((item, idx) => `
               <strong className="font-bold text-emerald-900 block mb-0.5">
                 Repositorio Oficial de Formularios y Plantillas en Blanco (Cl. 7.5):
               </strong>
-              Aquí dispone de los 12 registros maestros oficiales con encabezado oficial de AUBASA S.A. y campos listos para completar. Puede <strong>Copiar el Formato</strong> al portapapeles, <strong>Descargar en Texto (.txt)</strong> o <strong>Imprimir</strong> el documento oficial.
+              Aquí dispone de los {BLANK_TEMPLATES_DATA.length} registros maestros oficiales con encabezado oficial de AUBASA S.A. y campos listos para completar. Puede <strong>Copiar el Formato</strong> al portapapeles, <strong>Descargar en Texto (.txt)</strong> o <strong>Imprimir</strong> el documento oficial.
             </div>
           </div>
 

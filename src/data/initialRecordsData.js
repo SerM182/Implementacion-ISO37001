@@ -6,6 +6,26 @@
 
 export const RECORD_CATEGORIES = [
   {
+    id: 'contexto',
+    nombre: 'Contexto de la Organización y Análisis FODA',
+    shortName: 'Contexto y FODA',
+    clausulaIso: 'Cl. 4.1',
+    pilarAubasa: 'Gobernanza y Planificación Estratégica',
+    descripcion: 'Matriz de factores internos y externos (FODA) que afectan la capacidad del SGAS de lograr sus objetivos, con actualización ante cambios regulatorios o de la concesión BALP.',
+    color: 'slate',
+    iconName: 'Globe'
+  },
+  {
+    id: 'partes_interesadas',
+    nombre: 'Partes Interesadas y sus Requisitos',
+    shortName: 'Partes Interesadas',
+    clausulaIso: 'Cl. 4.2',
+    pilarAubasa: 'Gobernanza y Planificación Estratégica',
+    descripcion: 'Matriz de partes interesadas pertinentes (usuarios de peaje, contratistas, oferentes, sindicato, Poder Ejecutivo PBA, entidades bancarias) con sus requisitos y expectativas legítimas frente al SGAS.',
+    color: 'stone',
+    iconName: 'Users'
+  },
+  {
     id: 'capacitacion',
     nombre: 'Capacitación e Inducciones Antisoborno',
     shortName: 'Capacitación',
