@@ -48,7 +48,7 @@ export default function DueDiligenceCertificate({
                 Gerencia de Integridad, Transparencia y Cumplimiento Normativo
               </p>
               <p className="text-[11px] text-slate-500">
-                Sistema de Gestión Antisoborno • IRAM - ISO 37001:2016 (Cl. 8.2) & Ley 27.401
+                Sistema de Gestión Antisoborno • ISO 37001:2016 (Cl. 8.2) & Ley 27.401
               </p>
             </div>
             <div className="text-right font-mono text-xs text-slate-600">

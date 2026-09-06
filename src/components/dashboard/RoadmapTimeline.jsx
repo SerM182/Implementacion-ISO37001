@@ -63,7 +63,7 @@ export default function RoadmapTimeline({
         <div>
           <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider flex items-center gap-2">
             <Calendar className="w-4 h-4 text-[#0284c7]" />
-            Cronograma Estratégico de Implementación (6 Fases hacia IRAM ISO 37001)
+            Cronograma Estratégico de Implementación (6 Fases hacia ISO 37001)
           </h3>
           <p className="text-xs text-slate-500 mt-0.5">
             Hitos obligatorios para la certificación del SGAS en AUBASA. Marque los entregables a medida que se completen.

@@ -25,7 +25,7 @@ export const BLANK_TEMPLATES_DATA = [
     categoria: 'Personal & Gobernanza',
     frecuencia: 'Anual y por cada Licitación/Concurso de Obra',
     responsable: 'Directorio, Comisiones de Compra, Inspectores y Jefes de Peaje',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (IRAM-ISO 37001)
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
 ANEXO III - FORMULARIO OFICIAL DE DECLARACIÓN JURADA DE CONFLICTO DE INTERESES (Cl. 7.2)
 Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
 
@@ -62,7 +62,7 @@ Revisado por Cumplimiento (Firma/Sello): _______________________________________
     categoria: 'Debida Diligencia & Compras',
     frecuencia: 'Previo a toda adjudicación y renovación bienal',
     responsable: 'Oficial de Cumplimiento & Comisión Evaluadora',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (IRAM-ISO 37001)
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
 FORMULARIO OFICIAL DE EVALUACIÓN Y DICTAMEN DE DEBIDA DILIGENCIA (Cl. 8.2)
 Alcance: Contratación de Bienes, Servicios y Obras Viales en BALP (50 km)
 
@@ -103,7 +103,7 @@ Firma Oficial de Cumplimiento: _______________________    Firma Gerente de Compr
     categoria: 'Controles Financieros',
     frecuencia: 'Mensual y sorpresiva en Dock Sud y Hudson',
     responsable: 'Auditoría Interna, Tesorería y Supervisión de Peaje',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (IRAM-ISO 37001)
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
 ACTA DE ARQUEO SORPRESIVO Y CONCILIACIÓN DE FONDOS DE PEAJE (Cl. 8.3)
 Estaciones de Peaje Autopista Buenos Aires - La Plata
 
@@ -141,7 +141,7 @@ Firma Auditor Interno SGAS: ___________________`
     categoria: 'Controles No Financieros',
     frecuencia: 'Por cada tramo o certificado de obra en BALP',
     responsable: 'Inspección de Obras AUBASA & Laboratorio LEMIT / UNLP',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (IRAM-ISO 37001)
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
 PROTOCOLO DE ENSAYOS CIEGOS Y CERTIFICACIÓN TÉCNICA DE OBRAS VIALES (Cl. 8.4)
 Traza Autopista Buenos Aires - La Plata (Km 0+000 al Km 50+000)
 
@@ -175,13 +175,13 @@ Firma Gerente Técnico Operativo: ___________________`
     categoria: 'Mejora Continua',
     frecuencia: 'Ante todo desvío, hallazgo de auditoría o incidente',
     responsable: 'Dueño del Proceso afectado & Oficial de Cumplimiento',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (IRAM-ISO 37001)
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
 FICHA OFICIAL DE NO CONFORMIDAD Y ACCIÓN CORRECTIVA (CAPA) (Cl. 10.1)
 
 1. DATOS GENERALES:
 • Registro CAPA Nº: CAPA-2026-______   Fecha de Apertura: _____/_____/202___
 • Proceso Afectado: [  ] Contrataciones   [  ] Pagos / Tesorería   [  ] Obras Viales   [  ] Peajes   [  ] Otro
-• Origen del Hallazgo: [  ] Auditoría Interna   [  ] Canal Ético   [  ] Control de Peaje   [  ] Auditoría IRAM
+• Origen del Hallazgo: [  ] Auditoría Interna   [  ] Canal Ético   [  ] Control de Peaje   [  ] Auditoría Externa de Certificación
 
 2. DESCRIPCIÓN CIRCUNSTANCIADA DEL DESVÍO O NO CONFORMIDAD:
 _________________________________________________________________________________________
@@ -217,7 +217,7 @@ Firma Dueño del Proceso: _________________________    Firma Oficial de Cumplimi
     categoria: 'Relaciones Institucionales',
     frecuencia: 'Dentro de las 48 hs de recibido o rechazado un presente',
     responsable: 'Todo el personal / Custodia: Oficial de Cumplimiento',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (IRAM-ISO 37001)
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
 FORMULARIO DE DECLARACIÓN Y REGISTRO DE REGALOS Y HOSPITALIDAD (Cl. 8.7)
 
 1. DATOS DEL RECEPTOR:
@@ -251,7 +251,7 @@ Firma del Declarante: _________________________    Firma y Sello Oficial Cumplim
     categoria: 'Contrataciones',
     frecuencia: 'Obligatorio en todo pliego licitatorio y contrato',
     responsable: 'Gerencia de Compras & Contratistas oferentes',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (IRAM-ISO 37001)
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
 ANEXO DE INTEGRIDAD Y CLÁUSULAS ANTISOBORNO OBLIGATORIAS EN PLIEGOS (Cl. 8.6)
 Licitaciones Públicas, Privadas y Concursos de Obras en Autopista BALP (50 km)
 
@@ -261,7 +261,7 @@ en su carácter de Apoderado Legal en la Licitación / Contratación Nº _______
 
 DECLARA Y SE COMPROMETE FORMALMENTE ANTE AUTOPISTAS DE BUENOS AIRES S.A. (AUBASA) A:
 1. Conocer y respetar estrictamente la Política Antisoborno de AUBASA y los requerimientos de la
-   Norma IRAM-ISO 37001 y la Ley Nacional Nº 27.401 de Responsabilidad Penal Empresaria.
+   Norma ISO 37001 y la Ley Nacional Nº 27.401 de Responsabilidad Penal Empresaria.
 2. NO ofrecer, pagar, prometer ni autorizar, de manera directa o mediante intermediarios, ningún
    tipo de dádiva, soborno, pago indebido o beneficio a funcionarios, inspectores o empleados de AUBASA.
 3. Denunciar de inmediato a través del Canal Ético de AUBASA (canal.etico@aubasa.com.ar / 0800-468-3474)
@@ -281,7 +281,7 @@ Firma del Apoderado de la Empresa: ______________________    Aclaración / Sello
     categoria: 'Competencia & Concientización',
     frecuencia: 'Anual y en cada inducción de personal nuevo',
     responsable: 'Gerencia de RRHH & Oficial de Cumplimiento',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (IRAM-ISO 37001)
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
 REGISTRO OFICIAL DE ASISTENCIA Y EVALUACIÓN DE EFICACIA FORMATIVA (Cl. 7.2 / 7.3)
 
 1. DATOS DEL PROGRAMA DE CAPACITACIÓN:
@@ -313,13 +313,13 @@ Firma del Instructor: ___________________________    Firma Oficial de Cumplimien
     categoria: 'Evaluación del Desempeño',
     frecuencia: 'Semestral / Anual',
     responsable: 'Directorio y Presidencia de AUBASA',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (IRAM-ISO 37001)
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
 ACTA DE REUNIÓN DEL DIRECTORIO — REVISIÓN POR LA DIRECCIÓN DEL SGAS (Cl. 9.3)
 Libro de Actas Oficial — Sede Central AUBASA S.A.
 
 En la Ciudad de Buenos Aires, a los _____ días del mes de _________________ de 202___, se reúne el
 Directorio de Autopistas de Buenos Aires S.A. con la presencia del Oficial de Cumplimiento para
-tratar el siguiente ORDEN DEL DÍA relativo al Sistema de Gestión Antisoborno (Norma IRAM-ISO 37001):
+tratar el siguiente ORDEN DEL DÍA relativo al Sistema de Gestión Antisoborno (Norma ISO 37001):
 
 1. ESTADO DE LAS ACCIONES DE REVISIONES PREVIAS POR LA DIRECCIÓN.
 2. CAMBIOS EN EL CONTEXTO EXTERNO E INTERNO DE LA CONCESIÓN BALP (50 KM).
@@ -414,7 +414,7 @@ Firma Investigador Forense: ______________________    Firma Oficial Cumplimiento
     categoria: 'Planificación & Objetivos',
     frecuencia: 'Trimestral',
     responsable: 'Oficial de Cumplimiento & Gerencia General',
-    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (IRAM-ISO 37001)
+    formato: `AUBASA S.A. — SISTEMA DE GESTIÓN ANTISOBORNO (ISO 37001)
 TABLERO DE CONTROL Y SEGUIMIENTO DE OBJETIVOS ANTISOBORNO (Cl. 6.2)
 Período: Año 2026 — Alcance Concesión BALP (50 km)
 
@@ -523,7 +523,7 @@ export default function BlankTemplatesViewer({
               Catálogo de Registros y Formularios en Blanco
             </h2>
             <p className="text-xs text-slate-600 mt-1 max-w-3xl leading-relaxed">
-              Consulte, copie o descargue las <strong>plantillas estandarizadas en blanco</strong> requeridas por la Norma IRAM-ISO 37001 para la Concesión BALP (50 km). Estos modelos oficiales están listos para imprimir, completar y archivar como evidencia de auditoría.
+              Consulte, copie o descargue las <strong>plantillas estandarizadas en blanco</strong> requeridas por la Norma ISO 37001 para la Concesión BALP (50 km). Estos modelos oficiales están listos para imprimir, completar y archivar como evidencia de auditoría.
             </p>
           </div>
 
@@ -692,7 +692,7 @@ export default function BlankTemplatesViewer({
               ℹ️ Utilice esta plantilla como documento estándar oficial de AUBASA S.A.
             </span>
             <span className="font-mono text-[11px] font-bold text-[#0284c7]">
-              Norma IRAM-ISO 37001:2025
+              Norma ISO 37001:2025
             </span>
           </div>
         </div>

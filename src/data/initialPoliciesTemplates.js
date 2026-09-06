@@ -1,6 +1,6 @@
 /**
  * Compendio Oficial de Políticas, Manual y Procedimientos Operativos Estándar (POEs) del SGAS AUBASA
- * Norma IRAM ISO 37001:2016 y Ley Nacional 27.401
+ * Norma ISO 37001:2016 y Ley Nacional 27.401
  */
 
 export const INITIAL_POLICY_TEMPLATES = [
@@ -14,7 +14,7 @@ export const INITIAL_POLICY_TEMPLATES = [
     descripcion: 'Documento maestro que describe el alcance, contexto vial, liderazgo, política, mapa de procesos y gobernanza antisoborno de AUBASA.',
     contenidoMarkdown: `# MANUAL DEL SISTEMA DE GESTIÓN ANTISOBORNO (SGAS)
 **Código:** MAN-SGAS-01 | **Versión:** 2.0 (Oficial) | **Aprobación:** Acta de Directorio Nº 418
-**Norma:** IRAM ISO 37001:2016 | **Alcance:** Concesión Autopista Buenos Aires - La Plata (BALP - 50 km)
+**Norma:** ISO 37001:2016 | **Alcance:** Concesión Autopista Buenos Aires - La Plata (BALP - 50 km)
 
 ---
 

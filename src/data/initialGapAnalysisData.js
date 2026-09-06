@@ -311,7 +311,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Apoyo',
     requisito: 'Control de la información documentada y custodia de registros (Cl. 7.5)',
     queExigeNorma: 'Controlar la información documentada para protegerla contra pérdida de confidencialidad, uso indebido o alteración, garantizando retención y disposición.',
-    comoLoCumpleAubasa: 'Gestor Central de Evidencias Digitales Cl. 7.5 de AUBASA con codificación estandarizada, firma digital, retención mínima de 10 años y sellado criptográfico con Hash SHA-256 para garantizar inalterabilidad en auditorías IRAM.',
+    comoLoCumpleAubasa: 'Gestor Central de Evidencias Digitales Cl. 7.5 de AUBASA con codificación estandarizada, firma digital, retención mínima de 10 años y sellado criptográfico con Hash SHA-256 para garantizar inalterabilidad en auditorías de certificación.',
     poeAsociado: 'POE-SGAS-09',
     registroObligatorio: 'REG-DOC-02: Repositorio Central de Registros Auditables con Hash SHA-256',
     frecuenciaRegistro: 'En cada generación de evidencia / Backup semanal',
@@ -505,7 +505,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     frecuenciaRegistro: 'Semestral / Anual',
     responsable: 'Gerencia de Auditoría Interna / Oficial de Cumplimiento',
     estadoConformidad: 'parcial',
-    observaciones: 'Auditoría interna del 1er semestre ejecutada. Programada la auditoría integral previa a IRAM para Q4.',
+    observaciones: 'Auditoría interna del 1er semestre ejecutada. Programada la auditoría integral previa a la certificación para Q4.',
     accionRemedial: 'Completar la formación de 2 auditores internos adicionales en la norma ISO 37001.'
   },
   {
@@ -521,7 +521,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     responsable: 'Directorio de AUBASA / Gerente General',
     estadoConformidad: 'conforme',
     observaciones: 'Acta de revisión semestral suscripta por el Directorio en pleno.',
-    accionRemedial: 'Programar la sesión de revisión anual previa a la auditoría externa IRAM.'
+    accionRemedial: 'Programar la sesión de revisión anual previa a la auditoría externa de certificación.'
   },
   {
     id: 'GAP-9.4',

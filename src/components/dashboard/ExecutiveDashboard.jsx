@@ -275,7 +275,7 @@ export default function ExecutiveDashboard({
             </div>
           </div>
 
-          {/* KPI 2: Preparación Auditoría IRAM */}
+          {/* KPI 2: Preparación Auditoría de Certificación */}
           <div
             onClick={() => onNavigate('gapAnalysis')}
             className="bg-white border border-slate-200 hover:border-emerald-500 rounded-xl p-4.5 shadow-sm hover:shadow-md cursor-pointer transition-all flex flex-col justify-between group"
@@ -288,7 +288,7 @@ export default function ExecutiveDashboard({
               <div className="flex items-baseline gap-2 mt-2">
                 <span className="text-3xl font-black text-slate-900 font-mono">{gapMaturity.overallPercentage}%</span>
                 <span className="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200">
-                  IRAM Etapa 1
+                  Etapa 1
                 </span>
               </div>
               <p className="text-[11px] text-slate-600 mt-2 line-clamp-1 font-medium">

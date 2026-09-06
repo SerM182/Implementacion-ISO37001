@@ -212,7 +212,7 @@ export default function RecordDetailModal({
           <div className="p-3.5 rounded-xl bg-sky-50 border border-sky-200 flex items-start gap-3">
             <CheckCircle2 className="w-4 h-4 text-[#0284c7] mt-0.5 shrink-0" />
             <div className="text-[11px] text-slate-700">
-              <strong className="text-[#0369a1]">Trazabilidad ISO 37001 Cl. 7.5:</strong> Este registro cuenta con control de versión, identificación unívoca y archivo digital para garantizar su inmutabilidad frente a auditorías externas de IRAM / ISO.
+              <strong className="text-[#0369a1]">Trazabilidad ISO 37001 Cl. 7.5:</strong> Este registro cuenta con control de versión, identificación unívoca y archivo digital para garantizar su inmutabilidad frente a auditorías externas del organismo certificador.
             </div>
           </div>
 

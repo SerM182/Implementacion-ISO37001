@@ -134,7 +134,7 @@ export default function MasterPrintReport({
               </div>
             </div>
             <p className="p-3 bg-slate-50 print:bg-slate-50 border border-slate-200 print:border-slate-400 rounded-lg text-slate-700">
-              <strong>Dictamen de Auditoría IRAM:</strong> {gapMaturity.readinessVerdict}. AUBASA cuenta con {gapMaturity.conformeCount} requisitos con conformidad total, {gapMaturity.parcialCount} en calibración operativa y {gapMaturity.noConformeCount} brechas pendientes de cierre antes de la auditoría de Etapa 2.
+              <strong>Dictamen de Auditoría de Certificación:</strong> {gapMaturity.readinessVerdict}. AUBASA cuenta con {gapMaturity.conformeCount} requisitos con conformidad total, {gapMaturity.parcialCount} en calibración operativa y {gapMaturity.noConformeCount} brechas pendientes de cierre antes de la auditoría de Etapa 2.
             </p>
           </div>
 
@@ -331,7 +331,7 @@ export default function MasterPrintReport({
           {/* 7. Bloque Formal de Firmas y Validación Institucional */}
           <div className="pt-8 border-t-2 border-slate-300 print:border-black space-y-6">
             <p className="text-[10px] text-slate-500 print:text-slate-600 italic text-center">
-              El presente informe refleja fielmente el estado documental, operativo y de control del Sistema de Gestión Antisoborno de AUBASA, en estricto cumplimiento con la Norma IRAM-ISO 37001:2025, UNE-ISO 37002, ISO/TS 37008 y la Ley Nacional 27.401.
+              El presente informe refleja fielmente el estado documental, operativo y de control del Sistema de Gestión Antisoborno de AUBASA, en estricto cumplimiento con la Norma ISO 37001:2025, UNE-ISO 37002, ISO/TS 37008 y la Ley Nacional 27.401.
             </p>
 
             <div className="grid grid-cols-2 gap-12 pt-6 text-center">

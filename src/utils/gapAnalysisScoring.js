@@ -66,12 +66,12 @@ export function calculateGapMaturity(gapItems = []) {
     };
   });
 
-  // Dictamen de preparación para certificación IRAM / Externa
+  // Dictamen de preparación para certificación externa
   let readinessVerdict = '';
   let readinessBadge = '';
 
   if (overallPercentage >= 90 && noConformeCount === 0) {
-    readinessVerdict = 'LISTO PARA AUDITORÍA DE CERTIFICACIÓN (FASE 2 IRAM). Alto grado de madurez con evidencias sólidas.';
+    readinessVerdict = 'LISTO PARA AUDITORÍA DE CERTIFICACIÓN (FASE 2). Alto grado de madurez con evidencias sólidas.';
     readinessBadge = 'success';
   } else if (overallPercentage >= 70) {
     readinessVerdict = 'APTO PARA AUDITORÍA DE ETAPA 1 (REVISIÓN DOCUMENTAL). Se deben cerrar brechas en auditoría interna y revisión directiva.';

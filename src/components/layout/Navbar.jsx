@@ -31,7 +31,7 @@ export default function Navbar({
 
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'gapAnalysis', label: 'Diagnóstico', icon: CheckSquare, badge: 'IRAM' },
+    { id: 'gapAnalysis', label: 'Diagnóstico', icon: CheckSquare, badge: 'ISO' },
     { id: 'policies', label: 'POEs', icon: FileText, badge: '10' },
     { id: 'records', label: 'Registros', icon: FolderCheck, badge: '7.5', highlight: true },
     { id: 'risks', label: 'Riesgos', icon: Grid },

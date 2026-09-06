@@ -253,7 +253,7 @@ export default function ExportImportModal({
             Exportación para Auditoría y Tablas (CSV / Excel)
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Genera archivos compatibles con Microsoft Excel (UTF-8 con codificación oficial) para comisiones de auditoría IRAM y directorio.
+            Genera archivos compatibles con Microsoft Excel (UTF-8 con codificación oficial) para comisiones de auditoría y directorio.
           </p>
           <div className="flex flex-wrap gap-2.5">
             <button

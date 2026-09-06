@@ -30,7 +30,7 @@ export default function RecordsKpiHeader({ kpis }) {
           <span className="text-xs text-[#0284c7] font-semibold">Evidencias activas</span>
         </div>
         <div className="mt-3 flex items-center justify-between text-[11px] text-slate-500 border-t border-slate-100 pt-2.5">
-          <span>Trazabilidad IRAM</span>
+          <span>Trazabilidad de Auditoría</span>
           <span className="text-emerald-700 font-bold font-mono">100% Auditables</span>
         </div>
       </div>

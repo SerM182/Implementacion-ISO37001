@@ -1,6 +1,6 @@
 /**
  * Hoja de Ruta (Roadmap) de Implementación ISO 37001:2016 en AUBASA
- * Cronograma estratégico de 6 fases hacia la certificación con IRAM / organismo acreditado.
+ * Cronograma estratégico de 6 fases hacia la certificación con el organismo acreditado.
  */
 
 export const INITIAL_ROADMAP_PHASES = [
@@ -104,7 +104,7 @@ export const INITIAL_ROADMAP_PHASES = [
       { id: 'e6-1', nombre: 'Programa y Plan de Auditoría Interna ISO 37001 ejecutado', completado: false },
       { id: 'e6-2', nombre: 'Informe de Revisión por la Dirección (Cl. 9.3) firmado por el Directorio', completado: false },
       { id: 'e6-3', nombre: 'Cierre formal de No Conformidades y Acciones Correctivas (Cl. 10.1)', completado: false },
-      { id: 'e6-4', nombre: 'Auditoría de Certificación Etapa 1 (Documental) con IRAM', completado: false },
+      { id: 'e6-4', nombre: 'Auditoría de Certificación Etapa 1 (Documental) con el Organismo Certificador', completado: false },
       { id: 'e6-5', nombre: 'Auditoría de Certificación Etapa 2 (In Situ) y Obtención del Certificado ISO 37001', completado: false }
     ],
     responsable: 'Directorio / Oficial de Cumplimiento / Equipo Auditor'

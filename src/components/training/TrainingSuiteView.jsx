@@ -289,7 +289,7 @@ export default function TrainingSuiteView({
               <ShieldCheck className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
               <div className="space-y-1 text-xs text-slate-300">
                 <span className="font-bold text-white block">
-                  Requisito de Auditoría IRAM ISO 37001 (Cl. 7.2 & 7.3)
+                  Requisito de Auditoría ISO 37001 (Cl. 7.2 & 7.3)
                 </span>
                 <p className="leading-relaxed text-slate-400">
                   La organización debe conservar información documentada apropiada como evidencia de la competencia del personal. Todo colaborador en puestos de riesgo medio/alto de soborno debe acreditar la aprobación del curso específico con una periodicidad mínima anual.

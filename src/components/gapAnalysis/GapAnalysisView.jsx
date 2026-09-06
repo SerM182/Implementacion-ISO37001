@@ -222,7 +222,7 @@ ${gapItems.map((item, idx) => `
           }`}
         >
           <Award className="w-4 h-4" />
-          <span>4. Diagnóstico de Madurez IRAM</span>
+          <span>4. Diagnóstico de Madurez de Certificación</span>
           <span className={`px-1.5 py-0.2 text-[10px] rounded font-mono ${
             activeTab === 'maturity' ? 'bg-white/20 text-white' : 'bg-sky-100 text-[#0284c7]'
           }`}>
@@ -261,7 +261,7 @@ ${gapItems.map((item, idx) => `
               <div>
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                    Dictamen de Conformidad IRAM ISO 37001:
+                    Dictamen de Conformidad ISO 37001:
                   </span>
                   <span className="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-sky-50 text-[#0284c7] border border-sky-200">
                     BALP 50 KM
@@ -329,7 +329,7 @@ ${gapItems.map((item, idx) => `
         </div>
       )}
 
-      {/* SOLAPA 2: RUTA PASO A PASO (6 FASES HACIA IRAM) */}
+      {/* SOLAPA 2: RUTA PASO A PASO (6 FASES HACIA LA CERTIFICACIÓN) */}
       {activeTab === 'roadmap' && (
         <div className="space-y-6">
           <div className="bg-sky-50 border border-sky-200 rounded-xl p-4 flex items-start gap-3 text-xs text-sky-950">
@@ -366,7 +366,7 @@ ${gapItems.map((item, idx) => `
         </div>
       )}
 
-      {/* SOLAPA 4: DIAGNÓSTICO DE MADUREZ & AUDITORÍA IRAM */}
+      {/* SOLAPA 4: DIAGNÓSTICO DE MADUREZ & AUDITORÍA DE CERTIFICACIÓN */}
       {activeTab === 'maturity' && (
         <div className="space-y-6">
           {/* Tarjetas KPI de Estado */}
@@ -418,7 +418,7 @@ ${gapItems.map((item, idx) => `
                 </h3>
               </div>
               <span className="text-[10px] font-mono font-bold text-[#0284c7] bg-sky-50 px-2 py-0.5 rounded border border-sky-200">
-                Auditoría IRAM
+                Auditoría de Certificación
               </span>
             </div>
 

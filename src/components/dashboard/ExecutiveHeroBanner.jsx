@@ -56,7 +56,7 @@ export default function ExecutiveHeroBanner({
             <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center mb-1">
               <Star className="w-4 h-4 text-white fill-white" />
             </div>
-            <span className="text-[11px] font-black tracking-wider uppercase drop-shadow-xs">IRAM ISO 37001</span>
+            <span className="text-[11px] font-black tracking-wider uppercase drop-shadow-xs">ISO 37001</span>
             <span className="text-[9px] font-extrabold text-amber-100 uppercase tracking-tight">BALP 50 KM</span>
           </div>
           {/* Corte en V (Swallowtail notch invertido) hecho con SVG para precisión milimétrica */}
@@ -144,7 +144,7 @@ export default function ExecutiveHeroBanner({
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[11px] font-bold">
             <div className="flex items-center gap-1.5 px-3 py-1 bg-slate-50 border border-slate-200 rounded-md text-slate-700">
               <span className="w-2 h-2 rounded-full bg-sky-500" />
-              <span>IRAM ISO 37001:2025 (SGAS)</span>
+              <span>ISO 37001:2025 (SGAS)</span>
             </div>
 
             <div className="flex items-center gap-1.5 px-3 py-1 bg-slate-50 border border-slate-200 rounded-md text-slate-700">
@@ -229,7 +229,7 @@ export default function ExecutiveHeroBanner({
                 Diagnóstico & Checklist
               </h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                Evaluación integral de 32 requisitos normativos: brechas IRAM y asignación de responsables.
+                Evaluación integral de 32 requisitos normativos: brechas normativas y asignación de responsables.
               </p>
             </div>
 

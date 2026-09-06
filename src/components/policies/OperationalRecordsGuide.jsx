@@ -64,7 +64,7 @@ export const MANDATORY_RECORDS_GUIDE = [
     clausulaIso: 'Cl. 9.2',
     tipoId: 'auditoria',
     poeAsociado: 'POE-SGAS-08',
-    frecuencia: 'Mínimo 1 vez al año (Previo a auditoría de certificación IRAM)',
+    frecuencia: 'Mínimo 1 vez al año (Previo a auditoría de certificación)',
     responsable: 'Equipo Auditor Interno Independiente / Oficial de Cumplimiento',
     conservacion: '10 años',
     queDebeContener: 'Plan de auditoría, lista de verificación por cláusula, hallazgos tipificados (Conformidad, Observación, No Conformidad Mayor/Menor), muestreo de expedientes y dictamen técnico.',
@@ -301,7 +301,7 @@ export default function OperationalRecordsGuide({
   const handleExportGuideMarkdown = () => {
     const md = `# GUÍA MAESTRA DE POLÍTICAS, POEs Y REGISTROS OBLIGATORIOS (CL. 7.5) - AUBASA
 **Concesión:** Autopista Buenos Aires - La Plata (BALP - 50 km)
-**Norma:** IRAM ISO 37001:2016 y Ley 27.401
+**Norma:** ISO 37001:2016 y Ley 27.401
 **Fecha:** ${new Date().toLocaleDateString('es-AR')}
 
 ---
@@ -359,7 +359,7 @@ ${MANDATORY_POES_GUIDE.map((p, i) => `
               Guía Maestra: Políticas, POEs y Registros a Llevar Adelante
             </h2>
             <p className="text-xs text-slate-300 leading-relaxed">
-              Directorio oficial estructurado de los <strong>10 Procedimientos Operativos Estándar (POEs)</strong> y los <strong>12 Registros de Evidencia Obligatorios</strong> que AUBASA debe generar, firmar y custodiar operativamente para acreditar cumplimiento ante auditores del IRAM.
+              Directorio oficial estructurado de los <strong>10 Procedimientos Operativos Estándar (POEs)</strong> y los <strong>12 Registros de Evidencia Obligatorios</strong> que AUBASA debe generar, firmar y custodiar operativamente para acreditar cumplimiento ante auditores del organismo certificador.
             </p>
           </div>
 
@@ -427,7 +427,7 @@ ${MANDATORY_POES_GUIDE.map((p, i) => `
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>
-                <strong>Requisito ISO 37001 Cl. 7.5:</strong> Cada uno de estos 12 registros constituye evidencia auditable ante IRAM. Haga clic en <em>"Gestionar en Registros Cl. 7.5"</em> para cargar o consultar expedientes.
+                <strong>Requisito ISO 37001 Cl. 7.5:</strong> Cada uno de estos 12 registros constituye evidencia auditable ante el organismo certificador. Haga clic en <em>"Gestionar en Registros Cl. 7.5"</em> para cargar o consultar expedientes.
               </span>
             </div>
             {onNavigateToRecords && (
@@ -498,7 +498,7 @@ ${MANDATORY_POES_GUIDE.map((p, i) => `
                   {/* Contenido Obligatorio de la Evidencia */}
                   <div className="space-y-1">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
-                      ¿Qué debe contener la evidencia ante IRAM?
+                      ¿Qué debe contener la evidencia ante el organismo certificador?
                     </span>
                     <p className="text-xs text-slate-300 leading-relaxed italic bg-slate-950/40 p-2.5 rounded-lg border border-slate-800/50">
                       "{rec.queDebeContener}"

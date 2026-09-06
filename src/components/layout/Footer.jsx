@@ -18,7 +18,7 @@ export default function Footer({ onOpenExportModal }) {
               </span>
             </div>
             <p className="text-slate-500 leading-relaxed text-[11px]">
-              {AUBASA_CONTEXT.nombreOficial} — Concesionaria pública de la Red Vial Provincial de Buenos Aires. Sistema de Gestión Antisoborno según Norma IRAM-ISO 37001:2025.
+              {AUBASA_CONTEXT.nombreOficial} — Concesionaria pública de la Red Vial Provincial de Buenos Aires. Sistema de Gestión Antisoborno según Norma ISO 37001:2025.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export default function Footer({ onOpenExportModal }) {
           <div className="flex items-center gap-4 font-medium">
             <span>Oficial de Cumplimiento: Dr. Martín Valenzuela</span>
             <span>•</span>
-            <span className="text-[#0284c7] font-bold">Acreditación IRAM ISO 37001</span>
+            <span className="text-[#0284c7] font-bold">Acreditación ISO 37001</span>
           </div>
         </div>
       </div>

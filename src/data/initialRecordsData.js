@@ -1,6 +1,6 @@
 /**
  * Registros Obligatorios de Evidencias de Cumplimiento SGAS
- * Norma IRAM ISO 37001:2016 — Cláusula 7.5 (Información Documentada)
+ * Norma ISO 37001:2016 — Cláusula 7.5 (Información Documentada)
  * Contexto Operativo: AUBASA (Contratación, Pagos y Obras Viales)
  */
 

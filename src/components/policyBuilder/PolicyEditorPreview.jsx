@@ -162,7 +162,7 @@ export default function PolicyEditorPreview({
                   AUTOPISTAS DE BUENOS AIRES S.A.
                 </h2>
                 <p className="text-xs font-bold text-slate-600 uppercase tracking-wide">
-                  Sistema de Gestión Antisoborno (SGAS) • IRAM - ISO 37001:2016
+                  Sistema de Gestión Antisoborno (SGAS) • ISO 37001:2016
                 </p>
                 <p className="text-[10px] text-slate-500">
                   Gerencia de Cumplimiento e Integridad Institucional • Ley 27.401
