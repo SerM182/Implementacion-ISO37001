@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   ShieldAlert,
   LayoutDashboard,
@@ -16,9 +16,75 @@ import {
   User,
   LogIn,
   LogOut,
-  Crown
+  Crown,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext.jsx';
+
+// Barra de navegación con degradados + flechas que avisan cuando hay más pestañas
+// fuera de la vista (los tabs no entran completos ni en desktop angosto ni en móvil).
+function ScrollableNav({ className, children }) {
+  const scrollRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const updateScrollState = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 4);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+  };
+
+  useEffect(() => {
+    updateScrollState();
+    const el = scrollRef.current;
+    if (!el) return undefined;
+    const onScroll = () => updateScrollState();
+    el.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      el.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
+
+  const scrollBy = (delta) => {
+    scrollRef.current?.scrollBy({ left: delta, behavior: 'smooth' });
+  };
+
+  return (
+    <div className="relative min-w-0">
+      {canScrollLeft && (
+        <>
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-white to-transparent z-10" />
+          <button
+            onClick={() => scrollBy(-120)}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-5 h-5 rounded-full bg-white border border-slate-300 shadow-xs flex items-center justify-center cursor-pointer"
+            title="Ver pestañas anteriores"
+          >
+            <ChevronLeft className="w-3 h-3 text-slate-600" />
+          </button>
+        </>
+      )}
+      <div ref={scrollRef} className={className}>
+        {children}
+      </div>
+      {canScrollRight && (
+        <>
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-white to-transparent z-10" />
+          <button
+            onClick={() => scrollBy(120)}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-5 h-5 rounded-full bg-white border border-slate-300 shadow-xs flex items-center justify-center cursor-pointer"
+            title="Ver más pestañas"
+          >
+            <ChevronRight className="w-3 h-3 text-slate-600" />
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
 
 export default function Navbar({
   activeTab,
@@ -77,7 +143,7 @@ export default function Navbar({
           </div>
 
           {/* 2. Menú de Navegación Compacto y Fluido (Desktop / Pantallas Grandes) */}
-          <nav className="hidden lg:flex items-center gap-0.5 bg-slate-50/90 p-0.5 sm:p-1 rounded-xl border border-slate-200/80 overflow-x-auto no-scrollbar">
+          <ScrollableNav className="hidden lg:flex items-center gap-0.5 bg-slate-50/90 p-0.5 sm:p-1 rounded-xl border border-slate-200/80 overflow-x-auto no-scrollbar">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeTab === item.id;
@@ -112,7 +178,7 @@ export default function Navbar({
                 </button>
               );
             })}
-          </nav>
+          </ScrollableNav>
 
           {/* 3. Acciones Globales: Usuario / Superadmin, Cerrar Sesión Rojo Prominente, Base de Datos, PDF */}
           <div className="flex items-center gap-1 shrink-0">
@@ -177,7 +243,7 @@ export default function Navbar({
         </div>
 
         {/* Menú de Navegación Móvil y Tablets con Scroll Suave */}
-        <div className="lg:hidden flex items-center gap-1 py-1.5 overflow-x-auto no-scrollbar border-t border-slate-100">
+        <ScrollableNav className="lg:hidden flex items-center gap-1 py-1.5 overflow-x-auto no-scrollbar border-t border-slate-100">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -205,7 +271,7 @@ export default function Navbar({
               <span>Cerrar Sesión</span>
             </button>
           )}
-        </div>
+        </ScrollableNav>
       </div>
     </header>
   );
