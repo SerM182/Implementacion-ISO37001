@@ -192,6 +192,7 @@ export default function TrainingQuizSimulator({
                     type="text"
                     value={collabDni}
                     onChange={(e) => setCollabDni(e.target.value)}
+                    placeholder="XX.XXX.XXX"
                     className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-emerald-500"
                   />
                 </div>
@@ -203,6 +204,7 @@ export default function TrainingQuizSimulator({
                     type="text"
                     value={collabLegajo}
                     onChange={(e) => setCollabLegajo(e.target.value)}
+                    placeholder="LEG-XXXX"
                     className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-emerald-500"
                   />
                 </div>
@@ -214,6 +216,7 @@ export default function TrainingQuizSimulator({
                     type="text"
                     value={collabArea}
                     onChange={(e) => setCollabArea(e.target.value)}
+                    placeholder="Ej: Operaciones Viales & Peajes"
                     className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-emerald-500"
                   />
                 </div>

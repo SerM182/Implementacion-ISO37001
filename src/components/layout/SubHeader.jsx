@@ -42,7 +42,7 @@ export default function SubHeader({
             <GraduationCap className="w-3 h-3 text-sky-200" />
             <span className="text-sky-100 font-medium hidden lg:inline">Formados:</span>
             <span className="text-sky-100 font-medium lg:hidden">Form:</span>
-            <strong className="text-white font-mono font-bold">{collabsCount || 4}</strong>
+            <strong className="text-white font-mono font-bold">{collabsCount}</strong>
           </div>
 
           <div className="flex items-center gap-1 bg-sky-800/60 px-2 py-0.5 sm:py-1 rounded-md border border-sky-400/20 text-white" title="Riesgos identificados en la Matriz SGAS">

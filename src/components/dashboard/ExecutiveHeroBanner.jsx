@@ -171,7 +171,7 @@ export default function ExecutiveHeroBanner({
       <div className="bg-[#f8fafc] border border-slate-200/90 rounded-2xl p-6 sm:p-8 space-y-6 shadow-xs">
         <div className="text-center max-w-2xl mx-auto space-y-1">
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-            Easy as 1-2-3-4
+            Tan fácil como 1-2-3-4
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 font-medium">
             Ruta estructurada de 4 pasos para implementar y auditar con éxito el Sistema de Gestión Antisoborno en AUBASA.
@@ -188,10 +188,10 @@ export default function ExecutiveHeroBanner({
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-black text-slate-800 uppercase tracking-wider">
-                  Step 1
+                  Paso 1
                 </span>
                 <span className="text-[10px] font-mono font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">
-                  {stats.gapItemsCount || 32} Requisitos
+                  {stats.gapItemsCount} Requisitos
                 </span>
               </div>
 
@@ -252,10 +252,10 @@ export default function ExecutiveHeroBanner({
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-black text-slate-800 uppercase tracking-wider">
-                  Step 2
+                  Paso 2
                 </span>
                 <span className="text-[10px] font-mono font-bold text-pink-700 bg-pink-50 px-2 py-0.5 rounded border border-pink-200">
-                  {stats.recordsCount || 12} Evidencias
+                  {stats.recordsCount} Evidencias
                 </span>
               </div>
 
@@ -311,10 +311,10 @@ export default function ExecutiveHeroBanner({
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-black text-slate-800 uppercase tracking-wider">
-                  Step 3
+                  Paso 3
                 </span>
                 <span className="text-[10px] font-mono font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
-                  {stats.risksCount || 12} Riesgos • {stats.partnersCount || 8} DD
+                  {stats.risksCount} Riesgos • {stats.partnersCount} DD
                 </span>
               </div>
 
@@ -366,7 +366,7 @@ export default function ExecutiveHeroBanner({
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-black text-slate-800 uppercase tracking-wider">
-                  Step 4
+                  Paso 4
                 </span>
                 <span className="text-[10px] font-mono font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">
                   ISO 37002 / 37008
