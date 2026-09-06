@@ -15,25 +15,25 @@ export const AUBASA_CONTEXT = {
   },
   alcanceSGAS: {
     titulo: 'Alcance Oficial del SGAS ISO 37001 en AUBASA - Concesión BALP',
-    declaracion: 'El Sistema de Gestión Antisoborno de AUBASA tiene como alcance exclusivo la Concesión de la Autopista Buenos Aires - La Plata (BALP), abarcando de manera integral los procesos de Contratación (Licitaciones y Adquisiciones), Pagos (Tesorería y Controles Financieros) y Planificación y Ejecución de Obras Viales e Infraestructura de Peaje en la traza metropolitana (50 km).',
+    declaracion: 'El Sistema de Gestión Antisoborno de AUBASA tiene como alcance exclusivo los procesos de Contratación (Licitaciones y Adquisiciones) y Pagos (Tesorería y Controles Financieros) gestionados desde la Sede Central, y la Planificación y Ejecución de Obras Viales en la Concesión de la Autopista Buenos Aires - La Plata (BALP, 50 km). Quedan fuera de alcance los procesos de cobro y recaudación de peaje.',
     pilares: [
       {
         id: 'contratacion',
         nombre: 'Contratación y Compras BALP',
         icono: 'FileText',
-        descripcion: 'Licitaciones públicas y privadas, concursos de precios, contrataciones directas, pliegos de bases y condiciones técnicas para obras de pavimentación, luminarias, señalización y sistemas de peaje de la traza BALP.',
+        descripcion: 'Licitaciones públicas y privadas, concursos de precios, contrataciones directas, pliegos de bases y condiciones técnicas para obras de pavimentación, luminarias y señalización de la traza BALP.',
         areasInvolucradas: ['Gerencia de Compras y Contrataciones', 'Comisión Evaluadora de Ofertas', 'Asuntos Jurídicos'],
         normativaAplicable: 'Manual de Compras de AUBASA, Ley Prov. 13.981, Ley 27.401, ISO 37001 Cl. 8.4 y 8.6',
         riesgoTipico: 'Direccionamiento de pliegos, colusión de oferentes, filtración de presupuestos oficiales.'
       },
       {
         id: 'pagos',
-        nombre: 'Pagos y Controles Financieros BALP',
+        nombre: 'Pagos y Controles Financieros (Sede Central)',
         icono: 'DollarSign',
-        descripcion: 'Tesorería central, emisión de pagos a contratistas de BALP, recaudación y fondos fijos en estaciones de peaje Dock Sud y Hudson, redeterminaciones de precios y liquidaciones de certificados de obra.',
-        areasInvolucradas: ['Gerencia de Administración y Finanzas', 'Tesorería', 'Contabilidad', 'Supervisión de Peajes BALP'],
+        descripcion: 'Tesorería central, emisión de pagos a contratistas y proveedores de BALP, redeterminaciones de precios y liquidaciones de certificados de obra, gestionados desde la Sede Central.',
+        areasInvolucradas: ['Gerencia de Administración y Finanzas', 'Tesorería', 'Contabilidad'],
         normativaAplicable: 'Ley 27.401 Art. 7, ISO 37001 Cl. 8.1.2 y 8.3, Decreto 367/17 (Redeterminaciones)',
-        riesgoTipico: 'Soborno para agilizar pagos, alteración de fórmulas de redeterminación, fondos fijos desviados.'
+        riesgoTipico: 'Soborno para agilizar pagos a contratistas, alteración de fórmulas de redeterminación.'
       },
       {
         id: 'obras',
@@ -50,8 +50,8 @@ export const AUBASA_CONTEXT = {
     {
       nombre: 'Autopista Buenos Aires - La Plata (BALP)',
       trazado: '50 km que conectan la Ciudad Autónoma de Buenos Aires (CABA) con La Plata',
-      peajes: ['Peaje Dock Sud (Ascendente / Descendente)', 'Peaje Hudson (Troncal)', 'Peajes Ramal Gutiérrez', 'Accesos Bernal, Quilmes y Berazategui'],
-      caracteristicas: 'Corredor vial metropolitano de alto tránsito diario (>180.000 vehículos/día), 22 vías de cobro TelePASE y manual, obras continuas de fresado, bacheo profundo, repavimentación y mantenimiento de distribuidores.'
+      accesos: ['Accesos Bernal, Quilmes y Berazategui', 'Ramal Gutiérrez'],
+      caracteristicas: 'Corredor vial metropolitano de alto tránsito diario, con obras continuas de fresado, bacheo profundo, repavimentación y mantenimiento de distribuidores. El cobro y la recaudación de peaje están fuera del alcance del SGAS.'
     }
   ],
   autoridadesSGAS: {

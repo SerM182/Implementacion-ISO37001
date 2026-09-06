@@ -12,7 +12,7 @@ export const INITIAL_RISK_ITEMS = [
     id: 'RS-CON-01',
     proceso: 'Contratación',
     subproceso: 'Elaboración de Pliegos Técnicos',
-    riesgo: 'Direccionamiento de especificaciones técnicas en pliegos de licitación de sistemas de TelePASE y barreras ópticas para favorecer a un fabricante específico.',
+    riesgo: 'Direccionamiento de especificaciones técnicas en pliegos de licitación de maquinaria vial y equipos de planta asfáltica para favorecer a un fabricante específico.',
     descripcionEvento: 'Un funcionario de compras o asesor técnico redacta cláusulas del pliego que exigen patentes o dimensiones que solo un oferente del mercado posee, a cambio de una promesa de dádiva.',
     probabilidad: 2, // 1: Baja, 2: Media, 3: Alta
     impacto: 3,       // 1: Leve, 2: Moderado, 3: Crítico

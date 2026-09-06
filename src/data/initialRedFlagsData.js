@@ -82,11 +82,11 @@ export const RED_FLAGS_CATALOG = [
   {
     id: 'RF-PAG-04',
     categoria: 'Pagos y Tesorería',
-    alerta: 'Rendiciones de gastos de caja chica en peajes con comprobantes no fiscales o descripciones genéricas',
+    alerta: 'Rendiciones de caja chica de Sede Central con comprobantes no fiscales o descripciones genéricas',
     descripcion: 'Comprobantes manuscritos por "gastos varios" o atenciones a funcionarios de municipios por donde pasa la traza vial.',
     severidad: 'media',
     proceso: 'Pagos',
-    medidaInmediata: 'Desestimación del reintegro, reposición del dinero por el responsable del peaje e inspección sorpresiva.'
+    medidaInmediata: 'Desestimación del reintegro, reposición del dinero por el responsable de la rendición e inspección sorpresiva.'
   },
 
   // CATEGORÍA 3: OBRAS VIALES E INSPECCIÓN TÉCNICA

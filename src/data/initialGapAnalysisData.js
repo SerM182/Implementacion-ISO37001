@@ -1,7 +1,7 @@
 /**
  * Matriz Maestra de Requisitos ISO 37001:2016 & Diagnóstico de Brechas (Gap Analysis)
  * Alcance Exclusivo: Concesión Autopista Buenos Aires - La Plata (BALP - 50 km)
- * Procesos: Contratación • Pagos • Planificación y Ejecución de Obras Viales e Infraestructura de Peaje
+ * Procesos: Contratación • Pagos • Planificación y Ejecución de Obras Viales (Sede Central y traza BALP)
  */
 
 export const INITIAL_GAP_ANALYSIS_ITEMS = [
@@ -14,13 +14,13 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Contexto de la Organización',
     requisito: 'Comprensión de la organización y de su contexto',
     queExigeNorma: 'Determinar factores internos y externos pertinentes para su propósito y que afectan la capacidad de lograr los objetivos del SGAS.',
-    comoLoCumpleAubasa: 'Formalización del análisis de contexto de la Concesión Autopista BALP (50 km, 180.000 vehículos/día), identificando interacciones con Ministerio de Infraestructura PBA, Tribunal de Cuentas, ARBA, contratistas viales, proveedores de TelePASE y sindicato SUTPA.',
+    comoLoCumpleAubasa: 'Formalización del análisis de contexto de la Concesión Autopista BALP (50 km, 180.000 vehículos/día), identificando interacciones con Ministerio de Infraestructura PBA, Tribunal de Cuentas, ARBA, contratistas viales y sindicato SUTPA.',
     poeAsociado: 'MAN-SGAS-01 (Manual del SGAS - Cap. 2)',
     registroObligatorio: 'REG-CTX-01: Matriz de Contexto y FODA Antisoborno BALP',
     frecuenciaRegistro: 'Anual / Ante cambios regulatorios en PBA',
     responsable: 'Oficial de Cumplimiento / Directorio',
     estadoConformidad: 'conforme',
-    observaciones: 'Contexto formalizado y aprobado en el Manual del SGAS considerando la traza BALP y estaciones Dock Sud y Hudson.',
+    observaciones: 'Contexto formalizado y aprobado en el Manual del SGAS considerando la traza BALP y la Sede Central.',
     accionRemedial: 'Revisión periódica ante nuevas resoluciones provinciales.'
   },
   {
@@ -29,7 +29,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Contexto de la Organización',
     requisito: 'Comprensión de las necesidades y expectativas de las partes interesadas',
     queExigeNorma: 'Identificar las partes interesadas pertinentes para el SGAS y determinar sus requisitos y expectativas legítimas.',
-    comoLoCumpleAubasa: 'Matriz integral de partes interesadas en la traza BALP: usuarios de peaje, contratistas de obras viales, oferentes de licitaciones, SUTPA, Poder Ejecutivo PBA y entidades bancarias con requisitos de transparencia y canales éticos.',
+    comoLoCumpleAubasa: 'Matriz integral de partes interesadas: contratistas de obras viales, oferentes de licitaciones, SUTPA, Poder Ejecutivo PBA y entidades bancarias con requisitos de transparencia y canales éticos.',
     poeAsociado: 'MAN-SGAS-01 (Cap. 3 - Partes Interesadas)',
     registroObligatorio: 'REG-PI-01: Matriz de Partes Interesadas y Requisitos de Integridad',
     frecuenciaRegistro: 'Anual',
@@ -44,7 +44,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Contexto de la Organización',
     requisito: 'Determinación del alcance del sistema de gestión antisoborno',
     queExigeNorma: 'Determinar y documentar los límites y la aplicabilidad del SGAS.',
-    comoLoCumpleAubasa: 'Alcance delimitado formalmente: Concesión de la Autopista Buenos Aires - La Plata (BALP, 50 km) abarcando Contratación (Licitaciones y Compras), Pagos (Tesorería y Controles Financieros) y Planificación y Ejecución de Obras Viales e Infraestructura de Peaje (Dock Sud, Hudson y Accesos).',
+    comoLoCumpleAubasa: 'Alcance delimitado formalmente: Contratación (Licitaciones y Compras) y Pagos (Tesorería y Controles Financieros) gestionados desde la Sede Central, y Planificación y Ejecución de Obras Viales en la Concesión de la Autopista Buenos Aires - La Plata (BALP, 50 km). El cobro y la recaudación de peaje quedan fuera de alcance.',
     poeAsociado: 'MAN-SGAS-01 (Cap. 1 - Alcance)',
     registroObligatorio: 'REG-ALC-01: Declaración Formal de Alcance del SGAS y Acta de Directorio',
     frecuenciaRegistro: 'Permanente / Revisión anual',
@@ -74,7 +74,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Contexto de la Organización',
     requisito: 'Evaluación del riesgo de soborno',
     queExigeNorma: 'Evaluar periódicamente los riesgos de soborno inherentes, analizar y ponderar controles para determinar el riesgo residual.',
-    comoLoCumpleAubasa: 'Matriz de Riesgos de Soborno de AUBASA que evalúa 12 escenarios específicos en BALP (dirección de pliegos TelePASE, cartelización en pavimentación km 0-50, retornos en tesorería, soborno a inspectores de calidad de asfalto y desvío de fondos de peaje). Metodología 3x3 y 5x5 con planes de tratamiento obligatorios.',
+    comoLoCumpleAubasa: 'Matriz de Riesgos de Soborno de AUBASA que evalúa 12 escenarios específicos en BALP (dirección de pliegos de obra, cartelización en pavimentación km 0-50, retornos en tesorería, soborno a inspectores de calidad de asfalto y desvío de fondos fijos de Sede Central). Metodología 3x3 y 5x5 con planes de tratamiento obligatorios.',
     poeAsociado: 'POE-SGAS-01 (Identificación y Evaluación de Riesgos de Soborno)',
     registroObligatorio: 'REG-RIE-01: Matriz de Riesgos de Soborno y Fichas de Tratamiento',
     frecuenciaRegistro: 'Anual / Ante nuevas obras o denuncias',
@@ -123,7 +123,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Liderazgo',
     requisito: 'Política Antisoborno',
     queExigeNorma: 'Establecer, mantener y aplicar una política antisoborno que prohíba el soborno, exija el cumplimiento legal, otorgue autoridad a la función de cumplimiento y garantice no represalias.',
-    comoLoCumpleAubasa: 'Política POL-SGAS-01 firmada por la Alta Dirección, con prohibición taxativa de sobornos y cohecho en peajes, compras y obras; compromiso con la Ley 27.401; y publicada en la web oficial, cartelería de peajes Dock Sud y Hudson, y pliegos de licitación.',
+    comoLoCumpleAubasa: 'Política POL-SGAS-01 firmada por la Alta Dirección, con prohibición taxativa de sobornos y cohecho en compras, pagos y obras; compromiso con la Ley 27.401; y publicada en la web oficial, cartelería de Sede Central, y pliegos de licitación.',
     poeAsociado: 'POL-SGAS-01 (Política Antisoborno Institucional)',
     registroObligatorio: 'REG-POL-01: Acta de Aprobación, Difusión y Constancias de Publicación',
     frecuenciaRegistro: 'Anual / Revisión permanente',
@@ -138,7 +138,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Liderazgo',
     requisito: 'Roles, responsabilidades y autoridades de la organización',
     queExigeNorma: 'Asignar y comunicar responsabilidades y autoridades para los roles pertinentes en toda la organización.',
-    comoLoCumpleAubasa: 'Organigrama formal y descripciones de puestos con responsabilidades antisoborno asignadas para Compradores, Tesoreros, Supervisores de Peaje, Cajeros e Inspectores Técnicos de Obras en BALP.',
+    comoLoCumpleAubasa: 'Organigrama formal y descripciones de puestos con responsabilidades antisoborno asignadas para Compradores, Tesoreros e Inspectores Técnicos de Obras en BALP.',
     poeAsociado: 'MAN-SGAS-01 (Cap. 5 - Matriz RACI del SGAS)',
     registroObligatorio: 'REG-ORG-01: Descripciones de Puestos con Cláusulas de Integridad',
     frecuenciaRegistro: 'En cada contratación / Actualización anual',
@@ -153,7 +153,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Liderazgo',
     requisito: 'Función de cumplimiento antisoborno (Oficial de Cumplimiento)',
     queExigeNorma: 'Asignar a una persona o grupo la responsabilidad y autoridad independiente para supervisar el diseño e implementación del SGAS y reportar al órgano de gobierno.',
-    comoLoCumpleAubasa: 'Designación formal del Oficial de Cumplimiento con dedicación, autonomía operativa, libre acceso a todos los expedientes de contratación, registros de peaje y obras, y canal de reporte directo sin intermediación al Directorio.',
+    comoLoCumpleAubasa: 'Designación formal del Oficial de Cumplimiento con dedicación, autonomía operativa, libre acceso a todos los expedientes de contratación, pagos y obras, y canal de reporte directo sin intermediación al Directorio.',
     poeAsociado: 'MAN-SGAS-01 / POE-SGAS-08',
     registroObligatorio: 'REG-OFIC-01: Resolución de Designación, Estatuto de Autonomía e Informes',
     frecuenciaRegistro: 'Permanente / Informe semestral',
@@ -251,14 +251,14 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Apoyo',
     requisito: 'Toma de conciencia y formación (Capacitaciones Cl. 7.3)',
     queExigeNorma: 'Proporcionar formación antisoborno adecuada y regular al personal en función de sus roles y riesgos de soborno a los que están expuestos.',
-    comoLoCumpleAubasa: 'Plan Anual de Capacitación ISO 37001 con 6 cursos especializados (Inducción general, Peajes Dock Sud/Hudson, Licitaciones, Ensayos LEMIT, Canal Ético y Debida Diligencia). Simulador de dilemas éticos con nota mínima 80% y emisión de certificados oficiales SHA-256.',
+    comoLoCumpleAubasa: 'Plan Anual de Capacitación ISO 37001 con 6 cursos especializados (Inducción general, Compras y Pagos, Licitaciones, Ensayos LEMIT, Canal Ético y Debida Diligencia). Simulador de dilemas éticos con nota mínima 80% y emisión de certificados oficiales SHA-256.',
     poeAsociado: 'POE-SGAS-08 / Plan Anual de Formación',
     registroObligatorio: 'REG-CAP-01: Actas de Asistencia, Evaluaciones de Eficacia y Certificados',
     frecuenciaRegistro: 'Mensual / Por curso ejecutado',
     responsable: 'Capacitación & RRHH / Oficial de Cumplimiento',
     estadoConformidad: 'conforme',
     observaciones: 'Módulo de e-learning y simulador situacional operativo con emisión de certificados digitales.',
-    accionRemedial: 'Continuar con el cronograma de talleres presenciales para cajeros de peaje.'
+    accionRemedial: 'Continuar con el cronograma de talleres presenciales para personal de Sede Central.'
   },
   {
     id: 'GAP-7.4',
@@ -266,13 +266,13 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Apoyo',
     requisito: 'Comunicación (Interna y Externa)',
     queExigeNorma: 'Determinar las comunicaciones internas y externas pertinentes al SGAS (qué, cuándo, a quién, cómo y quién comunica).',
-    comoLoCumpleAubasa: 'Campaña permanente de tolerancia cero en peajes Dock Sud y Hudson, cartelería visible a 180.000 usuarios/día, publicaciones en intranet, y notificación fehaciente del Código de Conducta a los 50 principales proveedores de la autopista con acuse de recibo.',
+    comoLoCumpleAubasa: 'Campaña permanente de tolerancia cero en Sede Central, cartelería visible al personal y contratistas, publicaciones en intranet, y notificación fehaciente del Código de Conducta a los 50 principales proveedores de la autopista con acuse de recibo.',
     poeAsociado: 'MAN-SGAS-01 (Cap. 7 - Plan de Comunicación)',
     registroObligatorio: 'REG-COM-01: Registro de Campañas, Cartelería y Notificaciones a Contratistas',
     frecuenciaRegistro: 'Semestral / Permanente',
     responsable: 'Comunicaciones / Oficial de Cumplimiento',
     estadoConformidad: 'conforme',
-    observaciones: 'Cartelería de tolerancia cero instalada en cabinas de Dock Sud y Hudson.',
+    observaciones: 'Cartelería de tolerancia cero instalada en oficinas de Sede Central.',
     accionRemedial: 'Renovar folletería informativa en centros de atención al usuario.'
   },
   {
@@ -330,7 +330,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Operación',
     requisito: 'Planificación y control operacional',
     queExigeNorma: 'Planificar, implementar y controlar los procesos necesarios para cumplir los requisitos del SGAS e implementar las acciones de tratamiento de riesgos.',
-    comoLoCumpleAubasa: 'Integración de puntos de control antisoborno en el circuito ERP de compras, certificación de obras viales en traza BALP y recaudación de vías de peaje, impidiendo la prosecución del trámite sin las autorizaciones normativas.',
+    comoLoCumpleAubasa: 'Integración de puntos de control antisoborno en el circuito ERP de compras y certificación de obras viales en traza BALP, impidiendo la prosecución del trámite sin las autorizaciones normativas.',
     poeAsociado: 'POE-SGAS-05 / POE-SGAS-06',
     registroObligatorio: 'REG-COP-01: Checklists Operacionales de Contratación, Pagos y Obras',
     frecuenciaRegistro: 'En cada operación',
@@ -345,13 +345,13 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Operación',
     requisito: 'Debida diligencia de socios comerciales y contratistas',
     queExigeNorma: 'Evaluar el alcance del riesgo de soborno en relación con transacciones, proyectos, actividades, socios comerciales y personal específico.',
-    comoLoCumpleAubasa: 'Cuestionario de 15 puntos ponderados (Estructura UBO, screening PEP Res. UIF 35/2023, antecedentes penales Ley 27.401, solvencia fiscal y programa de compliance). Clasificación en riesgo Bajo, Medio o Alto con Enhanced Due Diligence para proveedores de pavimentación y tecnología de peaje.',
+    comoLoCumpleAubasa: 'Cuestionario de 15 puntos ponderados (Estructura UBO, screening PEP Res. UIF 35/2023, antecedentes penales Ley 27.401, solvencia fiscal y programa de compliance). Clasificación en riesgo Bajo, Medio o Alto con Enhanced Due Diligence para proveedores de pavimentación y obras viales.',
     poeAsociado: 'POE-SGAS-02 (Debida Diligencia de Socios Comerciales y Contratistas)',
     registroObligatorio: 'REG-DD-01: Dictámenes de Debida Diligencia y Legajos de Integridad',
     frecuenciaRegistro: 'Previo a cada contratación / Reevaluación bianual (o anual para Alto Riesgo)',
     responsable: 'Oficial de Cumplimiento / Compras',
     estadoConformidad: 'conforme',
-    observaciones: 'Registro de contratistas de pavimentación y sistemas de peaje evaluados con dictamen formal.',
+    observaciones: 'Registro de contratistas de pavimentación evaluados con dictamen formal.',
     accionRemedial: 'Completar screening de proveedores menores de insumos viales.'
   },
   {
@@ -405,7 +405,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Operación',
     requisito: 'Compromisos antisoborno y pactos de integridad',
     queExigeNorma: 'Exigir que los socios comerciales se comprometan a prevenir el soborno mediante acuerdos contractuales y facultades de rescisión.',
-    comoLoCumpleAubasa: 'Inclusión obligatoria e inmodificable de la Cláusula Antisoborno CLA-SGAS-01 y la firma del Pacto de Integridad PAC-SGAS-01 en el 100% de los contratos de obras de repavimentación km 0-50, software de peaje y mantenimiento de BALP, previendo la rescisión inmediata sin derecho a indemnización ante actos de corrupción.',
+    comoLoCumpleAubasa: 'Inclusión obligatoria e inmodificable de la Cláusula Antisoborno CLA-SGAS-01 y la firma del Pacto de Integridad PAC-SGAS-01 en el 100% de los contratos de obras de repavimentación km 0-50 y mantenimiento de BALP, previendo la rescisión inmediata sin derecho a indemnización ante actos de corrupción.',
     poeAsociado: 'POL-SGAS-01 / POE-SGAS-02',
     registroObligatorio: 'REG-PAC-01: Pactos de Integridad y Cláusulas Contractuales Firmadas',
     frecuenciaRegistro: 'En cada contrato / 100% de licitaciones',
@@ -450,14 +450,14 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Operación',
     requisito: 'Planteamiento de inquietudes (Canal Ético y garantía de no represalias)',
     queExigeNorma: 'Establecer canales accesibles y confidenciales para denunciar sospechas de soborno, garantizando anonimato y protección contra represalias.',
-    comoLoCumpleAubasa: 'Canal Ético multicanal (Portal web cifrado con token anónimo de seguimiento, línea 0800-INTEGRIDAD y buzones en estaciones Dock Sud y Hudson). Política de estricta protección y tolerancia cero a cualquier represalia laboral o contractual.',
+    comoLoCumpleAubasa: 'Canal Ético multicanal (Portal web cifrado con token anónimo de seguimiento, línea 0800-INTEGRIDAD y buzones en Sede Central). Política de estricta protección y tolerancia cero a cualquier represalia laboral o contractual.',
     poeAsociado: 'POE-SGAS-07 (Gestión de Denuncias, Canal Ético e Investigaciones)',
     registroObligatorio: 'REG-CAN-01: Registro Cifrado de Denuncias y Fichas de Triaje',
     frecuenciaRegistro: 'Continuo / Triaje en máximo 5 días hábiles',
     responsable: 'Oficial de Cumplimiento',
     estadoConformidad: 'conforme',
     observaciones: 'Canal web cifrado operativo con generación de token de seguimiento para denunciantes anónimos.',
-    accionRemedial: 'Reforzar la cartelería informativa del 0800 en obradores y vestuarios de peaje.'
+    accionRemedial: 'Reforzar la cartelería informativa del 0800 en obradores y Sede Central.'
   },
   {
     id: 'GAP-8.10',
@@ -548,7 +548,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Mejora',
     requisito: 'Mejora continua',
     queExigeNorma: 'Mejorar continuamente la conveniencia, adecuación y eficacia del SGAS.',
-    comoLoCumpleAubasa: 'Plan anual de mejora continua basado en lecciones aprendidas de investigaciones, sugerencias del personal en capacitaciones, automatización de controles en el ERP de peaje y modernización de ensayos viales con laboratorios universitarios.',
+    comoLoCumpleAubasa: 'Plan anual de mejora continua basado en lecciones aprendidas de investigaciones, sugerencias del personal en capacitaciones, automatización de controles en el ERP de compras y modernización de ensayos viales con laboratorios universitarios.',
     poeAsociado: 'MAN-SGAS-01 (Cap. 10 - Mejora Continua)',
     registroObligatorio: 'REG-MEJ-01: Plan Anual de Mejora Continua e Innovación Antisoborno',
     frecuenciaRegistro: 'Anual',
@@ -563,7 +563,7 @@ export const INITIAL_GAP_ANALYSIS_ITEMS = [
     capitulo: 'Mejora',
     requisito: 'No conformidad y acción correctiva (CAPA / 5 Porqués)',
     queExigeNorma: 'Reaccionar ante no conformidades, evaluar la causa raíz mediante acciones correctivas e implementar medidas para evitar su recurrencia.',
-    comoLoCumpleAubasa: 'Circuito CAPA con metodología de los 5 Porqués para investigar desvíos en compras, peajes u obras, fijación de planes de acción correctiva con fecha perentoria, y verificación formal de eficacia a los 60 días del cierre.',
+    comoLoCumpleAubasa: 'Circuito CAPA con metodología de los 5 Porqués para investigar desvíos en compras, pagos u obras, fijación de planes de acción correctiva con fecha perentoria, y verificación formal de eficacia a los 60 días del cierre.',
     poeAsociado: 'POE-SGAS-10 (No Conformidades, Causa Raíz y Acciones Correctivas CAPA)',
     registroObligatorio: 'REG-CAPA-01: Fichas CAPA de No Conformidad y Verificación de Eficacia',
     frecuenciaRegistro: 'Por evento ante hallazgo de auditoría o desvío operacional',

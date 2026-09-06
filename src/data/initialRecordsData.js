@@ -21,7 +21,7 @@ export const RECORD_CATEGORIES = [
     shortName: 'Partes Interesadas',
     clausulaIso: 'Cl. 4.2',
     pilarAubasa: 'Gobernanza y Planificación Estratégica',
-    descripcion: 'Matriz de partes interesadas pertinentes (usuarios de peaje, contratistas, oferentes, sindicato, Poder Ejecutivo PBA, entidades bancarias) con sus requisitos y expectativas legítimas frente al SGAS.',
+    descripcion: 'Matriz de partes interesadas pertinentes (contratistas, oferentes, sindicato, Poder Ejecutivo PBA, entidades bancarias) con sus requisitos y expectativas legítimas frente al SGAS.',
     color: 'stone',
     iconName: 'Users'
   },
@@ -31,7 +31,7 @@ export const RECORD_CATEGORIES = [
     shortName: 'Capacitación',
     clausulaIso: 'Cl. 7.2 & 7.3',
     pilarAubasa: 'Recursos Humanos y Cultura',
-    descripcion: 'Talleres, inducciones y evaluaciones de eficacia de formación ética y antisoborno para personal de peajes, compras, inspectores y directivos.',
+    descripcion: 'Talleres, inducciones y evaluaciones de eficacia de formación ética y antisoborno para personal de compras, pagos, inspectores de obra y directivos.',
     color: 'cyan',
     iconName: 'GraduationCap'
   },
@@ -121,7 +121,7 @@ export const RECORD_CATEGORIES = [
     shortName: 'Debida Diligencia',
     clausulaIso: 'Cl. 8.2',
     pilarAubasa: 'Contratación y Compras',
-    descripcion: 'Dictámenes de idoneidad ética, screening PEP/UBO, cuestionarios de integridad y reevaluaciones periódicas de oferentes, UTEs y proveedores de peaje y tecnología.',
+    descripcion: 'Dictámenes de idoneidad ética, screening PEP/UBO, cuestionarios de integridad y reevaluaciones periódicas de oferentes, UTEs y proveedores de obra vial.',
     color: 'indigo',
     iconName: 'SearchCheck'
   },
@@ -161,7 +161,7 @@ export const RECORD_CATEGORIES = [
     shortName: 'Comunicación',
     clausulaIso: 'Cl. 7.4',
     pilarAubasa: 'Apoyo y Cultura',
-    descripcion: 'Campañas de difusión de la política antisoborno, cartelería en peajes y obradores, comunicaciones a contratistas y demás partes interesadas.',
+    descripcion: 'Campañas de difusión de la política antisoborno, cartelería en Sede Central y obradores, comunicaciones a contratistas y demás partes interesadas.',
     color: 'violet',
     iconName: 'Send'
   },
@@ -195,16 +195,16 @@ export const INITIAL_RECORDS_DATA = [
     id: 'REC-CAP-2026-001',
     tipoRegistro: 'capacitacion',
     clausulaIso: 'Cl. 7.2 & 7.3',
-    titulo: 'Taller de Dilemas Éticos y Línea de Denuncias para Supervisores y Cajeros de Peaje',
+    titulo: 'Taller de Dilemas Éticos y Línea de Denuncias para Compras, Pagos y Supervisión de Obra',
     fecha: '2026-08-14',
-    areaUbicacion: 'Centro de Capacitación Hudson / Estaciones Dock Sud y Hudson',
-    responsable: 'Oficial de Cumplimiento (Dr. M. Valenzuela) & Gerencia de RRHH',
+    areaUbicacion: 'Sede Central',
+    responsable: 'Oficial de Cumplimiento & Gerencia de RRHH',
     estadoVerificacion: 'verificado', // 'verificado', 'en_revision', 'observado', 'no_conforme'
-    resumenEvidencia: 'Capacitación intensiva sobre identificación de ofrecimientos indebidos en cabinas, protocolo ante billetes/dádivas de usuarios y uso confidencial del canal ético. Asistencia del 94% de supervisores.',
+    resumenEvidencia: 'Capacitación intensiva sobre identificación de ofrecimientos indebidos en licitaciones y pagos, protocolo ante dádivas de contratistas y uso confidencial del canal ético. Asistencia del 94% de supervisores.',
     documentosAdjuntos: [
-      { nombre: 'Acta_Asistencia_Firmada_Peajes_2026.pdf', formato: 'PDF', hash: 'SHA256:8f4c2e91a0b5c1' },
+      { nombre: 'Acta_Asistencia_Firmada_Sede_Central_2026.pdf', formato: 'PDF', hash: 'SHA256:8f4c2e91a0b5c1' },
       { nombre: 'Evaluacion_Eficacia_Resultados.xlsx', formato: 'XLSX', hash: 'SHA256:1a7b3c9d8e4f50' },
-      { nombre: 'Material_Didactico_Dilemas_Peaje.pdf', formato: 'PDF', hash: 'SHA256:9c8d7e6f5a4b3c' }
+      { nombre: 'Material_Didactico_Dilemas_Eticos.pdf', formato: 'PDF', hash: 'SHA256:9c8d7e6f5a4b3c' }
     ],
     metadatosEspecificos: {
       asistentesConvocados: 85,
@@ -268,9 +268,9 @@ export const INITIAL_RECORDS_DATA = [
     id: 'REC-CDI-2026-002',
     tipoRegistro: 'conflicto_interes',
     clausulaIso: 'Cl. 7.2',
-    titulo: 'Declaración de No Conflicto para Comisión Evaluadora — Licitación LP-2026-08 (TelePASE)',
+    titulo: 'Declaración de No Conflicto para Comisión Evaluadora — Licitación LP-2026-08 (Señalización Vial)',
     fecha: '2026-08-05',
-    areaUbicacion: 'Comisión Evaluadora de Ofertas de Tecnología Vial',
+    areaUbicacion: 'Comisión Evaluadora de Ofertas de Obras Viales',
     responsable: 'Presidente de Comisión Evaluadora',
     estadoVerificacion: 'verificado',
     resumenEvidencia: 'Los 3 miembros técnicos de la comisión suscribieron la declaración previa a la apertura de ofertas confirmando no poseer relación familiar, laboral ni comercial con los 4 oferentes.',
@@ -691,12 +691,12 @@ export const INITIAL_RECORDS_DATA = [
     id: 'REC-CAN-2026-001',
     tipoRegistro: 'canal_etico',
     clausulaIso: 'Cl. 8.9',
-    titulo: 'Denuncia Registrada CASO-2026-014 — Presunto Cobro Indebido en Peaje Dock Sud',
+    titulo: 'Denuncia Registrada CASO-2026-014 — Presunto Pago Indebido a Proveedor de Sede Central',
     fecha: '2026-08-09',
     areaUbicacion: 'Canal Ético — Portal Web Cifrado',
     responsable: 'Oficial de Cumplimiento (Triaje de Admisibilidad)',
     estadoVerificacion: 'verificado',
-    resumenEvidencia: 'Denuncia anónima con token de seguimiento sobre presunto cobro sin emisión de ticket en turno nocturno. Admitida en triaje (plazo 5 días hábiles), se asignó código cifrado CASO-2026-014 y se derivó a investigación preliminar.',
+    resumenEvidencia: 'Denuncia anónima con token de seguimiento sobre presunta liquidación de un pago a proveedor sin la documentación de respaldo completa. Admitida en triaje (plazo 5 días hábiles), se asignó código cifrado CASO-2026-014 y se derivó a investigación preliminar.',
     documentosAdjuntos: [
       { nombre: 'Ficha_Triaje_CASO_2026_014.pdf', formato: 'PDF', hash: 'SHA256:1a2b3c4d5e6f7a' }
     ],
@@ -830,20 +830,20 @@ export const INITIAL_RECORDS_DATA = [
     id: 'REC-COM-2026-001',
     tipoRegistro: 'comunicacion',
     clausulaIso: 'Cl. 7.4',
-    titulo: 'Campaña de Difusión de la Política Antisoborno en Estaciones de Peaje BALP',
+    titulo: 'Campaña de Difusión de la Política Antisoborno en Sede Central y Obradores BALP',
     fecha: '2026-05-06',
-    areaUbicacion: 'Comunicaciones — Estaciones Dock Sud, Hudson y Troncales BALP',
+    areaUbicacion: 'Comunicaciones — Sede Central y Obradores BALP',
     responsable: 'Gerencia de Comunicación & Oficial de Cumplimiento',
     estadoVerificacion: 'verificado',
-    resumenEvidencia: 'Instalación de cartelería de tolerancia cero y vías del Canal Ético en cabinas de peaje, oficinas de atención y obradores BALP. Distribución de folletería impresa y publicación en intranet corporativa.',
+    resumenEvidencia: 'Instalación de cartelería de tolerancia cero y vías del Canal Ético en oficinas de Sede Central y obradores BALP. Distribución de folletería impresa y publicación en intranet corporativa.',
     documentosAdjuntos: [
-      { nombre: 'Registro_Distribucion_Materiales_Peajes.pdf', formato: 'PDF', hash: 'SHA256:1f2a3b4c5d6e7f' },
+      { nombre: 'Registro_Distribucion_Materiales_2026.pdf', formato: 'PDF', hash: 'SHA256:1f2a3b4c5d6e7f' },
       { nombre: 'Arte_Carteleria_ToleranciaCero.pdf', formato: 'PDF', hash: 'SHA256:8c9d0e1f2a3b4c' }
     ],
     metadatosEspecificos: {
-      canal: 'Cartelería en peajes, intranet y folletería',
-      audiencia: 'Personal de peaje y usuarios viales',
-      alcance: 'Estaciones Troncales Dock Sud y Hudson + Obradores BALP',
+      canal: 'Cartelería en Sede Central, intranet y folletería',
+      audiencia: 'Personal de compras, pagos, obras y usuarios viales',
+      alcance: 'Sede Central + Obradores BALP',
       medioVerificacion: 'Acta de distribución firmada por supervisores',
       fechaVigencia: '2026-05-06 a 2026-12-31'
     }

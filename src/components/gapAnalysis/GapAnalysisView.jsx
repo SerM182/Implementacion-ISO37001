@@ -461,7 +461,7 @@ ${gapItems.map((item, idx) => `
               <strong className="font-bold text-indigo-900 block mb-0.5">
                 Procedimientos Operativos Estándar (POEs) y Manual SGAS AUBASA:
               </strong>
-              Los 10 procedimientos obligatorios que rigen la operación en los 50 km de la Autopista BALP, estaciones de peaje Hudson y Dock Sud, comisiones de compra y obras viales.
+              Los 10 procedimientos obligatorios que rigen las contrataciones, pagos y obras viales en los 50 km de la Autopista BALP, gestionados desde la Sede Central.
             </div>
           </div>
 

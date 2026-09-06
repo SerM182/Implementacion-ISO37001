@@ -13,7 +13,7 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
           numero: '4.5',
           titulo: 'Evaluación del Riesgo de Soborno',
           requisito: 'La organización debe evaluar regularmente el riesgo de soborno inherente y residual en sus procesos clave, considerando la naturaleza del sector, el tamaño, la ubicación y las transacciones de alto valor.',
-          aplicacionAubasa: 'Obligatorio evaluar por separado: Licitaciones de obras viales, redeterminaciones de precios, pagos a subcontratistas, fondos fijos de estaciones de peaje y certificaciones de inspectores en traza.',
+          aplicacionAubasa: 'Obligatorio evaluar por separado: Licitaciones de obras viales, redeterminaciones de precios, pagos a subcontratistas, fondos fijos de Tesorería y certificaciones de inspectores en traza.',
           evidenciasTipicas: ['Matriz de Riesgos SGAS aprobada', 'Informes semestrales de revisión de riesgos', 'Criterios de valoración 3x3 documentados']
         },
         {
@@ -21,7 +21,7 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
           titulo: 'Política Antisoborno',
           requisito: 'La alta dirección debe establecer y mantener una política que prohíba el soborno, exija el cumplimiento de leyes antisoborno, sea apropiada al propósito, incluya el compromiso de mejora continua y garantice la autoridad independiente de la función de cumplimiento.',
           aplicacionAubasa: 'Aprobada por Directorio de AUBASA, de difusión pública y obligatoria para todos los contratistas que ingresen a la traza.',
-          evidenciasTipicas: ['Acta de Directorio de aprobación de la Política', 'Publicación en sitio web oficial y cartelería en estaciones de peaje', 'Constancias de acuse de recibo de empleados']
+          evidenciasTipicas: ['Acta de Directorio de aprobación de la Política', 'Publicación en sitio web oficial y cartelería en Sede Central', 'Constancias de acuse de recibo de empleados']
         },
         {
           numero: '5.3',
@@ -34,15 +34,15 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
           numero: '8.2',
           titulo: 'Debida Diligencia (Due Diligence)',
           requisito: 'Evaluar el alcance, la escala y la naturaleza del riesgo de soborno en relación con proyectos específicos, transacciones, socios comerciales y personal en puestos sensibles.',
-          aplicacionAubasa: 'Screening obligatorio de UTEs, constructoras de asfalto, proveedores de telepeaje y proveedores con contratos superiores a los umbrales de contratación directa.',
+          aplicacionAubasa: 'Screening obligatorio de UTEs, constructoras de asfalto y proveedores con contratos superiores a los umbrales de contratación directa.',
           evidenciasTipicas: ['Cuestionarios de debida diligencia completados', 'Certificados y dictámenes de screening PEP/UBO', 'Informes comerciales y antecedentes penales de directivos']
         },
         {
           numero: '8.3',
           titulo: 'Controles Financieros',
           requisito: 'Implementar controles financieros que reduzcan el riesgo de soborno (segregación de funciones, doble firma, auditoría previa al desembolso, conciliaciones bancarias).',
-          aplicacionAubasa: 'Doble firma en transferencias bancarias a contratistas de obra, prohibición total de pagos en efectivo fuera de fondos fijos estrictamente reglamentados en peajes, validación fiscal AFIP/ARBA previa al pago.',
-          evidenciasTipicas: ['Matriz de firmas y autorizaciones bancarias', 'Procedimiento de pago a contratistas de obra', 'Arqueos y rendiciones de fondos fijos de peajes']
+          aplicacionAubasa: 'Doble firma en transferencias bancarias a contratistas de obra, prohibición total de pagos en efectivo fuera de fondos fijos estrictamente reglamentados de Tesorería, validación fiscal AFIP/ARBA previa al pago.',
+          evidenciasTipicas: ['Matriz de firmas y autorizaciones bancarias', 'Procedimiento de pago a contratistas de obra', 'Arqueos y rendiciones de fondos fijos de Tesorería']
         },
         {
           numero: '8.4',
@@ -83,7 +83,7 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
           numero: '4.1',
           titulo: 'Comprensión de la Organización y de su Contexto',
           requisito: 'Determinar las cuestiones externas e internas pertinentes al propósito del SGAS y que afectan su capacidad para lograr los resultados previstos.',
-          aplicacionAubasa: 'Análisis del marco legal de concesiones viales provinciales, el Ministerio de Infraestructura PBA como órgano de supervisión y los riesgos propios del manejo de efectivo en peajes y de la certificación de obras.',
+          aplicacionAubasa: 'Análisis del marco legal de concesiones viales provinciales, el Ministerio de Infraestructura PBA como órgano de supervisión y los riesgos propios del manejo de fondos fijos en Tesorería y de la certificación de obras.',
           evidenciasTipicas: ['Análisis FODA antisoborno', 'Mapeo del marco regulatorio provincial y nacional', 'Contexto institucional del Manual del SGAS (MAN-SGAS-01)']
         },
         {
@@ -111,7 +111,7 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
           numero: '6.1',
           titulo: 'Acciones para Abordar Riesgos y Oportunidades',
           requisito: 'Planificar acciones para abordar los riesgos de soborno evaluados, integrarlas a los procesos y evaluar su eficacia.',
-          aplicacionAubasa: 'Planes de tratamiento de la Matriz de Riesgos con responsable y plazo, priorizando licitaciones, fondos fijos de peajes y certificación de obras.',
+          aplicacionAubasa: 'Planes de tratamiento de la Matriz de Riesgos con responsable y plazo, priorizando licitaciones, fondos fijos de Tesorería y certificación de obras.',
           evidenciasTipicas: ['Planes de tratamiento de riesgos', 'Matriz de Riesgos de Soborno (Cl. 4.5)', 'Seguimiento de eficacia de controles']
         },
         {
@@ -139,7 +139,7 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
           numero: '7.4',
           titulo: 'Comunicación',
           requisito: 'Determinar las comunicaciones internas y externas pertinentes al SGAS, incluyendo qué, cuándo, a quién y cómo comunicar.',
-          aplicacionAubasa: 'Difusión de la política en peajes y obradores, carta de adhesión a contratistas y publicación de resultados del SGAS a partes interesadas.',
+          aplicacionAubasa: 'Difusión de la política en Sede Central y obradores, carta de adhesión a contratistas y publicación de resultados del SGAS a partes interesadas.',
           evidenciasTipicas: ['Campañas de difusión y cartelería', 'Acuses de comunicación a contratistas', 'Registro de comunicaciones del SGAS']
         },
         {
@@ -323,7 +323,7 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
           pregunta: '¿La contratación obedece a un siniestro imprevisto (ej: colapso de puente, socavamiento de calzada por temporal) que pone en riesgo inminente la vida de los usuarios?',
           opciones: [
             { texto: 'SÍ (Emergencia vial sobreviniente acreditada con informe técnico y pericial)', siguientePaso: 2 },
-            { texto: 'NO (Es una necesidad recurrente como pintura, repuestos de peaje o desmalezamiento que no se licitó a tiempo)', resultado: 'IMPROCEDENTE COMO URGENCIA. Debe canalizarse mediante Licitación Pública o Concurso de Precios. El fraccionamiento o invocar falsa urgencia constituye riesgo de soborno e irregularidad penal.', tipo: 'prohibido' }
+            { texto: 'NO (Es una necesidad recurrente como pintura, repuestos viales o desmalezamiento que no se licitó a tiempo)', resultado: 'IMPROCEDENTE COMO URGENCIA. Debe canalizarse mediante Licitación Pública o Concurso de Precios. El fraccionamiento o invocar falsa urgencia constituye riesgo de soborno e irregularidad penal.', tipo: 'prohibido' }
           ]
         },
         {
@@ -352,7 +352,7 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
       id: 'esc-02',
       categoria: 'Pagos y Tesorería',
       titulo: 'Solicitud de pronto pago de certificados con descuento informal',
-      situacion: 'Un proveedor de barreras de peaje y sensores ópticos solicita a Tesorería que adelante el pago de facturas pendientes de cobro sin respetar el orden cronológico de vencimientos.',
+      situacion: 'Un proveedor de asfalto y áridos solicita a Tesorería que adelante el pago de facturas pendientes de cobro sin respetar el orden cronológico de vencimientos.',
       evaluacion: 'RIESGO CRÍTICO DE EXTORSIÓN O RETORNO (ISO 37001 Cl. 8.3).',
       dictamen: 'Los pagos deben ejecutarse estrictamente según el listado cronológico de obligaciones exigibles validado por el sistema ERP y con doble autorización bancaria. Cualquier alteración de prioridades sin justificación de liquidez auditada por la Gerencia de Finanzas es una Bandera Roja pasible de sumario.',
       clausulas: ['Cl. 8.3 (Controles Financieros)', 'Art. 265 Cód. Penal (Negociaciones Incompatibles)']
@@ -361,7 +361,7 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
       id: 'esc-03',
       categoria: 'Contratación',
       titulo: 'Oferentes en licitación con mismos apoderados o direcciones fiscales',
-      situacion: 'En la licitación para la modernización de cabinas de peaje de Hudson y Dock Sud, se presentan 2 empresas cuyas memorias sociales indican el mismo domicilio legal y el mismo contador certificante.',
+      situacion: 'En la licitación para la repavimentación de un tramo de la Autopista BALP, se presentan 2 empresas cuyas memorias sociales indican el mismo domicilio legal y el mismo contador certificante.',
       evaluacion: 'INDICIOS CLAROS DE CARTELIZACIÓN Y OFERTA SIMULADA (ISO 37001 Cl. 8.4 y Ley 27.401).',
       dictamen: 'La Comisión Evaluadora debe descalificar a ambas ofertas por colusión, suspender preventivamente a las firmas del Registro de Proveedores de AUBASA e informar de inmediato al Oficial de Cumplimiento para formular la denuncia ante la Comisión Nacional de Defensa de la Competencia (CNDC).',
       clausulas: ['Cl. 8.2 (Debida Diligencia)', 'Cl. 8.4 (Controles No Financieros)', 'Ley 27.401 Art. 7']

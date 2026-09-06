@@ -43,7 +43,7 @@ export const MANDATORY_RECORDS_GUIDE = [
     frecuencia: 'Anual / Ante incorporación de nuevas partes relevantes',
     responsable: 'Comité de Integridad & RRHH',
     conservacion: '10 años',
-    queDebeContener: 'Listado de partes interesadas pertinentes (usuarios de peaje, contratistas, oferentes, SUTPA, Poder Ejecutivo PBA, entidades bancarias), sus requisitos y expectativas legítimas y el canal de relacionamiento vigente.',
+    queDebeContener: 'Listado de partes interesadas pertinentes (contratistas, oferentes, SUTPA, Poder Ejecutivo PBA, entidades bancarias), sus requisitos y expectativas legítimas y el canal de relacionamiento vigente.',
     color: 'stone'
   },
   {

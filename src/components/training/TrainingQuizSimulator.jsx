@@ -216,7 +216,7 @@ export default function TrainingQuizSimulator({
                     type="text"
                     value={collabArea}
                     onChange={(e) => setCollabArea(e.target.value)}
-                    placeholder="Ej: Operaciones Viales & Peajes"
+                    placeholder="Ej: Sede Central / Obras Viales"
                     className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-emerald-500"
                   />
                 </div>

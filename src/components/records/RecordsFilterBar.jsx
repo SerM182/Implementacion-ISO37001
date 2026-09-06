@@ -24,7 +24,7 @@ export default function RecordsFilterBar({
             type="text"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Buscar por código, título, responsable, peaje, contratista o cláusula..."
+            placeholder="Buscar por código, título, responsable, contratista o cláusula..."
             className="w-full bg-slate-50 border border-slate-200 focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 rounded-xl pl-10 pr-9 py-2.5 text-xs text-slate-800 placeholder-slate-400 transition-all outline-none"
           />
           {searchQuery && (

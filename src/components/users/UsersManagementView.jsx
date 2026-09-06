@@ -648,7 +648,6 @@ ON CONFLICT (email) DO UPDATE SET
                     >
                       <option value="Oficina de Cumplimiento">Oficina de Cumplimiento</option>
                       <option value="Dirección General">Dirección General</option>
-                      <option value="Estaciones de Peaje & Operaciones BALP">Estaciones de Peaje BALP</option>
                       <option value="Planificación y Obras Viales">Planificación y Obras Viales</option>
                       <option value="Compras, Licitaciones y Contrataciones">Compras y Licitaciones</option>
                       <option value="Tesorería y Administración">Tesorería y Pagos</option>
@@ -664,7 +663,7 @@ ON CONFLICT (email) DO UPDATE SET
                       type="text"
                       value={formData.cargo}
                       onChange={(e) => setFormData({ ...formData, cargo: e.target.value })}
-                      placeholder="Ej: Supervisora Dock Sud"
+                      placeholder="Ej: Jefa de Compras"
                       className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 text-xs"
                     />
                   </div>

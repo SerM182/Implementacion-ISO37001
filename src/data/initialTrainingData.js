@@ -5,14 +5,13 @@
 
 export const TRAINING_PLAN_OVERVIEW = {
   anio: 2026,
-  titulo: 'Programa Anual de Capacitación y Sensibilización en Integridad y Antisoborno',
-  metaCobertura: 95, // 95% del personal de AUBASA
-  totalColaboradores: 860,
-  horasPlanificadasTotal: 4300,
+  titulo: 'Programa Anual de Capacitación y Sensibilización Antisoborno',
+  metaCobertura: 95, // 95% del personal alcanzado por el SGAS
+  totalColaboradores: 440,
+  horasPlanificadasTotal: 2200,
   estadoGlobal: 'en_ejecucion',
   frecuencia: 'Anual obligatoria + Inducción en nuevos ingresos',
   areasAlcanzadas: [
-    { nombre: 'Estaciones de Peaje y Recaudación', personal: 420, horasRequeridas: 4, progreso: 88 },
     { nombre: 'Planificación y Obras Viales', personal: 140, horasRequeridas: 6, progreso: 82 },
     { nombre: 'Compras, Licitaciones y Legal', personal: 95, horasRequeridas: 6, progreso: 94 },
     { nombre: 'Tesorería y Administración', personal: 110, horasRequeridas: 4, progreso: 90 },
@@ -405,15 +404,15 @@ export const SITUATIONAL_QUIZ_QUESTIONS = [
     cursoId: 'CUR-02',
     moduloRef: 1,
     clausulaIso: 'Cl. 8.3',
-    pregunta: 'En la estación de peaje Hudson (Autopista BALP), un conductor de camión de carga pesada llega a la cabina y ofrece al cajero pagar $15.000 ARS en efectivo sin pedir ticket para que "no le mida la altura ni lo mande a la báscula de pesaje". ¿Qué debe hacer el cajero?',
+    pregunta: 'En Tesorería, un proveedor le ofrece a la persona responsable de emitir la orden de pago $15.000 ARS en efectivo "por izquierda" para que su factura se pague antes que las demás, salteando el orden cronológico (FIFO). ¿Qué debe hacer el responsable?',
     opciones: [
-      { id: 'a', texto: 'Cobrar el dinero, no emitir ticket y registrarlo como propina del turno.' },
-      { id: 'b', texto: 'Rechazar de forma rotunda el dinero extra, cobrar la tarifa reglamentaria con ticket oficial, derivar inmediatamente el camión al puesto de pesaje y reportar el intento de soborno al Supervisor de Estación.' },
-      { id: 'c', texto: 'Cobrar el dinero y depositarlo en la caja chica de la estación para comprar insumos de limpieza.' },
-      { id: 'd', texto: 'Aceptar el dinero una sola vez si hay mucho tránsito congestionado en la autopista.' }
+      { id: 'a', texto: 'Cobrar el dinero y adelantar el pago, ya que igualmente le corresponde cobrar tarde o temprano.' },
+      { id: 'b', texto: 'Rechazar de forma rotunda el dinero extra, mantener el orden cronológico reglamentario y reportar el intento de soborno al Oficial de Cumplimiento.' },
+      { id: 'c', texto: 'Cobrar el dinero y depositarlo en la caja chica del área para comprar insumos de oficina.' },
+      { id: 'd', texto: 'Aceptar el dinero una sola vez si hay mucha demora en los pagos ese mes.' }
     ],
     respuestaCorrecta: 1,
-    explicacion: 'El pago indebido para omitir un control de seguridad vial o pesaje constituye soborno activo/pasivo. El cajero debe rechazarlo, cobrar la tarifa legal, asegurar la fiscalización en báscula y notificar la irregularidad.'
+    explicacion: 'El pago indebido para alterar el orden cronológico de pagos constituye soborno activo/pasivo. El responsable debe rechazarlo, mantener el criterio FIFO reglamentario y notificar la irregularidad.'
   },
   {
     id: 'Q3',
@@ -435,7 +434,7 @@ export const SITUATIONAL_QUIZ_QUESTIONS = [
     cursoId: 'CUR-03',
     moduloRef: 2,
     clausulaIso: 'Cl. 7.2 & 8.2',
-    pregunta: 'Un integrante de la Comisión Evaluadora de Ofertas de AUBASA descubre que uno de los oferentes de la licitación para el mantenimiento del sistema TelePASE pertenece a su hermano. ¿Cuál es su deber ético y normativo?',
+    pregunta: 'Un integrante de la Comisión Evaluadora de Ofertas de AUBASA descubre que uno de los oferentes de la licitación para la provisión de mezcla asfáltica pertenece a su hermano. ¿Cuál es su deber ético y normativo?',
     opciones: [
       { id: 'a', texto: 'Continuar en la comisión pero calificar a su hermano con un puntaje muy bajo para no levantar sospechas.' },
       { id: 'b', texto: 'Declarar inmediatamente el conflicto de interés por escrito ante el Oficial de Cumplimiento, abstenerse de intervenir en la evaluación y solicitar su reemplazo formal.' },
@@ -450,7 +449,7 @@ export const SITUATIONAL_QUIZ_QUESTIONS = [
     cursoId: 'CUR-01',
     moduloRef: 2,
     clausulaIso: 'Cl. 8.9 & 8.10',
-    pregunta: 'Un empleado de AUBASA sospecha razonablemente que se están realizando pagos irregulares en una estación de peaje, pero teme sufrir despidos o traslados si realiza la denuncia. ¿Qué garantías le brinda el SGAS ISO 37001 de AUBASA?',
+    pregunta: 'Un empleado de AUBASA sospecha razonablemente que se están realizando pagos irregulares en Tesorería, pero teme sufrir despidos o traslados si realiza la denuncia. ¿Qué garantías le brinda el SGAS ISO 37001 de AUBASA?',
     opciones: [
       { id: 'a', texto: 'Ninguna, porque las denuncias siempre se hacen con copia al jefe directo.' },
       { id: 'b', texto: 'Garantía absoluta de confidencialidad o anonimato a través del Canal Ético y política de tolerancia cero a represalias, siendo causal de despido inmediato sancionar a quien denuncie de buena fe.' },
@@ -465,15 +464,15 @@ export const SITUATIONAL_QUIZ_QUESTIONS = [
     cursoId: 'CUR-07',
     moduloRef: 1,
     clausulaIso: 'Cl. 8.3 & Ley 25.246',
-    pregunta: 'Un usuario habitual abona reiteradamente en efectivo el peaje de varias camionetas y camiones sin registrar actividad comercial aparente, pagando siempre con billetes de alta denominación. ¿Cuál es el proceder correcto del personal de peaje según las normas antisoborno y de prevención de lavado de AUBASA?',
+    pregunta: 'Un proveedor menor solicita reiteradamente ser pagado en efectivo, fraccionando sus facturas para quedar por debajo del monto que exige transferencia bancaria, sin justificación comercial aparente. ¿Cuál es el proceder correcto del personal de Tesorería según las normas antisoborno y de prevención de lavado de AUBASA?',
     opciones: [
-      { id: 'a', texto: 'Ignorar el patrón porque no es tarea del cajero evaluar la actividad comercial de los usuarios.' },
-      { id: 'b', texto: 'Reportar el patrón inusual de pagos en efectivo al Supervisor de Estación y al Oficial de Cumplimiento como operación sospechosa, sin alertar al usuario, conforme la Ley 25.246 y la Cl. 8.3.' },
-      { id: 'c', texto: 'Cobrarle un recargo especial en efectivo para desalentar el uso de billetes de alta denominación.' },
-      { id: 'd', texto: 'Registrar los pagos sin emitir ticket para no perjudicar al usuario.' }
+      { id: 'a', texto: 'Ignorar el patrón porque no es tarea de Tesorería evaluar la actividad comercial de los proveedores.' },
+      { id: 'b', texto: 'Reportar el patrón inusual de fraccionamiento y pagos en efectivo al Oficial de Cumplimiento como operación sospechosa, sin alertar al proveedor, conforme la Ley 25.246 y la Cl. 8.3.' },
+      { id: 'c', texto: 'Acceder al pago en efectivo para no perder al proveedor.' },
+      { id: 'd', texto: 'Registrar los pagos sin factura para agilizar el trámite.' }
     ],
     respuestaCorrecta: 1,
-    explicacion: 'Los pagos en efectivo reiterados y sin trazabilidad pueden constituir señales de alerta de lavado de activos. El personal debe reportar la operación inusual al Oficial de Cumplimiento (sujeto obligado UIF) sin alertar al cliente.'
+    explicacion: 'Los pagos en efectivo reiterados y el fraccionamiento de facturas sin trazabilidad pueden constituir señales de alerta de lavado de activos. El personal debe reportar la operación inusual al Oficial de Cumplimiento (sujeto obligado UIF) sin alertar al proveedor.'
   },
   {
     id: 'Q7',
@@ -540,7 +539,7 @@ export const SITUATIONAL_QUIZ_QUESTIONS = [
 export const INITIAL_COLLABORATORS_PROGRESS = [
   {
     id: 'COL-001',
-    nombre: 'Valenzuela, Martín',
+    nombre: '(a designar)',
     legajo: 'LEG-1042',
     area: 'Oficina de Cumplimiento',
     cargo: 'Oficial de Cumplimiento Antisoborno',
@@ -554,8 +553,8 @@ export const INITIAL_COLLABORATORS_PROGRESS = [
     id: 'COL-002',
     nombre: 'Gómez, Laura',
     legajo: 'LEG-2104',
-    area: 'Estaciones de Peaje',
-    cargo: 'Supervisora de Estación Peaje Dock Sud',
+    area: 'Compras, Licitaciones y Contrataciones',
+    cargo: 'Jefa de Compras y Contrataciones',
     cursosCompletados: ['CUR-01', 'CUR-02'],
     calificacionPromedio: 92,
     horasAcumuladas: 6,

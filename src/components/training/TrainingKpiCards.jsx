@@ -131,7 +131,7 @@ export default function TrainingKpiCards({ metrics }) {
           </div>
           <p className="text-[11px] text-slate-400 mt-2 flex items-center gap-1">
             <ShieldCheck className="w-3.5 h-3.5 text-purple-400 shrink-0" />
-            <span>Peajes, Obras, Licitaciones, Legal</span>
+            <span>Obras, Licitaciones, Pagos, Legal</span>
           </p>
         </div>
       </div>

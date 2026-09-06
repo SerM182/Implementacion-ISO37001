@@ -81,7 +81,7 @@ export default function MaturityRadarCard({
           </div>
 
           <p className="text-[11px] text-slate-600 leading-snug">
-            Doble firma bancaria, fondos fijos en estaciones de peaje y redeterminaciones Dec. 367/17.
+            Doble firma bancaria y redeterminaciones Dec. 367/17.
           </p>
 
           <div className="pt-2 border-t border-slate-200/80 flex items-center justify-between text-[10px]">

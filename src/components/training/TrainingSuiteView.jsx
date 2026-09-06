@@ -111,7 +111,7 @@ export default function TrainingSuiteView({
               Suite de Capacitaciones & Simulador de Integridad AUBASA
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 max-w-3xl leading-relaxed">
-              Programa integral de formación y evaluación de eficacia para el personal de peajes, inspectores de obras viales, comisiones de licitaciones y directivos.
+              Programa integral de formación y evaluación de eficacia para inspectores de obras viales, personal de compras, tesorería y directivos.
             </p>
           </div>
 

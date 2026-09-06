@@ -31,7 +31,6 @@ export default function Footer({ onOpenExportModal }) {
               <li>• Licitaciones Públicas y Contrataciones</li>
               <li>• Controles Financieros y Pagos a Proveedores</li>
               <li>• Planificación y Ejecución de Obras Viales</li>
-              <li>• Fondos Fijos y Recaudación en Peajes</li>
               <li>• Ensayos Técnicos LEMIT / UNLP</li>
             </ul>
           </div>

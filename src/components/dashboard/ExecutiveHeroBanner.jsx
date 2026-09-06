@@ -86,7 +86,7 @@ export default function ExecutiveHeroBanner({
 
           {/* Gran Título Blanco */}
           <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-black tracking-tight leading-tight text-white drop-shadow-sm">
-            Sistema de Gestión Antisoborno & Integridad en Autopista BALP
+            Sistema de Gestión Antisoborno en Autopista BALP
           </h1>
 
           {/* Subtítulo Blanco de Alta Legibilidad */}
@@ -171,7 +171,7 @@ export default function ExecutiveHeroBanner({
       <div className="bg-[#f8fafc] border border-slate-200/90 rounded-2xl p-6 sm:p-8 space-y-6 shadow-xs">
         <div className="text-center max-w-2xl mx-auto space-y-1">
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-            Tan fácil como 1-2-3-4
+            Ruta de Implementación en 4 Pasos
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 font-medium">
             Ruta estructurada de 4 pasos para implementar y auditar con éxito el Sistema de Gestión Antisoborno en AUBASA.
@@ -345,7 +345,7 @@ export default function ExecutiveHeroBanner({
                 Matriz Riesgos & DD
               </h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                Identificación de soborno en peajes Dock Sud/Hudson, pagos y screening de socios.
+                Identificación de soborno en contrataciones, pagos a proveedores y screening de socios.
               </p>
             </div>
 

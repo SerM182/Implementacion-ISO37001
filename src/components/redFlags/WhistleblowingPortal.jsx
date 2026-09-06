@@ -222,7 +222,7 @@ export default function WhistleblowingPortal({
                   </h3>
                 </div>
                 <p className="text-xs text-slate-400 mt-1">
-                  Espacio seguro y protegido para informar presuntos sobornos, conflictos de interés, irregularidades en peajes, pagos o certificaciones de obra (ISO 37001 Cl. 8.9).
+                  Espacio seguro y protegido para informar presuntos sobornos, conflictos de interés, irregularidades en contrataciones, pagos o certificaciones de obra (ISO 37001 Cl. 8.9).
                 </p>
               </div>
 
@@ -311,9 +311,8 @@ export default function WhistleblowingPortal({
                     className="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-xs text-white"
                   >
                     <option value="Contratación">Contratación (Licitaciones y Compras)</option>
-                    <option value="Pagos">Pagos (Tesorería, Fondos Fijos, Peajes)</option>
+                    <option value="Pagos">Pagos (Tesorería, Fondos Fijos)</option>
                     <option value="Obras Viales">Planificación y Ejecución de Obras Viales</option>
-                    <option value="Operaciones">Operaciones y Atención al Usuario</option>
                   </select>
                 </div>
 
@@ -329,7 +328,7 @@ export default function WhistleblowingPortal({
                     <option value="Conflicto de Intereses en Licitación">Conflicto de Intereses en Licitación</option>
                     <option value="Solicitud o Aceptación de Soborno">Solicitud o Aceptación de Soborno</option>
                     <option value="Irregularidad en Ensayos de Calidad de Asfalto">Irregularidad en Ensayos de Asfalto / Obras</option>
-                    <option value="Uso Indebido de Fondos Fijos en Peaje">Uso Indebido de Fondos Fijos en Peaje</option>
+                    <option value="Uso Indebido de Fondos Fijos">Uso Indebido de Fondos Fijos</option>
                     <option value="Presión para Certificación de Obra Incompleta">Presión para Certificación de Obra Incompleta</option>
                     <option value="Colusión o Direccionamiento de Pliegos">Colusión o Direccionamiento de Pliegos</option>
                     <option value="Otro Incumplimiento Normativo">Otro Incumplimiento Normativo</option>
@@ -341,13 +340,13 @@ export default function WhistleblowingPortal({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1">
-                    Lugar / Tramo Vial / Estación de Peaje
+                    Lugar / Tramo Vial / Sede
                   </label>
                   <input
                     type="text"
                     value={formData.ubicacion}
                     onChange={(e) => setFormData({ ...formData, ubicacion: e.target.value })}
-                    placeholder="Ej: Peaje Dock Sud / Peaje Hudson / Autopista BALP Km 28 / Sede Central"
+                    placeholder="Ej: Autopista BALP Km 28 / Sede Central"
                     className="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-xs text-white"
                   />
                 </div>

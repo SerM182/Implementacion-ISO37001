@@ -21,7 +21,7 @@ import {
 
 const CATEGORY_LABELS = {
   'Gobernanza y Cultura Ética': 'Gobernanza & Ética',
-  'Controles Financieros y Operativos': 'Finanzas & Peajes',
+  'Controles Financieros y Operativos': 'Finanzas & Tesorería',
   'Contrataciones Públicas y Pliegos': 'Licitaciones & Compras',
   'Inspección de Obra y Calidad': 'Obras Viales',
   'Investigaciones y Auditoría Forense': 'Auditoría & Cumplimiento',

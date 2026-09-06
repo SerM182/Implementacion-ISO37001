@@ -33,7 +33,7 @@ export const INITIAL_ROADMAP_PHASES = [
     entregables: [
       { id: 'e2-1', nombre: 'Metodología de Evaluación de Riesgos Antisoborno aprobada', completado: true },
       { id: 'e2-2', nombre: 'Matriz de Riesgos de Soborno en Licitaciones y Contrataciones', completado: true },
-      { id: 'e2-3', nombre: 'Matriz de Riesgos en Pagos, Tesorería y Fondos Fijos de Peaje', completado: true },
+      { id: 'e2-3', nombre: 'Matriz de Riesgos en Pagos y Tesorería', completado: true },
       { id: 'e2-4', nombre: 'Matriz de Riesgos en Planificación, Cubicaciones y Certificación de Obras', completado: false },
       { id: 'e2-5', nombre: 'Establecimiento de Objetivos Antisoborno medibles (Cl. 6.2)', completado: true }
     ],
@@ -65,7 +65,7 @@ export const INITIAL_ROADMAP_PHASES = [
     estado: 'pendiente',
     progreso: 30,
     clausulasIso: ['Cl. 7.2', 'Cl. 7.3', 'Cl. 8.2'],
-    objetivo: 'Ejecutar el proceso de debida diligencia de contratistas de repavimentación, proveedores de telepeaje, socios comerciales y colaboradores en puestos de riesgo.',
+    objetivo: 'Ejecutar el proceso de debida diligencia de contratistas de repavimentación, socios comerciales y colaboradores en puestos de riesgo.',
     entregables: [
       { id: 'e4-1', nombre: 'Procedimiento de Debida Diligencia de Terceros aprobado (POE-SGAS-02)', completado: true },
       { id: 'e4-2', nombre: 'Screening de Beneficiarios Finales y PEPs de los 50 principales proveedores', completado: false },
@@ -86,7 +86,7 @@ export const INITIAL_ROADMAP_PHASES = [
     entregables: [
       { id: 'e5-1', nombre: 'Portal Web y Línea 0800 del Canal Ético con token de seguimiento confidencial', completado: true },
       { id: 'e5-2', nombre: 'Procedimiento de Investigaciones Internas y Régimen Sancionatorio (POE-SGAS-07)', completado: false },
-      { id: 'e5-3', nombre: 'Plan de Capacitación y Sensibilización para inspectores viales y personal de peaje', completado: false },
+      { id: 'e5-3', nombre: 'Plan de Capacitación y Sensibilización para inspectores viales y personal de Sede Central', completado: false },
       { id: 'e5-4', nombre: 'Campaña de comunicación externa a contratistas y proveedores sobre tolerancia cero', completado: false }
     ],
     responsable: 'Oficial de Cumplimiento / Comunicación / RRHH'

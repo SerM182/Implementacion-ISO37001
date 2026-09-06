@@ -47,7 +47,7 @@ export default function Iso37008InvestigationModal({
     {
       id: 'EVID-01',
       tipo: 'Digital / Sistema Informático',
-      descripcion: `Logs de auditoría del sistema de peajes / compras relacionados con ${report.categoria}.`,
+      descripcion: `Logs de auditoría del sistema de compras y pagos relacionados con ${report.categoria}.`,
       fechaRecoleccion: report.fechaRecepcion || '2026-07-15',
       custodio: 'Gerencia de Sistemas & Cumplimiento',
       hashSha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'

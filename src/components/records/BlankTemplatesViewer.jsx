@@ -26,14 +26,14 @@ export const BLANK_TEMPLATES_DATA = [
     clausula: 'Cl. 7.2 & 5.1',
     categoria: 'Personal & Gobernanza',
     frecuencia: 'Anual y por cada Licitación/Concurso de Obra',
-    responsable: 'Directorio, Comisiones de Compra, Inspectores y Jefes de Peaje',
+    responsable: 'Directorio, Comisiones de Compra e Inspectores de Obra',
     formato: `Alcance: Autopista Buenos Aires - La Plata (BALP - 50 km)
 
 1. DATOS DEL DECLARANTE:
 • Apellido y Nombre: ____________________________________________________________________
 • D.N.I. / CUIL: ____________________________ Legajo Nº: _______________________________
 • Cargo / Función: ________________________________ Gerencia / Área: ____________________
-• Estación / Ubicación: [  ] Sede Central   [  ] Peaje Dock Sud   [  ] Peaje Hudson   [  ] Traza BALP
+• Estación / Ubicación: [  ] Sede Central   [  ] Traza BALP (Obras)   [  ] Otro: __________
 
 2. DECLARACIÓN JURADA BAJO SANCIÓN DE LEY:
 Declaro bajo juramento que a la fecha:
@@ -96,37 +96,35 @@ Firma Oficial de Cumplimiento: _______________________    Firma Gerente de Compr
   {
     id: 'REC-03',
     codigo: 'REC-ARQ-03',
-    nombre: 'Acta de Arqueo Sorpresivo en Estaciones de Peaje BALP',
+    nombre: 'Acta de Arqueo Sorpresivo de Fondo Fijo en Sede Central',
     clausula: 'Cl. 8.3',
     categoria: 'Controles Financieros',
-    frecuencia: 'Mensual y sorpresiva en Dock Sud y Hudson',
-    responsable: 'Auditoría Interna, Tesorería y Supervisión de Peaje',
-    formato: `Estaciones de Peaje Autopista Buenos Aires - La Plata
+    frecuencia: 'Mensual y sorpresiva',
+    responsable: 'Auditoría Interna y Tesorería',
+    formato: `Sede Central — Tesorería y Administración
 
 1. DATOS DEL PROCEDIMIENTO DE ARQUEO:
-• Estación de Peaje: [  ] Dock Sud Troncal    [  ] Hudson Troncal    [  ] Acceso / Ramal: _________
-• Vía Nº: __________   Turno: [  ] Mañana   [  ] Tarde   [  ] Noche
+• Área / Fondo Fijo Auditado: __________________________________________________________
 • Fecha del Arqueo: _____/_____/202___   Hora de Inicio: _______ hs.   Hora de Cierre: _______ hs.
-• Cajero/a Operador/a (Nombre y Legajo): _________________________________________________
+• Responsable del Fondo (Nombre y Legajo): _______________________________________________
 • Auditor / Supervisor Actuante: ________________________________________________________
 
-2. DETALLE DE VALORES FÍSICOS RECONTADOS EN CABINA:
-• Fondo Fijo de Cambio Asignado al Inicio de Turno: $ __________________________________
-• Billetes de $ 20.000 / $ 10.000 / $ 2.000 / $ 1.000: $ __________________________________
-• Billetes menores y Monedas:                       $ __________________________________
-• Total Efectivo Recontado en Caja (A):             $ __________________________________
+2. DETALLE DE VALORES FÍSICOS RECONTADOS:
+• Fondo Fijo Asignado: $ ______________________________________________________________
+• Billetes y Monedas Recontados: $ ____________________________________________________
+• Comprobantes y Rendiciones Pendientes: $ ____________________________________________
+• Total Efectivo + Comprobantes Recontado (A): $ ______________________________________
 
-3. CONCILIACIÓN CON SISTEMA INFORMÁTICO DE TRÁNSITOS:
-• Tránsitos Cobro Manual según Sistema Vía: _________ vehículos   = $ ________________ (B)
-• Tránsitos TelePASE / TAG Registrados:     _________ vehículos   (Sin cobro en efectivo)
-• Tickets / Exenciones Autorizadas en Vía:  _________ pasadas
+3. CONCILIACIÓN CONTABLE:
+• Saldo según Sistema Contable (B): $ __________________________________________________
+• Comprobantes sin rendir en el período: _________ comprobantes
 
 4. DETERMINACIÓN DE DIFERENCIAS:
-Total Físico (A) - Total Sistema (B + Fondo Cambio) = Diferencia: $ _______________________
+Total Físico (A) - Saldo Sistema (B) = Diferencia: $ ___________________________________
 Resultado: [  ] EXACTO / SIN DIFERENCIAS   [  ] SOBRANTE ($ ______)   [  ] FALTANTE ($ ______)
-Justificación / Observaciones del Cajero: _________________________________________________
+Justificación / Observaciones del Responsable: __________________________________________
 
-Firma Cajero/a de Vía: _______________________    Firma Supervisor de Peaje: ___________________
+Firma Responsable del Fondo: _______________________    Firma Tesorería: _________________
 Firma Auditor Interno SGAS: ___________________`
   },
   {
@@ -172,8 +170,8 @@ Firma Gerente Técnico Operativo: ___________________`
     formato: `
 1. DATOS GENERALES:
 • Registro CAPA Nº: CAPA-2026-______   Fecha de Apertura: _____/_____/202___
-• Proceso Afectado: [  ] Contrataciones   [  ] Pagos / Tesorería   [  ] Obras Viales   [  ] Peajes   [  ] Otro
-• Origen del Hallazgo: [  ] Auditoría Interna   [  ] Canal Ético   [  ] Control de Peaje   [  ] Auditoría Externa de Certificación
+• Proceso Afectado: [  ] Contrataciones   [  ] Pagos / Tesorería   [  ] Obras Viales   [  ] Otro
+• Origen del Hallazgo: [  ] Auditoría Interna   [  ] Canal Ético   [  ] Control Operativo   [  ] Auditoría Externa de Certificación
 
 2. DESCRIPCIÓN CIRCUNSTANCIADA DEL DESVÍO O NO CONFORMIDAD:
 _________________________________________________________________________________________
@@ -272,8 +270,8 @@ Firma del Apoderado de la Empresa: ______________________    Aclaración / Sello
     formato: `
 1. DATOS DEL PROGRAMA DE CAPACITACIÓN:
 • Título del Curso: ____________________________________________________________________
-• Módulo: [  ] M-01 Política & Cl. 5.2   [  ] M-02 Peajes & Finanzas   [  ] M-03 Obras & LEMIT   [  ] M-04 Canal 37002
-• Modalidad: [  ] Presencial Sede   [  ] Presencial Peajes   [  ] Plataforma E-Learning
+• Módulo: [  ] M-01 Política & Cl. 5.2   [  ] M-02 Compras & Finanzas   [  ] M-03 Obras & LEMIT   [  ] M-04 Canal 37002
+• Modalidad: [  ] Presencial Sede Central   [  ] Presencial Obrador   [  ] Plataforma E-Learning
 • Instructor / Capacitador: _____________________________________ Duración: ______ Horas
 • Fecha de Realización: _____/_____/202___
 
@@ -374,7 +372,7 @@ Firma Oficial de Cumplimiento: __________________`
 • Condición del Denunciante: [  ] Anónimo   [  ] Con Identidad Reservada bajo Cláusula 8.9
 
 2. HECHOS DENUNCIADOS:
-• Proceso Afectado: [  ] Peajes / Recaudación   [  ] Compras / Licitaciones   [  ] Obras BALP   [  ] Otro
+• Proceso Afectado: [  ] Pagos / Tesorería   [  ] Compras / Licitaciones   [  ] Obras BALP   [  ] Otro
 • Personas / Empresas Señaladas: ________________________________________________________
 • Relato sintético de los hechos: _______________________________________________________
 _________________________________________________________________________________________

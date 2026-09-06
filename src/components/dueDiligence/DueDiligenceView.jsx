@@ -115,7 +115,7 @@ export default function DueDiligenceView({
             </span>
           </div>
           <p className="text-xs text-slate-600 mt-1">
-            Evaluación sistemática de oferentes, contratistas de pavimentación, proveedores de telepeaje y socios estratégicos de AUBASA.
+            Evaluación sistemática de oferentes, contratistas de pavimentación y socios estratégicos de AUBASA.
           </p>
         </div>
 

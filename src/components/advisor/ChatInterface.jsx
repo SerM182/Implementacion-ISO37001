@@ -18,7 +18,7 @@ const SUGGESTED_PROMPTS = [
   '¿Qué controles no financieros exige la Cl. 8.4 para los ensayos de calados y asfalto?',
   '¿Cómo proceder ante una solicitud de compra directa por supuesta urgencia vial?',
   '¿Qué requisitos de debida diligencia aplican a un socio comercial con directivos PEP?',
-  '¿Cuáles son los controles financieros obligatorios en Tesorería y pagos de peaje?'
+  '¿Cuáles son los controles financieros obligatorios en Tesorería y pagos a contratistas?'
 ];
 
 export default function ChatInterface() {

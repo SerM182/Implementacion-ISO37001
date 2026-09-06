@@ -22,7 +22,7 @@ export default function SubHeader({
           </div>
           <span className="font-semibold text-sky-100 hidden sm:inline">CABA — La Plata</span>
           <span className="text-sky-300 hidden sm:inline">•</span>
-          <span className="text-sky-100 hidden md:inline">Peajes Dock Sud & Hudson</span>
+          <span className="text-sky-100 hidden md:inline">Sede Central</span>
           <span className="text-sky-300 hidden md:inline">•</span>
           <span className="bg-emerald-500 text-white font-black text-[9px] sm:text-[10px] px-2 py-0.5 rounded shadow-xs uppercase tracking-wider">
             Contratación + Pagos + Obras Viales

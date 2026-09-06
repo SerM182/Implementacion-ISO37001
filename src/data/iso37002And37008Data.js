@@ -34,7 +34,7 @@ export const STANDARDS_TRILOGY = [
     badge: 'Internal Investigations',
     color: 'indigo',
     descripcion: 'Directrices técnicas y legales para ejecutar investigaciones internas eficaces, garantizando confidencialidad, objetividad, cadena de custodia digital/física, derecho a defensa y reportes basados en hechos probados.',
-    enfoqueAubasa: 'Términos de Referencia (ToR), extracción forense de logs TelePASE, peritajes de asfalto con escribano y dictamen para Comité de Ética/Directorio.'
+    enfoqueAubasa: 'Términos de Referencia (ToR), extracción forense de registros de compras y pagos, peritajes de asfalto con escribano y dictamen para Comité de Ética/Directorio.'
   }
 ];
 

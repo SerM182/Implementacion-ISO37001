@@ -18,7 +18,7 @@ export const INITIAL_WHISTLEBLOWING_REPORTS = [
     evidenciasAportadas: 'Copia de actas societarias y vínculos de parentesco acreditados en redes sociales.',
     estado: 'en_investigacion', // 'recibida', 'evaluacion_preliminar', 'en_investigacion', 'comite_etica', 'derivacion_penal', 'cerrada'
     prioridad: 'alta', // 'alta', 'media', 'baja'
-    oficialACargo: 'Dr. Martín Valenzuela (Oficial de Cumplimiento)',
+    oficialACargo: '',
     fechaLimiteInforme: '2026-08-12',
     accionesTomadas: [
       { fecha: '2026-07-13', detalle: 'Admisión del caso y asignación de código confidencial.' },
@@ -42,7 +42,7 @@ export const INITIAL_WHISTLEBLOWING_REPORTS = [
     evidenciasAportadas: 'Audio de conversación y fotografías de probetas no identificadas en camioneta.',
     estado: 'comite_etica',
     prioridad: 'alta',
-    oficialACargo: 'Dr. Martín Valenzuela (Oficial de Cumplimiento)',
+    oficialACargo: '',
     fechaLimiteInforme: '2026-07-28',
     accionesTomadas: [
       { fecha: '2026-06-29', detalle: 'Apertura inmediata de expediente confidencial de investigación.' },
@@ -58,21 +58,21 @@ export const INITIAL_WHISTLEBLOWING_REPORTS = [
     fechaRecepcion: '2026-05-14',
     origen: 'Correo Electrónico Canal Ético',
     tipoDenunciante: 'anonimo',
-    categoria: 'Uso Indebido de Fondos Fijos en Peaje',
+    categoria: 'Uso Indebido de Fondos Fijos de Sede Central',
     procesoAfectado: 'Pagos',
-    ubicacion: 'Estación de Peaje Hudson (Autopista BALP)',
-    descripcion: 'Se denunció la presentación reiterada de tickets de combustible de vehículos particulares cargados al fondo fijo de la estación de peaje.',
-    personasInvolucradas: 'Encargado de Turno Peaje Hudson',
+    ubicacion: 'Sede Central (Tesorería)',
+    descripcion: 'Se denunció la presentación reiterada de tickets de combustible de vehículos particulares cargados al fondo fijo de Tesorería.',
+    personasInvolucradas: 'Responsable de Caja Chica de Tesorería',
     evidenciasAportadas: 'Listado de patentes de vehículos ajenos a la flota oficial de AUBASA.',
     estado: 'cerrada',
     prioridad: 'media',
-    oficialACargo: 'Dra. Silvina Morales (Auditora de Cumplimiento)',
+    oficialACargo: '',
     fechaLimiteInforme: '2026-06-14',
     accionesTomadas: [
-      { fecha: '2026-05-15', detalle: 'Cruce con sistema de telepeaje y cámaras LPR de la estación.' },
+      { fecha: '2026-05-15', detalle: 'Cruce de comprobantes con el sistema contable y registro de flota oficial.' },
       { fecha: '2026-05-20', detalle: 'Se constató el desvío irregular de fondos por un monto menor.' },
       { fecha: '2026-06-01', detalle: 'Se ordenó la restitución del dinero y sanción de suspensión laboral de 15 días.' }
     ],
-    conclusionDictamen: 'Caso resuelto con sanción disciplinaria y reintegro total del monto. Se implementó tarjeta prepaga digital para el peaje.'
+    conclusionDictamen: 'Caso resuelto con sanción disciplinaria y reintegro total del monto. Se implementó tarjeta prepaga digital para la rendición de caja chica.'
   }
 ];

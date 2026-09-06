@@ -68,25 +68,25 @@ export const INITIAL_PARTNERS_REGISTRY = [
     fechaVencimiento: '2028-06-15',
     dictamenOficial: 'PROVEEDOR APTO. Sin antecedentes desfavorables. Cumple Ley 27.401 y estructura UBO verificada.',
     hallazgos: 'Empresa con 20 años en el rubro vial metropolitano, cuenta con Programa de Integridad auditado y planta asfáltica en Berazategui.',
-    oficialEvaluador: 'Dr. Martín Valenzuela (Oficial de Cumplimiento)'
+    oficialEvaluador: ''
   },
   {
     id: 'PROV-002',
-    razonSocial: 'Consorcio Vial TelePASE & Tecnología S.R.L.',
+    razonSocial: 'Señalización y Luminarias Viales S.R.L.',
     cuit: '33-71239845-9',
-    rubro: 'Sistemas de Peaje, Antenas RFID y Software',
+    rubro: 'Señalización Horizontal/Vertical y Luminarias LED Viales',
     contacto: 'Lic. Laura Benítez (Gerente Comercial)',
-    email: 'lbenitez@telepasetecno.com.ar',
-    contratoActual: 'Mantenimiento Preventivo y Actualización de Vías de TelePASE Dock Sud y Hudson',
+    email: 'lbenitez@senalizacionviales.com.ar',
+    contratoActual: 'Provisión y Mantenimiento de Señalización y Luminarias BALP km 0 al 50',
     montoContratoARS: 420000000,
     puntajeDD: 72,
     nivelRiesgo: 'medio',
     tipoDebidaDiligencia: 'Estándar',
     fechaEvaluacion: '2026-04-10',
     fechaVencimiento: '2027-04-10',
-    dictamenOficial: 'APROBADO CON CONDICIÓN DE MONITOREO. Requiere cláusula contractual de auditoría periódica de código y facturación.',
+    dictamenOficial: 'APROBADO CON CONDICIÓN DE MONITOREO. Requiere cláusula contractual de auditoría periódica de facturación.',
     hallazgos: 'Sociedad constituida hace 3 años. No cuenta con Oficial de Cumplimiento dedicado, pero firmó la adhesión a la Política de AUBASA.',
-    oficialEvaluador: 'Dr. Martín Valenzuela (Oficial de Cumplimiento)'
+    oficialEvaluador: ''
   },
   {
     id: 'PROV-003',
@@ -104,6 +104,6 @@ export const INITIAL_PARTNERS_REGISTRY = [
     fechaVencimiento: '2026-11-01',
     dictamenOficial: 'RIESGO ALTO. REQUIERE ELEVACIÓN Y AUTORIZACIÓN EXPRESA DEL DIRECTORIO DE AUBASA. Monitoreo por auditor externo.',
     hallazgos: 'Uno de los socios de la UTE posee un cargo político como Director de Vialidad Municipal en distrito limítrofe (PEP). Requiere control estricto de certificaciones y doble firma obligatoria en pagos.',
-    oficialEvaluador: 'Dr. Martín Valenzuela (Oficial de Cumplimiento)'
+    oficialEvaluador: ''
   }
 ];

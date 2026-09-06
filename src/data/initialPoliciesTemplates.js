@@ -23,8 +23,8 @@ El presente Manual describe la estructura, políticas y procesos del Sistema de 
 
 ### 2. ALCANCE DEL SISTEMA
 El SGAS aplica con carácter vinculante a todos los procesos directos e indirectos de:
-1. **Contratación y Abastecimiento:** Licitaciones públicas, concursos y compras de insumos viales y sistemas de peaje.
-2. **Pagos y Tesorería:** Recaudación en estaciones de peaje, fondos fijos, liquidación a proveedores y redeterminaciones de precios.
+1. **Contratación y Abastecimiento:** Licitaciones públicas, concursos y compras de insumos viales.
+2. **Pagos y Tesorería:** Fondos fijos, liquidación a proveedores y redeterminaciones de precios, gestionados desde la Sede Central.
 3. **Planificación y Ejecución de Obras Viales:** Proyectos de repavimentación, bacheo, señalización, obras civiles, ensayos técnicos de probetas y certificación de avance físico.
 
 ### 3. ESTRUCTURA DE GOBERNANZA ANTISOBORNO
@@ -92,7 +92,7 @@ Cualquier empleado, funcionario o contratista que infrinja esta Política estar�
 Establecer la metodología sistemática para identificar, analizar, evaluar y tratar los riesgos de soborno en todos los procesos de AUBASA, determinando el nivel de riesgo residual aceptable.
 
 ### 2. ALCANCE
-Aplica a todos los procesos gerenciales, operativos (Peajes, Obras, Contrataciones, Tesorería) y de soporte.
+Aplica a todos los procesos gerenciales, operativos (Obras, Contrataciones, Tesorería) y de soporte.
 
 ### 3. RESPONSABILIDADES
 - **Líderes de Proceso:** Identificar escenarios de riesgo en sus áreas operativas y proponer controles preventivos.
@@ -100,7 +100,7 @@ Aplica a todos los procesos gerenciales, operativos (Peajes, Obras, Contratacion
 - **Directorio:** Aprobar la Matriz de Riesgos y el apetito de riesgo institucional.
 
 ### 4. ETAPAS DEL PROCEDIMIENTO
-1. **Identificación de Escenarios:** Análisis de interacciones con funcionarios públicos, contratistas viales, inspectores y manejo de efectivo en peajes.
+1. **Identificación de Escenarios:** Análisis de interacciones con funcionarios públicos, contratistas viales, inspectores y manejo de fondos fijos en Tesorería.
 2. **Evaluación Inherente:** Calificación de Probabilidad (1 a 5) e Impacto (1 a 5) sin considerar controles existentes.
 3. **Ponderación de Controles:** Evaluación del diseño y eficacia operativa de los controles preventivos y detectivos.
 4. **Cálculo del Riesgo Residual:** Determinación del nivel final (Bajo, Medio, Alto, Crítico).
@@ -126,7 +126,7 @@ Aplica a todos los procesos gerenciales, operativos (Peajes, Obras, Contratacion
 ---
 
 ### 1. OBJETIVO
-Definir los pasos obligatorios para evaluar los antecedentes, solvencia ética y riesgos de soborno de contratistas de obra vial, proveedores de TelePASE y consultores antes de su contratación y durante la ejecución contractual.
+Definir los pasos obligatorios para evaluar los antecedentes, solvencia ética y riesgos de soborno de contratistas de obra vial y consultores antes de su contratación y durante la ejecución contractual.
 
 ### 2. ALCANCE
 Aplica al 100% de las empresas que participen en Licitaciones Públicas, Concursos de Precios y Contrataciones Directas de AUBASA.
@@ -162,7 +162,7 @@ Aplica al 100% de las empresas que participen en Licitaciones Públicas, Concurs
 Prevenir, identificar y resolver situaciones donde los intereses personales, económicos, laborales o familiares de los colaboradores de AUBASA colisionen con los intereses y la objetividad de la empresa.
 
 ### 2. ALCANCE
-Directorio, Gerencias, personal de Compras, Comisiones Evaluadoras de Licitaciones, Inspectores de Obras y Jefes de Estaciones de Peaje.
+Directorio, Gerencias, personal de Compras, Comisiones Evaluadoras de Licitaciones e Inspectores de Obras.
 
 ### 3. TIPOLOGÍAS DE DECLARACIÓN
 1. **Declaración Anual Preventiva:** Obligatoria en el mes de marzo para todo el personal alcanzado.
@@ -417,21 +417,21 @@ Ante cualquier No Conformidad o falla de control:
 4. **Rescisión con Causa y Penalidades:** El quebrantamiento de esta cláusula facultará a AUBASA a declarar la **RESCISIÓN INMEDIATA Y AUTOMÁTICA DEL CONTRATO POR CULPA EXCLUSIVA DEL CONTRATISTA**, con pérdida de la garantía de cumplimiento de contrato, inhabilitación por 5 años en el Registro de Proveedores y reclamo por los daños y perjuicios ocasionados a la red vial.`
   },
 
-  // 14. CLÁUSULA PEAJES Y TELEPASE
+  // 14. CLÁUSULA SISTEMAS DE COMPRAS Y PAGOS
   {
     id: 'CLA-SGAS-02',
     codigo: 'CLA-SGAS-02',
     clausulaIso: 'Cl. 8.6',
-    titulo: 'Cláusula de Transparencia y Auditoría para Contratos de Peaje y TelePASE',
+    titulo: 'Cláusula de Transparencia y Auditoría para Contratos de Software de Compras y Pagos',
     categoria: 'Contrataciones y Pliegos',
-    descripcion: 'Cláusula anticorrupción específica para proveedores de tecnología, software de peaje y medios de pago.',
-    contenidoMarkdown: `# CLÁUSULA DE INTEGRIDAD PARA TECNOLOGÍA DE PEAJES Y TELEPASE
+    descripcion: 'Cláusula anticorrupción específica para proveedores de tecnología, software de compras (ERP) y sistemas de pago a proveedores.',
+    contenidoMarkdown: `# CLÁUSULA DE INTEGRIDAD PARA TECNOLOGÍA DE COMPRAS Y PAGOS
 **Código:** CLA-SGAS-02 | **Norma:** ISO 37001:2016 (Cl. 8.6) | **Ley:** 27.401
 
 ---
 
-**CLÁUSULA DÉCIMA SÉPTIMA: INTEGRIDAD EN SISTEMAS TRANSACCIONALES Y TELEPASE.**
-1. **Trazabilidad de Transacciones:** EL PROVEEDOR garantiza que el software y hardware de peaje no posee puertas traseras ni rutinas que permitan omitir o alterar registros de tránsito o recaudación.
+**CLÁUSULA DÉCIMA SÉPTIMA: INTEGRIDAD EN SISTEMAS TRANSACCIONALES DE COMPRAS Y PAGOS.**
+1. **Trazabilidad de Transacciones:** EL PROVEEDOR garantiza que el software y hardware del sistema de compras y pagos no posee puertas traseras ni rutinas que permitan omitir o alterar registros de licitaciones o desembolsos.
 2. **Auditoría de Algoritmos:** AUBASA podrá someter el código y las bases de datos a peritajes informáticos de integridad sin previo aviso.
 3. **Declaración PEP:** EL PROVEEDOR declara bajo juramento no poseer entre sus accionistas o personal clave a funcionarios públicos del área de transporte o vialidad.`
   },
@@ -555,7 +555,7 @@ Determinar qué, cuándo, a quién y cómo se comunican la política antisoborno
 
 ### 2. COMUNICACIÓN INTERNA
 - Inducción obligatoria a todo nuevo ingreso sobre la Política POL-SGAS-01 y el Canal Ético.
-- Cartelería de tolerancia cero en cabinas de peaje, oficinas y obradores.
+- Cartelería de tolerancia cero en oficinas de Sede Central y obradores.
 - Publicación en intranet y recordatorio en recibos de sueldo con las vías de denuncia.
 
 ### 3. COMUNICACIÓN EXTERNA
@@ -588,7 +588,7 @@ Asegurar que el personal que ocupa puestos expuestos al riesgo de soborno (compr
 
 ### 2. PUESTOS EXPUESTOS
 1. Gerentes y personal de Compras y Contrataciones.
-2. Tesorería, pagos y supervisión de recaudación de peajes.
+2. Tesorería y pagos a contratistas.
 3. Inspectores de obra, directores técnicos y laboratorio.
 4. Miembros de Comisiones Evaluadoras de Licitaciones.
 

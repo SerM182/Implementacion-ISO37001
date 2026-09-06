@@ -186,7 +186,7 @@ export default function TrainingCoursePlayer({
                 </span>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Este contenido regula las decisiones cotidianas en las estaciones de peaje (Dock Sud, Hudson, Ramal Gutiérrez y accesos BALP), en los frentes de obra vial y en las compras públicas. La inobservancia de estos controles da lugar a sanciones administrativas conforme el Reglamento Interno y la Ley 27.401.
+                Este contenido regula las decisiones cotidianas en los frentes de obra vial, en las compras públicas y en la tesorería de Sede Central. La inobservancia de estos controles da lugar a sanciones administrativas conforme el Reglamento Interno y la Ley 27.401.
               </p>
             </div>
           </div>

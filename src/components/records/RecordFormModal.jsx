@@ -249,7 +249,7 @@ export default function RecordFormModal({
                 type="text"
                 value={formData.areaUbicacion}
                 onChange={(e) => setFormData({ ...formData, areaUbicacion: e.target.value })}
-                placeholder="Ej. Peaje Dock Sud / Peaje Hudson / Obras BALP"
+                placeholder="Ej. Sede Central / Obras BALP"
                 className={`w-full bg-white border rounded-xl p-2.5 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200 ${
                   errors.areaUbicacion ? 'border-rose-500' : 'border-slate-300'
                 }`}
@@ -777,7 +777,7 @@ export default function RecordFormModal({
                   <label className="block text-slate-600 text-[10px] mb-1">Audiencia</label>
                   <input type="text" value={formData.metadatosEspecificos.audiencia || ''}
                     onChange={(e) => handleMetadataChange('audiencia', e.target.value)}
-                    placeholder="Ej. Personal de peaje"
+                    placeholder="Ej. Personal de Sede Central"
                     className="w-full bg-white border border-slate-300 rounded-lg p-2 text-slate-800 outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-sky-200" />
                 </div>
                 <div>
