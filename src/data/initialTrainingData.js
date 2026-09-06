@@ -408,7 +408,7 @@ export const SITUATIONAL_QUIZ_QUESTIONS = [
     opciones: [
       { id: 'a', texto: 'Cobrar el dinero y adelantar el pago, ya que igualmente le corresponde cobrar tarde o temprano.' },
       { id: 'b', texto: 'Rechazar de forma rotunda el dinero extra, mantener el orden cronológico reglamentario y reportar el intento de soborno al Oficial de Cumplimiento.' },
-      { id: 'c', texto: 'Cobrar el dinero y depositarlo en la caja chica del área para comprar insumos de oficina.' },
+      { id: 'c', texto: 'Cobrar el dinero y guardarlo para entregarlo "por las dudas" si alguien pregunta más adelante.' },
       { id: 'd', texto: 'Aceptar el dinero una sola vez si hay mucha demora en los pagos ese mes.' }
     ],
     respuestaCorrecta: 1,

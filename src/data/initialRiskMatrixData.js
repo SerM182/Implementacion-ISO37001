@@ -141,19 +141,19 @@ export const INITIAL_RISK_ITEMS = [
   {
     id: 'RS-PAG-03',
     proceso: 'Pagos',
-    subproceso: 'Gestión de Fondos Fijos y Viáticos de Inspección',
-    riesgo: 'Desvío de fondos de caja chica o viáticos de inspección de obras bajo conceptos apócrifos de "gastos de representación".',
-    descripcionEvento: 'Uso de comprobantes irregulares o no autorizados para justificar salidas de fondos en comisiones de supervisión de obra en la traza BALP.',
+    subproceso: 'Respaldo Documental y Oportunidad de Pago',
+    riesgo: 'Liberación de órdenes de pago sin respaldo documental completo (factura, remito, certificado de obra) o fuera del circuito de aprobación estándar, encubriendo un pago indebido.',
+    descripcionEvento: 'Aprobación de transferencias bancarias con comprobantes incompletos, no fiscales o cargados fuera de plazo, sin la verificación previa exigida por el procedimiento de pagos.',
     probabilidad: 2,
     impacto: 2,
     // Inherent = 4
     controlesExistentes: [
-      'Rendición mensual de comprobantes digitales de caja chica.',
-      'Tope máximo de gasto fijado por resolución interna.'
+      'Checklist de respaldo documental obligatorio previo a la liberación del pago.',
+      'Validación fiscal AFIP/ARBA de cada comprobante antes del desembolso.'
     ],
     efectividadControles: 'fuerte', // (0.3)
     // Residual = ceil(4 * 0.3) = 2 (Bajo)
-    planTratamiento: 'Eliminación del dinero en efectivo mediante tarjetas corporativas prepagas recargables con rendición digital geolocalizada y conciliación mensual automática.',
+    planTratamiento: 'Bloqueo automático en el sistema de pagos de toda orden que no tenga adjunta la documentación de respaldo completa y validada, con conciliación mensual automática.',
     responsable: 'Tesorería / Gerencia de Finanzas',
     plazo: '2026-11-01',
     estado: 'controlado',

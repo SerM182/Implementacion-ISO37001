@@ -92,17 +92,17 @@ export function queryComplianceAdvisor(userQuery) {
     };
   }
 
-  // Doble firma / Pagos / Tesorería / Fondo Fijo
-  if (queryClean.includes('pago') || queryClean.includes('tesoreria') || queryClean.includes('tesorería') || queryClean.includes('firma') || queryClean.includes('fondo fijo') || queryClean.includes('caja chica') || queryClean.includes('transferencia')) {
+  // Doble firma / Pagos / Tesorería / Respaldos documentales
+  if (queryClean.includes('pago') || queryClean.includes('tesoreria') || queryClean.includes('tesorería') || queryClean.includes('firma') || queryClean.includes('respaldo') || queryClean.includes('comprobante') || queryClean.includes('transferencia')) {
     return {
       tipo: 'controles_financieros',
-      titulo: 'Protocolo de Pagos y Fondos Fijos en Sede Central (Cl. 8.3)',
-      respuesta: `**Controles Financieros de AUBASA (POE-SGAS-05):**\n\n1. **Segregación de Funciones:** Ninguna persona puede solicitar, aprobar y liberar una transferencia simultáneamente (Principio de 4 Ojos).\n2. **Doble Firma Bancaria:** Toda transferencia requiere dos aprobaciones jerárquicas en la plataforma de banca electrónica.\n3. **Cuentas Bancarias:** Pagos únicamente a cuentas oficiales del CUIT adjudicatario en Argentina (prohibición de cuentas de terceros u offshore).\n4. **Fondo Fijo de Sede Central:** Rendición semanal con factura fiscal a nombre de AUBASA. Prohibido pagar atenciones o gastos personales.`,
+      titulo: 'Protocolo de Pagos y Respaldos Documentales (Cl. 8.3)',
+      respuesta: `**Controles Financieros de AUBASA (POE-SGAS-05):**\n\n1. **Segregación de Funciones:** Ninguna persona puede solicitar, aprobar y liberar una transferencia simultáneamente (Principio de 4 Ojos).\n2. **Doble Firma Bancaria:** Toda transferencia requiere dos aprobaciones jerárquicas en la plataforma de banca electrónica. AUBASA no realiza pagos en efectivo bajo ninguna circunstancia.\n3. **Cuentas Bancarias:** Pagos únicamente a cuentas oficiales del CUIT adjudicatario en Argentina (prohibición de cuentas de terceros u offshore).\n4. **Respaldo Documental Completo:** Toda orden de pago debe contar con factura electrónica válida en AFIP, remito o certificado de recepción/obra conformado, y orden de compra, antes de liberarse.`,
       clausulasRelacionadas: ['ISO 37001 Cl. 8.3 (Controles Financieros)', 'Código Penal Art. 265'],
       accionesRecomendadas: [
         'Verificar la correlatividad del orden de pago (criterio FIFO).',
         'Validar certificado de obra con firma de inspección antes del desembolso.',
-        'Auditoría digital mensual de comprobantes de fondo fijo.'
+        'Auditoría digital mensual de respaldos documentales y plazos de pago.'
       ]
     };
   }
@@ -144,7 +144,7 @@ export function queryComplianceAdvisor(userQuery) {
   return {
     tipo: 'general',
     titulo: 'Asesoría en Sistema de Gestión Antisoborno (SGAS AUBASA)',
-    respuesta: `AUBASA implementa la norma **ISO 37001:2016** con integración a la **Ley Nacional 27.401** y la **Ley Provincial 6021 de Obras Públicas** en tres áreas neurálgicas:\n\n1. **Contratación:** Licitaciones públicas con especificaciones neutrales, comisiones evaluadoras independientes y debida diligencia de contratistas (Cl. 8.2 & 8.4).\n2. **Pagos y Finanzas:** Segregación de funciones, doble firma bancaria y control de fondos fijos en Sede Central (Cl. 8.3).\n3. **Obras Viales:** Inspección técnica en traza, ensayos ciegos de laboratorio de asfalto y hormigón en universidades y cubicación in situ (Cl. 8.4).\n\nPuede consultar sobre casos puntuales, árboles de decisión ética o el procedimiento para cada requisito normativo.`,
+    respuesta: `AUBASA implementa la norma **ISO 37001:2016** con integración a la **Ley Nacional 27.401** y la **Ley Provincial 6021 de Obras Públicas** en tres áreas neurálgicas:\n\n1. **Contratación:** Licitaciones públicas con especificaciones neutrales, comisiones evaluadoras independientes y debida diligencia de contratistas (Cl. 8.2 & 8.4).\n2. **Pagos y Finanzas:** Segregación de funciones, doble firma bancaria y verificación de respaldos documentales de todo pago (Cl. 8.3).\n3. **Obras Viales:** Inspección técnica en traza, ensayos ciegos de laboratorio de asfalto y hormigón en universidades y cubicación in situ (Cl. 8.4).\n\nPuede consultar sobre casos puntuales, árboles de decisión ética o el procedimiento para cada requisito normativo.`,
     clausulasRelacionadas: ['ISO 37001 (Cl. 4 a 10)', 'Ley 27.401'],
     accionesRecomendadas: [
       'Explorar la Matriz de Riesgos para conocer los puntos críticos de control.',

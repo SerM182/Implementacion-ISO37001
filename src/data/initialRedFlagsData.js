@@ -82,11 +82,11 @@ export const RED_FLAGS_CATALOG = [
   {
     id: 'RF-PAG-04',
     categoria: 'Pagos y Tesorería',
-    alerta: 'Rendiciones de caja chica de Sede Central con comprobantes no fiscales o descripciones genéricas',
-    descripcion: 'Comprobantes manuscritos por "gastos varios" o atenciones a funcionarios de municipios por donde pasa la traza vial.',
+    alerta: 'Órdenes de pago liberadas con comprobantes no fiscales, incompletos o descripciones genéricas de "gastos varios"',
+    descripcion: 'Facturas o remitos sin validación AFIP/ARBA, o certificados de obra/recepción faltantes, adjuntados al expediente de pago para justificar atenciones a funcionarios de municipios por donde pasa la traza vial.',
     severidad: 'media',
     proceso: 'Pagos',
-    medidaInmediata: 'Desestimación del reintegro, reposición del dinero por el responsable de la rendición e inspección sorpresiva.'
+    medidaInmediata: 'Rechazo de la orden de pago hasta regularizar el respaldo documental, reintegro por el responsable de la carga e inspección de expedientes similares.'
   },
 
   // CATEGORÍA 3: OBRAS VIALES E INSPECCIÓN TÉCNICA

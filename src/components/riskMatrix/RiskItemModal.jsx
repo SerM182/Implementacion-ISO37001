@@ -111,7 +111,7 @@ export default function RiskItemModal({
             <label className="block text-xs font-semibold text-slate-300 mb-1">Subproceso / Área</label>
             <input
               type="text"
-              placeholder="Ej: Licitación, Calados, Fondo Fijo"
+              placeholder="Ej: Licitación, Calados, Respaldo Documental"
               value={formData.subproceso}
               onChange={(e) => setFormData({ ...formData, subproceso: e.target.value })}
               className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white"

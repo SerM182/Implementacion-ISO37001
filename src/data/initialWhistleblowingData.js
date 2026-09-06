@@ -58,21 +58,21 @@ export const INITIAL_WHISTLEBLOWING_REPORTS = [
     fechaRecepcion: '2026-05-14',
     origen: 'Correo Electrónico Canal Ético',
     tipoDenunciante: 'anonimo',
-    categoria: 'Uso Indebido de Fondos Fijos de Sede Central',
+    categoria: 'Pago Liberado sin Respaldo Documental Válido',
     procesoAfectado: 'Pagos',
     ubicacion: 'Sede Central (Tesorería)',
-    descripcion: 'Se denunció la presentación reiterada de tickets de combustible de vehículos particulares cargados al fondo fijo de Tesorería.',
-    personasInvolucradas: 'Responsable de Caja Chica de Tesorería',
-    evidenciasAportadas: 'Listado de patentes de vehículos ajenos a la flota oficial de AUBASA.',
+    descripcion: 'Se denunció que se autorizó y transfirió el pago a un proveedor de insumos de oficina sin el remito de recepción de mercadería correspondiente, adjuntando posteriormente al expediente una factura con fecha alterada.',
+    personasInvolucradas: 'Analista de Cuentas a Pagar de Tesorería',
+    evidenciasAportadas: 'Comparación de metadatos del PDF de la factura con el registro de ingreso al sistema contable.',
     estado: 'cerrada',
     prioridad: 'media',
     oficialACargo: '',
     fechaLimiteInforme: '2026-06-14',
     accionesTomadas: [
-      { fecha: '2026-05-15', detalle: 'Cruce de comprobantes con el sistema contable y registro de flota oficial.' },
-      { fecha: '2026-05-20', detalle: 'Se constató el desvío irregular de fondos por un monto menor.' },
-      { fecha: '2026-06-01', detalle: 'Se ordenó la restitución del dinero y sanción de suspensión laboral de 15 días.' }
+      { fecha: '2026-05-15', detalle: 'Cruce del expediente de pago con el sistema contable y el circuito de recepción de mercadería.' },
+      { fecha: '2026-05-20', detalle: 'Se constató que el pago se liberó antes de contar con el remito de recepción firmado.' },
+      { fecha: '2026-06-01', detalle: 'Se ordenó el refuerzo del checklist de respaldo documental y sanción de suspensión laboral de 15 días.' }
     ],
-    conclusionDictamen: 'Caso resuelto con sanción disciplinaria y reintegro total del monto. Se implementó tarjeta prepaga digital para la rendición de caja chica.'
+    conclusionDictamen: 'Caso resuelto con sanción disciplinaria. Se reforzó el bloqueo automático en el sistema de pagos para expedientes sin respaldo documental completo.'
   }
 ];

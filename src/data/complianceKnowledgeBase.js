@@ -41,8 +41,8 @@ export const COMPLIANCE_KNOWLEDGE_BASE = {
           numero: '8.3',
           titulo: 'Controles Financieros',
           requisito: 'Implementar controles financieros que reduzcan el riesgo de soborno (segregación de funciones, doble firma, auditoría previa al desembolso, conciliaciones bancarias).',
-          aplicacionAubasa: 'Doble firma en transferencias bancarias a contratistas de obra, prohibición total de pagos en efectivo fuera de fondos fijos estrictamente reglamentados de Tesorería, validación fiscal AFIP/ARBA previa al pago.',
-          evidenciasTipicas: ['Matriz de firmas y autorizaciones bancarias', 'Procedimiento de pago a contratistas de obra', 'Arqueos y rendiciones de fondos fijos de Tesorería']
+          aplicacionAubasa: 'Doble firma en transferencias bancarias a contratistas de obra, prohibición absoluta de pagos en efectivo, validación fiscal AFIP/ARBA y de respaldo documental (factura, remito, certificado de obra) previa a cada pago.',
+          evidenciasTipicas: ['Matriz de firmas y autorizaciones bancarias', 'Procedimiento de pago a contratistas de obra', 'Checklist de respaldo documental y oportunidad de pago']
         },
         {
           numero: '8.4',

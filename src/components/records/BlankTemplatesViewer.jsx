@@ -96,37 +96,41 @@ Firma Oficial de Cumplimiento: _______________________    Firma Gerente de Compr
   },
   {
     id: 'REC-03',
-    codigo: 'REC-ARQ-03',
-    nombre: 'Acta de Arqueo Sorpresivo de Fondo Fijo en Sede Central',
+    codigo: 'REC-RDP-03',
+    nombre: 'Verificación de Respaldos Documentales y Oportunidad de Pago',
     clausula: 'Cl. 8.3',
     categoria: 'Controles Financieros',
-    frecuencia: 'Mensual y sorpresiva',
+    frecuencia: 'Mensual, sobre muestreo de órdenes de pago',
     responsable: 'Auditoría Interna y Tesorería',
-    formato: `Sede Central — Tesorería y Administración
+    formato: `Sede Central — Tesorería y Administración (todos los pagos se realizan por transferencia bancaria; AUBASA no efectúa pagos en efectivo)
 
-1. DATOS DEL PROCEDIMIENTO DE ARQUEO:
-• Área / Fondo Fijo Auditado: __________________________________________________________
-• Fecha del Arqueo: _____/_____/202___   Hora de Inicio: _______ hs.   Hora de Cierre: _______ hs.
-• Responsable del Fondo (Nombre y Legajo): _______________________________________________
+1. DATOS DEL PROCEDIMIENTO DE VERIFICACIÓN:
+• Período / Lote de Pagos Auditado: ______________________________________________________
+• Fecha de la Verificación: _____/_____/202___
 • Auditor / Supervisor Actuante: ________________________________________________________
+• Cantidad de Órdenes de Pago Incluidas en la Muestra: ___________________________________
 
-2. DETALLE DE VALORES FÍSICOS RECONTADOS:
-• Fondo Fijo Asignado: $ ______________________________________________________________
-• Billetes y Monedas Recontados: $ ____________________________________________________
-• Comprobantes y Rendiciones Pendientes: $ ____________________________________________
-• Total Efectivo + Comprobantes Recontado (A): $ ______________________________________
+2. DETALLE DE ÓRDENES DE PAGO VERIFICADAS:
+Nº | Orden de Pago / Proveedor | Factura Válida AFIP | Remito o Cert. de Obra | Fecha Vto. | Fecha de Pago
+01 |                           |                      |                        |            |
+02 |                           |                      |                        |            |
+03 |                           |                      |                        |            |
 
-3. CONCILIACIÓN CONTABLE:
-• Saldo según Sistema Contable (B): $ __________________________________________________
-• Comprobantes sin rendir en el período: _________ comprobantes
+3. HALLAZGOS DE RESPALDO DOCUMENTAL:
+[  ] CONFORME: Toda la muestra cuenta con factura válida en AFIP, remito o certificado de obra y orden de compra.
+[  ] OBSERVACIONES MENORES: Comprobantes cargados con demora, sin impacto en la liberación del pago.
+[  ] NO CONFORME: Se detectaron pagos liberados sin respaldo documental completo. Detalle: __________
+_________________________________________________________________________________________
 
-4. DETERMINACIÓN DE DIFERENCIAS:
-Total Físico (A) - Saldo Sistema (B) = Diferencia: $ ___________________________________
-Resultado: [  ] EXACTO / SIN DIFERENCIAS   [  ] SOBRANTE ($ ______)   [  ] FALTANTE ($ ______)
-Justificación / Observaciones del Responsable: __________________________________________
+4. DETERMINACIÓN DE OPORTUNIDAD DE PAGO (CRITERIO FIFO):
+• Órdenes de Pago Procesadas Fuera del Orden Cronológico de Vencimiento: _________________
+• Justificación Documentada de la Excepción (si corresponde): ___________________________
 
-Firma Responsable del Fondo: _______________________    Firma Tesorería: _________________
-Firma Auditor Interno SGAS: ___________________`
+5. DICTAMEN Y ACCIONES:
+[  ] SIN OBSERVACIONES: Se archiva como evidencia de auditoría.
+[  ] SE DERIVA A FICHA CAPA (Cl. 10.1 y 10.2) por hallazgo de incumplimiento.
+
+Firma Auditor Interno SGAS: _______________________    Firma Tesorería: __________________`
   },
   {
     id: 'REC-04',
