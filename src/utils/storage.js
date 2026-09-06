@@ -67,6 +67,13 @@ const CLEAN_ROADMAP = INITIAL_ROADMAP_PHASES.map(phase => ({
   entregables: phase.entregables?.map(h => ({ ...h, completado: false })) || []
 }));
 
+// Plan de Capacitación limpio al 0% de avance por área (mantiene las metas
+// y dotación de personal, que son datos de referencia, no progreso real)
+const CLEAN_TRAINING_PLAN = {
+  ...TRAINING_PLAN_OVERVIEW,
+  areasAlcanzadas: TRAINING_PLAN_OVERVIEW.areasAlcanzadas.map(area => ({ ...area, progreso: 0 }))
+};
+
 export const sgasStorage = {
   // Modo de Espacio de Trabajo
   getWorkspaceMode: () => safeGet(STORAGE_KEYS.WORKSPACE_MODE, 'blank'),
@@ -101,7 +108,7 @@ export const sgasStorage = {
   saveRecords: (data) => safeSet(STORAGE_KEYS.RECORDS, data),
 
   // Capacitaciones & Inducciones (Mantiene plan temático pero con 0 colaboradores cargados por defecto)
-  getTrainingPlan: () => safeGet(STORAGE_KEYS.TRAINING_PLAN, TRAINING_PLAN_OVERVIEW),
+  getTrainingPlan: () => safeGet(STORAGE_KEYS.TRAINING_PLAN, CLEAN_TRAINING_PLAN),
   saveTrainingPlan: (data) => safeSet(STORAGE_KEYS.TRAINING_PLAN, data),
 
   getCollaborators: () => safeGet(STORAGE_KEYS.TRAINING_COLLABORATORS, []),
@@ -133,7 +140,7 @@ export const sgasStorage = {
       safeSet(STORAGE_KEYS.GAP_ANALYSIS, CLEAN_GAP_ANALYSIS);
       safeSet(STORAGE_KEYS.POLICIES, INITIAL_POLICY_TEMPLATES);
       safeSet(STORAGE_KEYS.ROADMAP, CLEAN_ROADMAP);
-      safeSet(STORAGE_KEYS.TRAINING_PLAN, TRAINING_PLAN_OVERVIEW);
+      safeSet(STORAGE_KEYS.TRAINING_PLAN, CLEAN_TRAINING_PLAN);
       return true;
     } catch (e) {
       console.error('Error al limpiar a estado en blanco:', e);

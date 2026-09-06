@@ -51,7 +51,7 @@ export default function TrainingKpiCards({ metrics }) {
           </div>
           <p className="text-[11px] text-slate-400 mt-2 flex items-center gap-1">
             <TrendingUp className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-            <span>Alcanzando 860 colaboradores de AUBASA</span>
+            <span>Meta: alcanzar a los {totalEmployees} colaboradores de AUBASA</span>
           </p>
         </div>
 
