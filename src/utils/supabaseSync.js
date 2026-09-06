@@ -8,38 +8,34 @@ export const supabaseSync = {
   // Comprobar si Supabase está activo
   isConnected: () => isSupabaseConfigured(),
 
-  // Cargar todos los datos desde Supabase a la app
+  // Descarga todos los datos desde Supabase (lectura pura: no persiste nada
+  // localmente). Cada llamador decide si y como aplicar lo descargado, ya
+  // que un pull automatico y un pull manual explicito del usuario tienen
+  // semantica distinta (ver App.jsx vs ExportImportModal.jsx).
   pullFromCloud: async () => {
     if (!isSupabaseConfigured() || !supabase) return { success: false, message: 'Supabase no configurado' };
 
     try {
       // 1. Riesgos
-      const { data: risksData, error: errRisks } = await supabase.from('risks').select('*');
-      if (!errRisks && risksData) sgasStorage.saveRisks(risksData);
+      const { data: risksData } = await supabase.from('risks').select('*');
 
       // 2. Socios
-      const { data: partnersData, error: errPartners } = await supabase.from('partners').select('*');
-      if (!errPartners && partnersData) sgasStorage.savePartners(partnersData);
+      const { data: partnersData } = await supabase.from('partners').select('*');
 
       // 3. Registros Cl. 7.5
-      const { data: recordsData, error: errRecords } = await supabase.from('records').select('*');
-      if (!errRecords && recordsData) sgasStorage.saveRecords(recordsData);
+      const { data: recordsData } = await supabase.from('records').select('*');
 
       // 4. Denuncias
-      const { data: reportsData, error: errReports } = await supabase.from('whistleblowing_reports').select('*');
-      if (!errReports && reportsData) sgasStorage.saveReports(reportsData);
+      const { data: reportsData } = await supabase.from('whistleblowing_reports').select('*');
 
       // 5. Colaboradores Capacitados
-      const { data: collabsData, error: errCollabs } = await supabase.from('training_collaborators').select('*');
-      if (!errCollabs && collabsData) sgasStorage.saveCollaborators(collabsData);
+      const { data: collabsData } = await supabase.from('training_collaborators').select('*');
 
       // 6. Checklist 36 Requisitos
-      const { data: gapData, error: errGap } = await supabase.from('gap_analysis').select('*');
-      if (!errGap && gapData && gapData.length > 0) sgasStorage.saveGapAnalysis(gapData);
+      const { data: gapData } = await supabase.from('gap_analysis').select('*');
 
       // 7. Usuarios del Sistema SGAS
-      const { data: usersData, error: errUsers } = await supabase.from('app_users').select('*');
-      if (!errUsers && usersData && usersData.length > 0) sgasStorage.saveUsers(usersData);
+      const { data: usersData } = await supabase.from('app_users').select('*');
 
       return {
         success: true,

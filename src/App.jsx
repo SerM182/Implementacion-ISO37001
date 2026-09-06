@@ -46,18 +46,40 @@ function AppContent() {
   const [isPrintReportOpen, setIsPrintReportOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
-  // Sincronización automática con Supabase Cloud en el arranque de la app
+  // Sincronización automática con Supabase Cloud en el arranque de la app.
+  // Solo hidrata cada lista si sigue vacía al momento de recibir la respuesta:
+  // si el usuario ya cargó/agregó datos localmente mientras el pull estaba en
+  // vuelo, esos datos locales prevalecen en vez de ser pisados por la nube.
   useEffect(() => {
     if (supabaseSync.isConnected()) {
+      // Hidrata React state y localStorage a la vez solo cuando corresponde
+      // aplicar los datos de la nube; si no corresponde, deja todo intacto.
+      const hydrateIfEmpty = (cloudList, setter, saveFn) => {
+        if (!(cloudList?.length > 0)) return;
+        setter(prev => {
+          if (prev.length !== 0) return prev;
+          saveFn(cloudList);
+          return cloudList;
+        });
+      };
+
       supabaseSync.pullFromCloud().then((res) => {
         if (res.success && res.data) {
-          if (res.data.risks) setRisks(res.data.risks);
-          if (res.data.partners) setPartners(res.data.partners);
-          if (res.data.records) setRecords(res.data.records);
-          if (res.data.reports) setReports(res.data.reports);
-          if (res.data.collaborators) setCollaborators(res.data.collaborators);
-          if (res.data.users && res.data.users.length > 0) setUsers(res.data.users);
-          if (res.data.gapItems && res.data.gapItems.length > 0) setGapItems(res.data.gapItems);
+          hydrateIfEmpty(res.data.risks, setRisks, sgasStorage.saveRisks);
+          hydrateIfEmpty(res.data.partners, setPartners, sgasStorage.savePartners);
+          hydrateIfEmpty(res.data.records, setRecords, sgasStorage.saveRecords);
+          hydrateIfEmpty(res.data.reports, setReports, sgasStorage.saveReports);
+          hydrateIfEmpty(res.data.collaborators, setCollaborators, sgasStorage.saveCollaborators);
+          hydrateIfEmpty(res.data.users, setUsers, sgasStorage.saveUsers);
+
+          if (res.data.gapItems?.length > 0) {
+            setGapItems(prev => {
+              const isPrevUntouched = prev.every(i => !i.estadoConformidad || i.estadoConformidad === 'no_conforme');
+              if (!isPrevUntouched) return prev;
+              sgasStorage.saveGapAnalysis(res.data.gapItems);
+              return res.data.gapItems;
+            });
+          }
         }
       }).catch(err => {
         console.warn('Auto-pull inicial de Supabase:', err);
@@ -264,14 +286,14 @@ function AppContent() {
 
           {activeTab === 'risks' && (
             <RiskMatrixView
-              risks={risks}
+              risksList={risks}
               onUpdateRisks={handleUpdateRisks}
             />
           )}
 
           {activeTab === 'dueDiligence' && (
             <DueDiligenceView
-              partners={partners}
+              partnersList={partners}
               onUpdatePartners={handleUpdatePartners}
             />
           )}

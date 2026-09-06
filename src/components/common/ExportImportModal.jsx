@@ -78,6 +78,16 @@ export default function ExportImportModal({
     const res = await supabaseSync.pullFromCloud();
     setSyncLoading(false);
     if (res.success) {
+      // Descarga explícita solicitada por el usuario: la nube reemplaza los
+      // datos locales sin condiciones (a diferencia del auto-pull al iniciar).
+      const { data } = res;
+      if (data.risks) sgasStorage.saveRisks(data.risks);
+      if (data.partners) sgasStorage.savePartners(data.partners);
+      if (data.records) sgasStorage.saveRecords(data.records);
+      if (data.reports) sgasStorage.saveReports(data.reports);
+      if (data.collaborators) sgasStorage.saveCollaborators(data.collaborators);
+      if (data.users) sgasStorage.saveUsers(data.users);
+      if (data.gapItems) sgasStorage.saveGapAnalysis(data.gapItems);
       setFeedback({ type: 'success', text: 'Datos descargados desde Supabase Cloud y cargados en la aplicación.' });
       if (onDataReloaded) onDataReloaded();
     } else {
